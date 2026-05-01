@@ -1,4 +1,4 @@
-Initiate a directory with the task name, write down the key files. Also, put your analysis in an `task_inspection.md` file and add things there as we iterate.
+Initiate a directory with the `benchmark-task` name, write down the key files. Also, put your analysis in an `task_inspection.md` file and add things there as we iterate.
 
 Tell me about this task. Review the agent trajectories from docent links to see why agent fails. Feel free to initiate subagents to look at each agent trajectory and give you the key messages and observations. And then tell me your verdict about the task quality. The single most valuable answer I want to learn: **Is the agent failure because of the task itself or the agent capability bottleneck.**. All questions below are helping you to gradually make a final decision.
 
