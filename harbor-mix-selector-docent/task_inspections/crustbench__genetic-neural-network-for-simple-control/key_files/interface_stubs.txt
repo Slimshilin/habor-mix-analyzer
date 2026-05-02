@@ -1,0 +1,320 @@
+pub mod model_system;
+pub mod signal_designer;
+pub mod activation_fnc;
+pub mod genetic_operations;
+pub mod input_toolbox;
+pub mod matrix_math;
+pub mod neural_network;
+===== /workspace/rbench_reference/src/interfaces/model_system.rs =====
+// model_system.rs
+use crate::neural_network::{NN, NNInput};
+use crate::signal_designer::Signal;
+use std::fs::File;
+use std::io::Write;
+#[derive(Default)]
+/// Represents a neural network-based system with simulation data and signal processing.
+pub struct SystemNN {
+    pub input_sys: Option<fn(&mut [f32])>,
+    pub input_data: Vec<f32>,
+    pub input_data_size: Vec<i32>,
+    pub input_types: Vec<usize>,
+    pub signal: Option<Box<Signal>>,
+    pub output: Option<Box<Signal>>,
+    pub data_system: Vec<f32>,
+    pub size_data_system: usize,
+    pub fit: f32,
+    pub max_counter: i32,
+    pub steady_rise_check: i32,
+    pub neural_network: Box<NN>,
+    pub func_system: Option<fn(&mut [f32]) -> f32>,
+    pub max_sys: f32,
+    pub min_sys: f32,
+}
+/// Creates and initializes a SystemNN and its neural network.
+pub fn createNNSystem(system_nn: &mut SystemNN, input: &mut NNInput) {
+    unimplemented!();
+}
+/// Frees memory associated with a SystemNN.
+pub fn clearNNSystem(system_nn: &mut SystemNN) {
+    unimplemented!();
+}
+/// Resets system simulation state for a clean run.
+pub fn cleanNNSystem(system_nn: &mut SystemNN) {
+    unimplemented!();
+}
+/// Analyzes signal to find its maximum and minimum values.
+pub fn getMaxMinSignalValues(signal: &Signal, max: &mut f32, min: &mut f32) {
+    unimplemented!();
+}
+/// Executes one optimization round to find best U input for the system.
+pub fn findUOneRound(system_nn: &mut SystemNN, for_values: &[f32; 3], data: &mut [f32; 12]) {
+    unimplemented!();
+}
+/// Calls multiple search passes to fine-tune U for the system and signal.
+pub fn findUForSystemAndSignal(system_nn: &mut SystemNN, data: &mut [f32; 12]) {
+    unimplemented!();
+}
+/// Calculates a simple numerical derivative.
+pub fn makeDerivation(x: f32, x_t: f32, dt: f32) -> f32 {
+    unimplemented!();
+}
+/// Prepares and applies normalization matrices for the SystemNN based on system signal properties.
+pub fn createDeNormalization(system_nn: &mut SystemNN) {
+    unimplemented!();
+}
+/// Simulates the system using its neural network and updates fit/error metrics.
+pub fn makeSimulationOfSignalNN<W: Write>(system: &mut SystemNN, writer: &mut W, csv: bool){
+    unimplemented!();
+}===== /workspace/rbench_reference/src/interfaces/neural_network.rs =====
+// neural_network.rs
+use crate::population::Pop;
+use crate::matrix_math::Matrix;
+#[derive(Default)]
+/// Structure representing the neural network definition.
+pub struct NN {
+    pub AW: Vec<Matrix>,                        // Weight matrices for each layer (AW)
+    pub BW: Vec<Matrix>,                        // Bias matrices for each layer (BW)
+    pub neuronsSize: Vec<usize>,               // Number of neurons per layer
+    pub layerNumber: usize,                    // Number of layers (including input/output)
+    pub countOfValues: usize,                 // Total number of parameters (weights + biases)
+    pub normalizationMatrix: [Vec<f32>; 2],    // [0] = max, [1] = min for inputs
+    pub denormalizationMatrix: [Vec<f32>; 2],  // [0] = max, [1] = min for outputs
+    pub func_ptr: Option<fn(f32) -> f32>,       // Activation function
+    pub layerType: Vec<i32>,                    // Type per layer (0 = FF, 1 = SD)
+    pub sdNeuronsTypes: Vec<Vec<u8>>,         // Neuron types per SD layer (0 = straight, 1 = S, 2 = D)
+    pub SDMemory: Vec<Matrix>,                 // Memory for each SD layer (one Matrix per SD layer)
+}
+#[derive(Default)]
+/// Input structure used to create an NN instance.
+pub struct NNInput {
+    pub neuronsSize: Vec<usize>,               // Number of neurons per layer
+    pub layerNumber: usize,                    // Total number of layers
+    pub normalizationMatrix: [Vec<f32>; 2],    // [0] = max, [1] = min for inputs
+    pub denormalizationMatrix: [Vec<f32>; 2],  // [0] = max, [1] = min for outputs
+    pub layerType: Vec<i32>,                    // Type per hidden layer
+    pub sdNumber: usize,                       // Number of SD layers
+}
+fn clearNNInput(input: NNInput) {
+    unimplemented!();
+}
+pub fn createNeuralNetwork(input: NNInput, neural_network: &mut NN) {
+    unimplemented!();
+}
+pub fn clearNeuralNetwork(neural_network: NN) {
+    unimplemented!();
+}
+pub fn fillMatrixesNN(neural_network: &mut NN, population: &[f32]) {
+    unimplemented!();
+}
+pub fn clearSDMemory(neural_network: &mut NN) {
+    unimplemented!();
+}
+pub fn deNormalizationProcess(neural_network: &mut NN, input: &mut Matrix, way: i32) {
+    unimplemented!();
+}
+fn makeSDLayerAction(neural_network: &mut NN, input: &mut Matrix, sd_index: usize, layer_index: usize) {
+    unimplemented!();
+}
+pub fn oneCalculation(neural_network: &mut NN, input: &mut Matrix, output: &mut Matrix) {
+    unimplemented!();
+}===== /workspace/rbench_reference/src/interfaces/pid_controller.rs =====
+use crate::systems_builder;
+// pid_controller.rs
+use std::fs::File;
+use crate::signal_designer::Signal;
+#[derive(Default)]
+pub struct PID {
+    // constants not changed in calculations
+    pub Kp: f32,
+    pub Ki: f32,
+    pub Kd: f32,
+    pub tauI: f32,
+    pub tauD: f32,
+    // values used in process of the calculations
+    pub prevError: f32,
+    pub proportiError: f32,
+    pub integralError: f32,
+    pub differenError: f32,
+    // input values
+    pub signal: Option<Box<Signal>>,  // Assuming ownership
+    pub func_system: Option<fn(&mut [f32]) -> f32>,
+    // memory of output
+    pub output: Option<Box<Signal>>,  // Assuming ownership
+    pub dataSystem: Option<Box<[f32]>>,
+    pub sizeDataSystem: i32,
+    // the limits
+    pub limMaxInt: f32,
+    pub limMinInt: f32,
+    pub limMax: f32,
+    pub limMin: f32,
+    // the fit value of pid run
+    pub fit: f32,
+    // the check for steady rise pid
+    pub steadyRiseCheck: i32,
+    // signal oscillation counter
+    pub maxCounter: i32,
+}
+pub fn createNewPidController(pid: &mut PID) {
+    unimplemented!();
+}
+pub fn deletePid(pid: &mut PID) {
+    unimplemented!();
+}
+pub fn makeSimulationOfSignal(pid: &mut PID, csv_file: &mut File, csv: i32) {
+    unimplemented!();
+}
+pub fn resetOutputMemoryPid(pid: &mut PID) {
+    unimplemented!();
+}===== /workspace/rbench_reference/src/interfaces/population.rs =====
+// population.rs
+use crate::general_math::createRandomFloat;
+#[derive(Default)]
+/// Structure representing the input to create a population.
+pub struct InputPop {
+    pub rows: usize,
+    pub cols: usize,
+    pub s: [Vec<f32>; 2], // s[0] = max, s[1] = min
+}
+#[derive(Default)]
+/// Structure representing the population.
+pub struct Pop {
+    pub rows: usize,
+    pub cols: usize,
+    pub pop: Vec<Vec<f32>>,
+    pub s: [Vec<f32>; 2],
+}
+/// Clear/deallocate InputPop (in Rust usually handled by `Drop`, but shown for parity).
+fn clearInputPop(input: &mut InputPop) {
+    unimplemented!();
+}
+/// Creates an InputPop structure using max/min bounds and a size array.
+pub fn createInputPop(input_pop: &mut InputPop, max: &[f32], min: &[f32], size: &[i32]) {
+    unimplemented!();
+}
+/// Allocates a population from an InputPop definition.
+fn alocatePopulation(input: &mut InputPop, population: &mut Pop) {
+    unimplemented!();
+}
+/// Deallocates the memory held by a Pop structure.
+pub fn clearPopulation(population: &mut Pop) {
+    unimplemented!();
+}
+/// Creates a random population from the given input constraints.
+pub fn createStructure(input: &mut InputPop, population: &mut Pop) {
+    unimplemented!();
+}
+/// Fills the population with random values within the constraints in `s`.
+pub fn generateRandomPopulation(population: &mut Pop) {
+    unimplemented!();
+}
+/// Places a part of the source population into the target population using the index range.
+pub fn placePartOfPop(pop: &mut Pop, source: &Pop, indexes: &[usize; 2]) {
+    unimplemented!();
+}===== /workspace/rbench_reference/src/interfaces/signal_designer.rs =====
+// signal_designer.rs
+#[derive(Default)]
+pub struct Signal {
+    pub signal: Vec<f32>, // the values of the signal at each time point
+    pub dt: f32,          // the sampling time for the signal
+    pub length: i32,      // length of the signal in seconds
+}
+pub fn deleteSignal(signal: &mut Signal) {
+    unimplemented!();
+}
+pub fn cliSignalSelector(signal: &mut Signal) {
+    unimplemented!();
+}
+fn selectStepSignal(signal: &mut Signal) {
+    unimplemented!();
+}
+fn selectCustomASignal(signal: &mut Signal) {
+    unimplemented!();
+}===== /workspace/rbench_reference/src/interfaces/sort.rs =====
+pub fn quickSort(fit:&mut Vec<f32>, input:&mut Vec<i32>, length:i32){
+    unimplemented!();
+}===== /workspace/rbench_reference/src/interfaces/systems_builder.rs =====
+// systems_builder.rs
+use crate::pid_controller;
+pub fn linear(data: &mut [f32]) -> f32 {
+    unimplemented!();
+}
+pub fn complexYDot(data: &mut [f32]) -> f32 {
+    unimplemented!();
+}
+pub fn complexYDddot(data: &mut [f32]) -> f32 {
+    unimplemented!();
+}
+pub fn selectSystem(func_ptr: &mut Option<fn(&mut [f32]) -> f32>) -> i32 {
+    unimplemented!();
+}
+</|codexB10; role: tool|>
+<|codexB11; role: assistant|>
+Executed exec_command call_mP0H09VWfm6RjzN00e2sqVak
+<tool call>
+exec_command(cmd=for f in /workspace/rbench_reference/src/bin/test_*.rs; do echo "===== $f ====="; sed -n '1,260p' "$f"; done, workdir=/workspace, yield_time_ms=1000, max_output_tokens=30000)
+</tool call>
+</|codexB11; role: assistant|>
+<|codexB12; role: tool|>
+Command: /bin/bash -lc 'for f in /workspace/rbench_reference/src/bin/test_*.rs; do echo "===== $f ====="; sed -n '"'1,260p' \""'$f"; done'
+Chunk ID: a6bbf2
+Wall time: 0.0000 seconds
+Process exited with code 0
+Original token count: 8132
+Output:
+===== /workspace/rbench_reference/src/bin/test_activation_func.rs =====
+
+use Genetic_neural_network_for_simple_control::activation_fnc::{
+    selectTangActivationFunction, 
+    selectSigmActivationFunction};
+
+fn compare_results(a: f32, b: f32) -> bool {
+    (a - b).abs() < f32::EPSILON
+}
+
+fn test_sigmoid(x: f32) -> f32 {
+    1.0 / (1.0 + (-x).exp())
+}
+#[test]
+pub fn testActivationFncTanh() {
+    println!("\x1b[1m=======TEST ACTIVAION FNC TANH STARTED=======\x1b[0m");
+
+    let data_check1: f32 = 1.0;
+    let data_check2:f32 = 23.5;
+    let data_check3: f32 = 3.333;
+
+    let mut func_ptr_tanh: Option<fn(f32) -> f32> = None;
+    selectTangActivationFunction(&mut func_ptr_tanh);
+    let func = func_ptr_tanh.expect("Tanh function not set");
+
+    let flag1 = compare_results(data_check1.tanh() * 5.0, func(data_check1));
+    let flag2 = compare_results(data_check2.tanh() * 5.0, func(data_check2));
+    let flag3 = compare_results(data_check3.tanh() * 5.0, func(data_check3));
+
+    selectSigmActivationFunction(&mut None); // dummy call to match C code
+
+    assert!(flag1 && flag2 && flag3, "Test Activation Function Tanh failed");
+    println!("\x1b[1m\x1b[32m=======TEST ACTIVAION FNC TANH SUCCESSFUL=======\x1b[0m");
+    
+}
+
+#[test]
+pub fn testActivationFncSigm()  {
+    println!("\x1b[1m=======TEST ACTIVAION FNC SIGM STARTED=======\x1b[0m");
+
+    let data_check1 = 1.0;
+    let data_check2 = 23.5;
+    let data_check3 = 3.333;
+
+    let mut func_ptr_sigm: Option<fn(f32) -> f32> = None;
+    selectSigmActivationFunction(&mut func_ptr_sigm);
+    let func = func_ptr_sigm.expect("Sigmoid function not set");
+
+    let flag1 = compare_results(test_sigmoid(data_check1), func(data_check1));
+    let flag2 = compare_results(test_sigmoid(data_check2), func(data_check2));
+    let flag3 = compare_results(test_sigmoid(data_check3), func(data_check3));
+
+    assert!(flag1 && flag2 && flag3, "Test Activation Function Sigmoid failed");
+    println!("\x1b[1m\x1b[32m=======TEST ACTIVAION FNC SIGM SUCCESSFUL=======\x1b[0m");
+    
+}
+fn main(){}

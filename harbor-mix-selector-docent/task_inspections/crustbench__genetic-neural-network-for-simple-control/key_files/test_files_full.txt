@@ -1,0 +1,958 @@
+===== /workspace/rbench_reference/src/bin/test_full_run.rs =====
+use Genetic_neural_network_for_simple_control::sort::quickSort;
+use Genetic_neural_network_for_simple_control::fit_functions::*;
+use Genetic_neural_network_for_simple_control::genetic_operations::*;
+use Genetic_neural_network_for_simple_control::pid_controller::*;
+use Genetic_neural_network_for_simple_control::population::*;
+use Genetic_neural_network_for_simple_control::neural_network::*;
+use Genetic_neural_network_for_simple_control::model_system::*;
+use std::fs::{File, OpenOptions};
+use std::io::{BufWriter, Write};
+fn getMinFit(fit: &Vec<f32>) -> usize {
+    let mut min = 0;
+    let length = fit.len();
+    for i in 1..length {
+        if fit[i as usize] < fit[min] {
+            min = i as usize;
+        }
+    }
+    min
+}
+
+fn closeRandomSizeGeneration(population: &mut Pop, sizes: &Vec<f32>){
+    for i in 0 .. population.cols{
+        population.s[0][i] = sizes[i as usize] + 0.7;
+        population.s[1][i] = sizes[i as usize] - 0.7;
+    }
+}
+
+fn createSystemNeuralNetworkInputTEST(input: &mut NNInput) {
+    input.layerNumber = 5;
+    input.neuronsSize = vec![1, 5, 5, 5, 5, 1];
+    input.layerType = vec![0, 0, 0, 0, 0, 0];
+    input.sdNumber = 0;
+}
+
+#[test]
+pub fn testPIDRun() {
+    println!("\x1b[1m=======TEST PID RUN STARTED=======\x1b[0m");
+
+    let mut csv_file = File::create("TOOLBOX/PYTHON/input/data_pid_run.csv").unwrap();
+    writeln!(csv_file, "best").unwrap();
+
+    let chance = 0.1;
+    let generations = 5000;
+    let best_index = [0, 10];
+    let rand_one_index = [10, 195];
+    let rand_two_index = [195, 380];
+    let rand_ful_index = [380, 500];
+
+    let size_one_index = 185;
+    let size_two_index = 185;
+
+    let best_nums = [4, 2, 2, 2];
+
+    let mut input = InputPop::default();
+    let mut pop = Pop::default();
+
+    let max = vec![100.0, 100.0, 100.0, 1.0];
+    let min = vec![0.0, 0.0, 0.0, 0.0];
+    let size = [500, 4];
+    let size_ful = [120, 4];
+
+    createInputPop(&mut input, &max, &min, &size);
+    createStructure(&mut input, &mut pop);
+
+    let mut fit = vec![0.0; pop.rows];
+
+    let mut pid = PID::default();
+    createNewPidController(&mut pid);
+    pid.limMax = 60.0;
+    pid.limMin = -60.0;
+    pid.limMaxInt = pid.limMax / 2.0;
+    pid.limMinInt = pid.limMin / 2.0;
+
+    for i in 0..generations {
+        pidFitFunction(&mut pop, &mut fit, &mut pid);
+        let best_fit = getMinFit(&fit);
+
+        writeln!(csv_file, "{}", fit[best_fit]).unwrap();
+
+        if i % 100 == 0 || i > 9990 {
+            println!(
+                "GENERATION[{i:05}] - fit: {} P: {} I: {} D: {} Tau: {} - {}",
+                fit[best_fit],
+                pop.pop[best_fit][0],
+                pop.pop[best_fit][1],
+                pop.pop[best_fit][2],
+                pop.pop[best_fit][3],
+                best_fit
+            );
+        }
+
+        let mut best_pop = Pop::default();
+        let mut rand_pop_one = Pop::default();
+        let mut rand_pop_two = Pop::default();
+
+        selbest(&fit, &pop, &mut best_pop, &best_nums, 1);
+        selturn(&pop, &fit, &mut rand_pop_one, size_one_index);
+        selturn(&pop, &fit, &mut rand_pop_two, size_two_index);
+
+        crosov(&mut rand_pop_one, &mut vec![1, 2], 2);
+        crosov(&mut rand_pop_two, &mut vec![1, 2], 2);
+
+        mutx(&mut rand_pop_one, chance);
+        mutx(&mut rand_pop_two, chance);
+
+        let mut input_rand = InputPop::default();
+        let mut pop_random = Pop::default();
+        createInputPop(&mut input_rand, &max, &min, &size_ful);
+        createStructure(&mut input_rand, &mut pop_random);
+
+        placePartOfPop(&mut pop, &best_pop, &best_index);
+        placePartOfPop(&mut pop, &rand_pop_one, &rand_one_index);
+        placePartOfPop(&mut pop, &rand_pop_two, &rand_two_index);
+        placePartOfPop(&mut pop, &pop_random, &rand_ful_index);
+
+        if i == generations - 1 || i % 100 == 0 {
+            let mut csv_file2 = File::create("TOOLBOX/PYTHON/input/data_pid_.csv").unwrap();
+            writeln!(csv_file2, "P,I,D,CV,RV").unwrap();
+
+            pid.Kp = best_pop.pop[0][0];
+            pid.Ki = best_pop.pop[0][1];
+            pid.Kd = best_pop.pop[0][2];
+            pid.tauD = best_pop.pop[0][3];
+
+            makeSimulationOfSignal(&mut pid, &mut csv_file2, 1);
+
+            println!(
+                "BEST PID: P: {} I: {} D: {} Tau: {} - FIT: {} Count: {}",
+                pid.Kp, pid.Ki, pid.Kd, pid.tauD, pid.fit, pid.maxCounter
+            );
+        }
+    }
+
+    clearPopulation(&mut pop);
+    deletePid(&mut pid);
+    // plotGraph();
+    let flag = 1;
+    assert!(flag == 1);
+    println!("\x1b[1m\x1b[32m=======TEST PID RUN SUCCESSFUL=======\x1b[0m");
+    
+}
+#[test]
+pub fn testNNRun() {
+    println!("\x1b[1m=======TEST NN RUN STARTED=======\x1b[0m");
+
+    let mut csv_file = BufWriter::new(File::create("data_nn_fit.csv").unwrap());
+    writeln!(csv_file, "best").unwrap();
+
+    let mut input_nn = NNInput::default();
+    let mut system_nn = SystemNN::default();
+
+    createSystemNeuralNetworkInputTEST(&mut input_nn);
+    createNNSystem(&mut system_nn, &mut input_nn);
+
+    system_nn.max_sys = 40.0;
+    system_nn.min_sys = -5.0;
+    
+    let chance = 0.1;
+    let generations = 50000;
+
+    let best_index = [0, 5];
+    let rand_one_index = [5, 43];
+    let rand_two_index = [43, 70];
+    let rand_rand_index = [70, 95];
+    let rand_randc_index = [95, 100];
+
+    let size_one_index = 38;
+    let size_two_index = 27;
+
+    let best_nums = vec![2, 2, 1];
+    let best_count = 3;
+
+    let rest_cros = vec![1, 2];
+
+    createDeNormalization(&mut system_nn);
+
+    let count = system_nn.neural_network.countOfValues;
+    let max = vec![1.0; count];
+    let min = vec![-1.0; count];
+    
+    let mut input_pop = InputPop::default();
+    let mut pop = Pop::default();
+    createInputPop(&mut input_pop, &max, &min, &[100, count as i32]);
+    createStructure(&mut input_pop, &mut pop);
+
+    let mut fit = vec![0.0; pop.rows];
+
+    let mut input_random = InputPop::default();
+    let mut pop_random = Pop::default();
+    createInputPop(&mut input_random, &max, &min, &[25, count as i32]);
+    createStructure(&mut input_random, &mut pop_random);
+
+    let mut input_close_random = InputPop::default();
+    let mut pop_close_random = Pop::default();
+    createInputPop(&mut input_close_random, &max, &min, &[5, count as i32]);
+    createStructure(&mut input_close_random, &mut pop_close_random);
+
+    for i in 0..generations {
+        nnFitFunction(&mut pop, &mut fit, &mut system_nn);
+        let best_fit = getMinFit(&fit);
+        writeln!(csv_file, "{}", fit[best_fit]).unwrap();
+
+        if i % 10 == 0 || i > 9990 {
+            println!("GENERATION[{:05}] - fit: {}  - {}", i, fit[best_fit], best_fit);
+        }
+
+        let mut best_pop = Pop::default();
+        let mut rand_pop_one = Pop::default();
+        let mut rand_pop_two = Pop::default();
+
+        selbest(&fit, &pop, &mut best_pop, &best_nums, 1);
+        selturn(&pop, &fit, &mut rand_pop_one, size_one_index);
+        selturn(&pop, &fit, &mut rand_pop_two, size_two_index);
+
+        let mut rest_cros_one = vec![5, 10, 15, 20, 25];
+        let mut rest_cros_two = vec![10, 15, 27, 35];
+
+        crosov(&mut rand_pop_one, &mut rest_cros_one, 2);
+        crosov(&mut rand_pop_two, &mut rest_cros_two, 4);
+
+        mutx(&mut rand_pop_one, chance);
+        mutx(&mut rand_pop_two, chance);
+
+        closeRandomSizeGeneration(&mut pop_close_random, &pop.pop[best_fit]);
+        generateRandomPopulation(&mut pop_random);
+        generateRandomPopulation(&mut pop_close_random);
+
+        if (i % 100 == 0 || i == generations - 1) && i != 0 {
+            let mut csv_file2 = BufWriter::new(File::create("TOOLBOX/PYTHON/input/data_nn.csv").unwrap());
+            writeln!(csv_file2, "CV,RV, System Output, Corrected Output").unwrap();
+
+            let mut csv_file3 = BufWriter::new(OpenOptions::new()
+                .create(true).append(true).open("TOOLBOX/PYTHON/input/best_nn.txt").unwrap());
+            write!(csv_file3, "[").unwrap();
+            for val in &pop.pop[0] {
+                write!(csv_file3, "{}, ", val).unwrap();
+            }
+            writeln!(csv_file3, "]").unwrap();
+
+            fillMatrixesNN(&mut system_nn.neural_network, &pop.pop[best_fit]);
+            makeSimulationOfSignalNN(&mut system_nn, &mut csv_file2, true);
+
+            println!("BEST NN: FIT: {} Count: {}", system_nn.fit, system_nn.max_counter);
+            // plotGraphNN();
+        }
+
+        placePartOfPop(&mut pop, &best_pop, &best_index);
+        placePartOfPop(&mut pop, &rand_pop_one, &rand_one_index);
+        placePartOfPop(&mut pop, &rand_pop_two, &rand_two_index);
+        placePartOfPop(&mut pop, &pop_random, &rand_rand_index);
+        placePartOfPop(&mut pop, &pop_close_random, &rand_randc_index);
+
+        clearPopulation(&mut best_pop);
+        clearPopulation(&mut rand_pop_one);
+        clearPopulation(&mut rand_pop_two);
+    }
+
+    clearPopulation(&mut pop);
+    clearPopulation(&mut pop_random);
+    clearNNSystem(&mut system_nn);
+===== /workspace/rbench_reference/src/bin/test_genetic_operations.rs =====
+use Genetic_neural_network_for_simple_control::genetic_operations::{selbest, selrand, selturn, crosov, mutx};
+use Genetic_neural_network_for_simple_control::population::{createInputPop, createStructure, clearPopulation, Pop, InputPop};
+
+pub fn createPopulation(population: &mut Pop, size: &[i32]){
+    let mut input : InputPop = InputPop::default();
+    let min = vec![0.0, 50.0, -20.0];
+    let max = vec![10.0, 100.0, -10.0];
+    createInputPop(&mut input, &min, &max, size);
+    createStructure(&mut input, population);
+}
+
+#[test]
+pub fn testSelbest()  {
+    println!("\x1b[1m=======TEST SELBEST STARTED=======\x1b[0m");
+
+    let mut new_population_higher = Pop::default();
+    let mut new_population_lower = Pop::default();
+    let mut population = Pop::default();
+
+    let fit = vec![-1.0, 15.0, -3.0];
+    let selects = vec![2, 2];
+    let size = vec![3, 3];
+    let fit_length = 3;
+    let selects_length = 2;
+
+    createPopulation(&mut population, &size);
+
+    selbest(&fit, &population, &mut new_population_higher, &selects, 0);
+    selbest(&fit, &population, &mut new_population_lower, &selects , 1);
+
+    assert_eq!(new_population_higher.rows, 4);
+    assert_eq!(new_population_lower.rows, 4);
+
+    clearPopulation(&mut population);
+    clearPopulation(&mut new_population_higher);
+    clearPopulation(&mut new_population_lower);
+
+    println!("\x1b[1m\x1b[32m=======TEST SELBEST SUCCESSFUL=======\x1b[0m");
+    
+}
+
+#[test]
+pub fn testCrossov() {
+    println!("\x1b[1m=======TEST CROSSOV STARTED=======\x1b[0m");
+
+    let mut population = Box::new(Pop::default());
+    let size = vec![2, 9];
+    let row1 = vec![1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0];
+    let row2 = vec![10.0, 20.0, 30.0, 40.0, 50.0, 60.0, 70.0, 80.0, 90.0];
+    let row1_check = vec![1.0, 2.0, 30.0, 40.0, 50.0, 6.0, 7.0, 80.0, 90.0];
+    let row2_check = vec![10.0, 20.0, 3.0, 4.0, 5.0, 60.0, 70.0, 8.0, 9.0];
+
+    createPopulation(&mut population, &size);
+    population.pop[0] = row1.clone();
+    population.pop[1] = row2.clone();
+
+    let mut selects = vec![2, 5, 7];
+    crosov(&mut population, &mut selects, 3);
+
+    assert_eq!(population.pop[0], row1_check);
+    assert_eq!(population.pop[1], row2_check);
+
+    clearPopulation(&mut population);
+
+    println!("\x1b[1m\x1b[32m=======TEST CROSSOV SUCCESSFUL=======\x1b[0m");
+    
+}
+
+#[test]
+pub fn testMutx()  {
+    println!("\x1b[1m=======TEST MUTX STARTED=======\x1b[0m");
+
+    let mut population = Box::new(Pop::default());
+    let size = vec![2, 9];
+    createPopulation(&mut population, &size);
+
+    mutx(&mut population, 0.3);
+
+    clearPopulation(&mut population);
+
+    println!("\x1b[1m\x1b[32m=======TEST MUTX SUCCESSFUL=======\x1b[0m");
+    
+}
+
+#[test]
+pub fn testSelrand() {
+    println!("\x1b[1m=======TEST SELRAND STARTED=======\x1b[0m");
+
+    let mut population = Pop::default();
+    let mut new_population = Pop::default();
+    let size = vec![5, 3];
+    let rows = 10;
+
+    createPopulation(&mut population, &size);
+    selrand(&mut population, &mut new_population, rows);
+
+    assert_eq!(new_population.rows, rows as usize);
+
+    clearPopulation(&mut population);
+    clearPopulation(&mut new_population);
+
+    println!("\x1b[1m\x1b[32m=======TEST SELRAND SUCCESSFUL=======\x1b[0m");
+    
+}
+
+#[test]
+pub fn testSelturn() {
+    println!("\x1b[1m=======TEST SELTURN STARTED=======\x1b[0m");
+
+    let mut population = Pop::default();
+    let mut new_population = Pop::default();
+    let size = vec![3, 3];
+    let rows = 10;
+    let fit = vec![0.9, 0.3, 0.5];
+
+    createPopulation(&mut population, &size);
+    selturn(&population, &fit, &mut new_population, rows);
+
+    assert_eq!(new_population.rows, rows as usize);
+
+    clearPopulation(&mut population);
+    clearPopulation(&mut new_population);
+
+    println!("\x1b[1m\x1b[32m=======TEST SELTURN SUCCESSFUL=======\x1b[0m");
+    
+}
+pub fn main(){}===== /workspace/rbench_reference/src/bin/test_matrixes.rs =====
+use Genetic_neural_network_for_simple_control::matrix_math::{Matrix, matrixSubstAdd, matrixMultiply, matrixAllValuesFormula};
+use Genetic_neural_network_for_simple_control::activation_fnc::*;
+
+pub fn from_vec(matrix: Vec<Vec<f32>>) -> Matrix {
+    let rows = matrix.len();
+    let cols = if rows > 0 { matrix[0].len() } else { 0 };
+    Matrix {
+        matrix,
+        sizes: vec![rows, cols],
+    }
+}
+
+
+fn compare_matrices(a: &Matrix, b: &Matrix) -> bool {
+    if a.matrix.len() != b.matrix.len() || a.matrix[0].len() != b.matrix[0].len() {
+        return false;
+    }
+    for x in 0..a.matrix.len() {
+        for y in 0..a.matrix[x].len() {
+            if (a.matrix[x][y] - b.matrix[x][y]).abs() > f32::EPSILON {
+                return false;
+            }
+        }
+    }
+    true
+}
+#[test]
+pub fn test_matrix_add_sub()  {
+    println!("\x1b[1m=======TEST MATRIX ADD SUB STARTED=======\x1b[0m");
+
+    let a = from_vec(vec![vec![1.0, 1.0], vec![1.0, 1.0]]);
+    let b = from_vec(vec![vec![1.0, 1.0], vec![1.0, 1.0]]);
+
+    let desired_add = from_vec(vec![vec![2.0, 2.0], vec![2.0, 2.0]]);
+    let desired_sub = from_vec(vec![vec![0.0, 0.0], vec![0.0, 0.0]]);
+
+    let add = matrixSubstAdd(&a, &b, 1);
+    let sub = matrixSubstAdd(&a, &b, 0);
+
+    // println!("Result of the add:");
+    // add.print();
+    // println!("Result of the sub:");
+    // sub.print();
+
+    let ok_add = compare_matrices(&add, &desired_add);
+    let ok_sub = compare_matrices(&sub, &desired_sub);
+
+    assert!(ok_add);
+    assert!(ok_sub);
+
+    println!("\x1b[1m\x1b[32m=======TEST MATRIX ADD SUB SUCCESSFUL=======\x1b[0m");
+    
+}
+#[test]
+pub fn test_matrix_multiply() {
+    println!("\x1b[1m=======TEST MATRIX MULTIPLY STARTED=======\x1b[0m");
+
+    let a = from_vec(vec![vec![1.0, 1.0, 1.0], vec![2.0, 2.0, 2.0]]);
+    let b = from_vec(vec![vec![1.0, 2.0], vec![1.0, 2.0], vec![1.0, 2.0]]);
+    let desired = from_vec(vec![vec![3.0, 6.0], vec![6.0, 12.0]]);
+
+    let result = matrixMultiply(&a, &b);
+    assert!(compare_matrices(&result, &desired));
+
+    println!("\x1b[1m\x1b[32m=======TEST MATRIX MULTIPLY SUCCESSFUL=======\x1b[0m");
+}
+#[test]
+pub fn test_matrix_all_values_formula()  {
+    println!("\x1b[1m=======TEST MATRIX ALL VALUES FORMULA STARTED=======\x1b[0m");
+
+    let mut data_tanh = from_vec(vec![vec![1.0, 1.0], vec![2.0, 2.0]]);
+    let mut data_sigm = from_vec(vec![vec![1.0, 1.0], vec![2.0, 2.0]]);
+
+    let func_ptr_tanh = tangenth;
+    let func_ptr_sigm = sigmoid;
+
+    let desired_tanh = from_vec(vec![
+        vec![func_ptr_tanh(1.0), func_ptr_tanh(1.0)],
+        vec![func_ptr_tanh(2.0), func_ptr_tanh(2.0)],
+    ]);
+    let desired_sigm = from_vec(vec![
+        vec![func_ptr_sigm(1.0), func_ptr_sigm(1.0)],
+        vec![func_ptr_sigm(2.0), func_ptr_sigm(2.0)],
+    ]);
+
+    matrixAllValuesFormula(&mut data_tanh, func_ptr_tanh);
+    matrixAllValuesFormula(&mut data_sigm, func_ptr_sigm);
+
+    let ok_tanh = compare_matrices(&data_tanh, &desired_tanh);
+    let ok_sigm = compare_matrices(&data_sigm, &desired_sigm);
+
+    assert!(ok_tanh);
+    assert!(ok_sigm);
+
+    println!("\x1b[1m\x1b[32m=======TEST MATRIX ALL VALUES FORMULA SUCCESSFUL=======\x1b[0m");
+}
+
+pub fn test_matrix_from_pointer() {
+    println!("\x1b[1m=======TEST MATRIX FROM POINTER STARTED=======\x1b[0m");
+
+    let desired = from_vec(vec![
+        vec![1.0, 2.0],
+        vec![3.0, 4.0],
+        vec![5.0, 6.0],
+    ]);
+
+    let data = Matrix::createMatrixFromPointer(&[1.0, 2.0, 3.0, 4.0, 5.0, 6.0], vec![3, 2]);
+
+    // println!("Result of the matrix from pointer:");
+    // data.print();
+
+    assert!(compare_matrices(&data, &desired));
+
+    println!("\x1b[1m\x1b[32m=======TEST MATRIX FROM POINTER SUCCESSFUL=======\x1b[0m");
+    
+}
+#[test]
+pub fn test_matrix_fully_copy_matrix() {
+    println!("\x1b[1m=======TEST MATRIX FULLY COPY STARTED=======\x1b[0m");
+
+    let original = from_vec(vec![
+        vec![1.0, 2.0],
+        vec![3.0, 4.0],
+        vec![5.0, 6.0],
+    ]);
+    let copied = original.clone();
+
+    assert!(compare_matrices(&original, &copied));
+    println!("\x1b[1m\x1b[32m=======TEST MATRIX FULLY COPY SUCCESSFUL=======\x1b[0m");
+    
+}
+pub fn main(){}===== /workspace/rbench_reference/src/bin/test_model_system.rs =====
+use Genetic_neural_network_for_simple_control::model_system::{
+    createNNSystem, 
+    createDeNormalization, 
+    makeSimulationOfSignalNN, 
+    cleanNNSystem
+};
+use Genetic_neural_network_for_simple_control::neural_network::{
+    fillMatrixesNN,
+    NNInput
+};
+use Genetic_neural_network_for_simple_control::population::{
+    createInputPop, 
+    createStructure, 
+    clearPopulation, 
+    Pop, 
+    InputPop
+};
+use Genetic_neural_network_for_simple_control::model_system::{
+    SystemNN
+};
+
+use std::fs::File;
+use std::io::BufWriter;
+use std::io::Write;
+
+fn create_system_neural_network_input(input: &mut NNInput, check: i32) {
+    input.neuronsSize = if check == 1 {
+        vec![1, 3, 2, 1]
+    } else {
+        vec![1, 5, 5, 1]
+    };
+
+    input.layerNumber = 4;
+    input.layerType = vec![0; input.layerNumber];
+    input.sdNumber = 0;
+}
+
+#[test]
+pub fn testSystemCreate()  {
+    println!("\x1b[1m=======TEST SYSTEM NN CREATE STARTED=======\x1b[0m");
+
+    let mut input = NNInput::default();
+    let mut system_nn = Box::new(SystemNN::default());
+
+    create_system_neural_network_input(&mut input, 1);
+    createNNSystem(&mut system_nn, &mut input);
+
+    system_nn.max_sys = 50.0;
+    system_nn.min_sys = -50.0;
+
+    createDeNormalization(&mut system_nn);
+
+    let mut input_pop = Box::new(InputPop::default());
+    let mut pop = Box::new(Pop::default());
+    let count = system_nn.neural_network.as_ref().countOfValues;
+    let size = vec![1, count];
+    let max = vec![1.0; count];
+    let min = vec![0.0; count];
+
+    let mut csv_file = BufWriter::new( File::create("./input/data_nn.csv").unwrap() );
+    
+    writeln!(csv_file, "CV,RV");
+    
+
+    createInputPop(&mut input_pop, &max, &min, &size.iter().map(|&x| x as i32).collect::<Vec<i32>>());
+    createStructure(&mut input_pop, &mut pop);
+
+    fillMatrixesNN(system_nn.neural_network.as_mut(), &pop.pop[0]);
+    makeSimulationOfSignalNN(&mut system_nn, &mut csv_file, true);
+
+    let mut csv_file2 = File::create("./input/data_nn_fit.csv").expect("Failed to create fit file");
+    writeln!(csv_file2, "best").unwrap();
+    writeln!(csv_file2, "{}", system_nn.fit).unwrap();
+
+
+    cleanNNSystem(&mut system_nn.as_mut());
+    clearPopulation(&mut pop.as_mut());
+
+    println!("\x1b[1m\x1b[32m=======TEST SYSTEM NN CREATE SUCCESSFUL=======\x1b[0m");
+    
+}
+fn main(){}===== /workspace/rbench_reference/src/bin/test_neural_network.rs =====
+// This is a skeleton Rust test file representing the translated structure
+// from the C code. Actual implementation for each function assumed to exist
+
+use Genetic_neural_network_for_simple_control::neural_network::*;
+use Genetic_neural_network_for_simple_control::population::*;
+use Genetic_neural_network_for_simple_control::matrix_math::*;
+
+fn check_matrixes_nn(neural_network: &NN, population: &[f32]) -> bool {
+    let mut global_index = 0;
+
+    for i in 0..(neural_network.layerNumber - 1) {
+        let aw = &neural_network.AW[i];
+        for x in 0..aw.sizes[0] {
+            for y in 0..aw.sizes[1] {
+                if aw.matrix[x][y] != population[global_index] {
+                    return false;
+                }
+                global_index += 1;
+            }
+        }
+
+        if i < neural_network.layerNumber - 2 {
+            let bw = &neural_network.BW[i];
+            for x in 0..bw.sizes[0] {
+                for y in 0..bw.sizes[1] {
+                    if bw.matrix[x][y] != population[global_index] {
+                        return false;
+                    }
+                    global_index += 1;
+                }
+            }
+        }
+    }
+
+    true
+}
+
+fn create_simple_neural_network(neural_network: &mut NN, check: i32) {
+    let mut input = NNInput {
+        neuronsSize: vec![1, 0, 0, 1],
+        layerNumber: 4,
+        normalizationMatrix: [vec![100.0], vec![0.0]],
+        denormalizationMatrix: [vec![100.0], vec![0.0]],
+        layerType: vec![0, 1, 0, 0],
+        sdNumber: 1,
+    };
+
+    if check == 1 {
+        input.neuronsSize[1] = 3;
+        input.neuronsSize[2] = 2;
+    } else {
+        input.neuronsSize[1] = 5;
+        input.neuronsSize[2] = 5;
+    }
+
+    createNeuralNetwork(input, neural_network);
+}
+
+#[test]
+pub fn test_neural_network_create()  {
+    println!("\x1b[1m=======TEST NEURAL NETWORK CREATE STARTED=======\x1b[0m");
+
+    let mut neural_network = NN::default();
+    let check = 0;
+    create_simple_neural_network(&mut neural_network, check);
+
+    let neuronsSize = vec![1, 5, 5, 1];
+    let layerType = vec![0, 1, 0, 0];
+    let normalization_max = vec![100.0];
+    let normalization_min = vec![0.0];
+    let denormalization_max = vec![100.0];
+    let denormalization_min = vec![0.0];
+    let sd_types_one = vec![0, 0, 1, 2, 2];
+    let row_sd = vec![5, 1];
+
+    assert_eq!(neural_network.neuronsSize, neuronsSize);
+    assert_eq!(neural_network.layerType, layerType);
+    assert_eq!(neural_network.normalizationMatrix[0], normalization_max);
+    assert_eq!(neural_network.normalizationMatrix[1], normalization_min);
+    assert_eq!(neural_network.denormalizationMatrix[0], denormalization_max);
+    assert_eq!(neural_network.denormalizationMatrix[1], denormalization_min);
+    assert_eq!(neural_network.sdNeuronsTypes[0], sd_types_one);
+    assert_eq!(neural_network.SDMemory[0].sizes, row_sd);
+
+    clearNeuralNetwork(neural_network);
+
+    println!("\x1b[1m\x1b[32m=======TEST NEURAL NETWORK CREATE SUCCESSFUL=======\x1b[0m");
+    
+}
+
+#[test]
+pub fn test_fill_matrixes_nn() {
+    println!("\x1b[1m=======TEST FILL MATRIXES NN STARTED=======\x1b[0m");
+
+    let mut neural_network = NN::default();
+    create_simple_neural_network(&mut neural_network, 0);
+    let count = neural_network.countOfValues;
+
+    let mut pop = Pop::default();
+    let mut input_pop = InputPop::default();
+    createInputPop(&mut input_pop, &vec![10.0; count], &vec![0.0; count], &[1, count as i32]);
+    createStructure(&mut input_pop, &mut pop);
+
+    fillMatrixesNN(&mut neural_network, &pop.pop[0]);
+    let flag = check_matrixes_nn(&neural_network, &pop.pop[0]);
+
+    assert!(flag);
+
+    clearNeuralNetwork(neural_network);
+    clearPopulation(&mut pop);
+
+    println!("\x1b[1m\x1b[32m=======TEST FILL MATRIXES NN SUCCESSFUL=======\x1b[0m");
+    
+}
+
+#[test]
+pub fn test_de_normalization_process() {
+    println!("\x1b[1m=======TEST DE_NORMALIZATION PROCESS STARTED=======\x1b[0m");
+
+    let mut neural_network = NN::default();
+    create_simple_neural_network(&mut neural_network, 0);
+    let mut a = Matrix::default();
+    a.matrix = vec![vec![0.0; 1]; 1];
+    a.sizes = vec![1, 1];
+
+    a.matrix[0][0] = 50.0;
+    deNormalizationProcess(&mut neural_network, &mut a, 0);
+    assert_eq!(a.matrix[0][0], 0.0);
+
+    a.matrix[0][0] = 0.40;
+    deNormalizationProcess(&mut neural_network, &mut a, 1);
+    assert_eq!(a.matrix[0][0], 70.0);
+
+    a.matrixDelete();
+    clearNeuralNetwork(neural_network);
+
+    println!("\x1b[1m\x1b[32m=======TEST DE_NORMALIZATION PROCESS SUCCESSFUL=======\x1b[0m");
+}
+
+#[test]
+pub fn test_one_calculation() {
+    println!("\x1b[1m=======TEST ONE CALCULATION STARTED=======\x1b[0m");
+
+    let mut neural_network = NN::default();
+    create_simple_neural_network(&mut neural_network, 1);
+
+    let mut input = Matrix::default();
+    input.matrix = vec![vec![0.0; 1]; 1];
+    input.sizes = vec![1, 1];
+    input.matrix[0][0] = 70.0;
+
+    let mut output = Matrix::default();
+    output.matrix = vec![vec![0.0; 1]; 1];
+    output.sizes = vec![1, 1];
+
+    let count = neural_network.countOfValues;
+    let mut pop = Pop::default();
+    let mut input_pop = InputPop::default();
+    createInputPop(&mut input_pop, &vec![1.0; count], &vec![-1.0; count], &[1, count as i32]);
+    createStructure(&mut input_pop, &mut pop);
+
+    let pop_example = vec![0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.1, 0.2, 0.1, 0.2];
+    fillMatrixesNN(&mut neural_network, &pop_example);
+
+    oneCalculation(&mut neural_network, &mut input, &mut output);
+
+    println!("Result output:");
+    for row in &output.matrix {
+        for &val in row {
+            let rounded = (val * 10_000.0).round() / 10_000.0;
+            print!("{} ", rounded);
+        }
+        println!();
+    }
+
+    println!("Result SD memory:");
+    for row in &neural_network.SDMemory[0].matrix {
+        for &val in row {
+            print!("{} ", val);
+        }
+        println!();
+    }
+
+    clearNeuralNetwork(neural_network);
+    clearPopulation(&mut pop);
+    output.matrixDelete();
+    let flag = 1;
+    assert_eq!(flag, 1);
+    println!("\x1b[1m\x1b[32m=======TEST ONE CALCULATION SUCCESSFUL=======\x1b[0m");
+}
+
+fn main(){}
+===== /workspace/rbench_reference/src/bin/test_pid_controller.rs =====
+use Genetic_neural_network_for_simple_control::pid_controller::{createNewPidController, deletePid, makeSimulationOfSignal, PID};
+use std::fs::File;
+use std::io::Write;
+
+#[test]
+pub fn testPIDCreate() {
+    println!("\x1b[1m=======TEST PID CREATE STARTED=======\x1b[0m");
+
+    let mut pid = Box::new(PID::default());
+    createNewPidController(&mut pid);
+
+    let mut csv_file = File::create("data_pid_.csv").expect("Unable to create CSV file");
+    writeln!(csv_file, "P,I,D,CV,RV").expect("Failed to write CSV header");
+
+    pid.Kp = 1.0;
+    pid.Ki = 1.0;
+    pid.Kd = 0.0;
+
+    pid.limMax = 10.0;
+    pid.limMin = -10.0;
+
+    pid.limMaxInt = pid.limMax / 2.0;
+    pid.limMinInt = pid.limMin / 2.0;
+
+    let csv = true;
+    makeSimulationOfSignal(&mut pid, &mut csv_file, 1);
+
+    println!("{}", pid.fit);
+    
+    deletePid(&mut pid.as_mut());
+
+    let flag = 1;
+    assert_eq!(flag, 1, "Test PID Create failed");
+
+    println!("\x1b[1m\x1b[32m=======TEST PID CREATE SUCCESSFUL=======\x1b[0m");
+}
+fn main(){}===== /workspace/rbench_reference/src/bin/test_population.rs =====
+use Genetic_neural_network_for_simple_control::population::{createInputPop, createStructure, clearPopulation, Pop, InputPop};
+
+#[test]
+pub fn testPopulation() {
+    println!("\x1b[1m=======TEST POPULATION STARTED=======\x1b[0m");
+
+    let mut input = InputPop::default();
+    let mut pop = Pop::default();
+
+    let max = vec![10.0, 100.0, -10.0];
+    let min = vec![0.0, 50.0, -20.0];
+    let size = vec![3, 3];
+
+    createInputPop(&mut input, &max, &min, &size);
+    createStructure(&mut input, &mut pop);
+
+    let mut flag = true;
+
+    for i in 0..pop.cols {
+        println!("{} - {}", pop.s[0][i], pop.s[1][i]);
+        assert!(pop.s[0][i] - max[i] < f32::EPSILON || pop.s[1][i] - min[i] < f32::EPSILON);
+        
+    }
+
+    println!("Following population created:");
+    for i in 0..pop.rows {
+        for j in 0..pop.cols {
+            print!("{} ", pop.pop[i][j]);
+            if pop.pop[i][j] > pop.s[0][j] || pop.pop[i][j] < pop.s[1][j] {
+                flag = false;
+            }
+        }
+        println!();
+    }
+
+    clearPopulation(&mut pop);
+
+
+    println!("\x1b[1m\x1b[32m=======TEST POPULATION SUCCESSFUL=======\x1b[0m");
+    
+}
+fn main(){}===== /workspace/rbench_reference/src/bin/test_signal_designer.rs =====
+use Genetic_neural_network_for_simple_control::signal_designer::{Signal, cliSignalSelector, deleteSignal};
+#[test]
+pub fn testSignalCreate() {
+    println!("\x1b[1m=======TEST SIGNAL CREATE STARTED=======\x1b[0m");
+
+    let mut signal = Box::new(Signal::default());
+    cliSignalSelector(&mut signal);
+    deleteSignal(&mut signal);
+
+    let flag = 1;
+    assert_eq!(flag, 1, "Test Signal Create failed");
+
+    println!("\x1b[1m\x1b[32m=======TEST SIGNAL CREATE SUCCESSFUL=======\x1b[0m");
+}
+
+fn main() {
+ 
+}===== /workspace/rbench_reference/src/bin/test_sort.rs =====
+use Genetic_neural_network_for_simple_control::sort::quickSort;
+
+#[test]
+pub fn testQuicksort() {
+    println!("\x1b[1m=======TEST QUICK SORT STARTED=======\x1b[0m");
+
+    let length = 5;
+    let mut fit = vec![9.6, 3.4, 10.0, 4.6, 0.4];
+    let mut result: Vec<i32> = (0..length).collect();
+    let result_correct = vec![4, 1, 3, 0, 2];
+
+    quickSort(&mut fit, &mut result, length);
+
+    for i in 0..length {
+        assert_eq!(result[i as usize], result_correct[i as usize], "Mismatch at index {}: expected {}, got {}", i, result_correct[i as usize], result[i as usize]);
+    }
+
+    println!("\x1b[1m\x1b[32m=======TEST QUICK SORT SUCCESSFUL=======\x1b[0m");
+    
+}
+pub fn main(){}===== /workspace/rbench_reference/src/bin/test_system_builder.rs =====
+use Genetic_neural_network_for_simple_control::systems_builder::selectSystem;
+use Genetic_neural_network_for_simple_control::pid_controller::{deletePid, PID};
+use Genetic_neural_network_for_simple_control::signal_designer::Signal;
+#[test]
+pub fn testSelectSystem() {
+    println!("\x1b[1m=======TEST SELECT SYSTEM STARTED=======\x1b[0m");
+
+    let mut func_ptr: Option<fn(&mut [f32]) -> f32> = None;
+    let mut pid = Box::new(PID::default());
+
+    // Select the system
+    let _size = selectSystem(&mut func_ptr);
+
+    // Allocate dummy signals and system memory
+    pid.signal = Some(Box::new(Signal {
+        signal: vec![0.0],
+        dt: 0.1,
+        length: 1,
+    }));
+
+    pid.output = Some(Box::new(Signal {
+        signal: vec![0.0],
+        dt: 0.1,
+        length: 1,
+    }));
+
+    pid.dataSystem = Some(Box::new([0.0; 10]));
+
+    deletePid(pid.as_mut());
+
+    println!("\x1b[1m\x1b[32m=======TEST SELECT SYSTEM SUCCESSFUL=======\x1b[0m");
+    
+}
+fn main(){}
+</|codexB12; role: tool|>
+<|codexB13; role: assistant|>
+The interfaces are thin wrappers over a fairly stateful C design. I’m reading the original algorithms now, especially the neural-network and simulation code, because that’s where most of the translation risk sits.Executed exec_command call_cwXnAUpWQRGJnnucnYKk7Bf6
+<tool call>
+exec_command(cmd=for f in /workspace/environment/src/toolbox/general/*.c /workspace/environment/src/toolbox/genetic/*.c /workspace/environment/src/toolbox/neural/*.c /workspace/environment/src/main.c; do echo "===== $f ====="; sed -n '1,260p' "$f"; done, workdir=/workspace, yield_time_ms=1000, max_output_tokens=40000)
+</tool call>
+</|codexB13; role: assistant|>
+</|codex blocks|>
+</|transcript codex|>
+

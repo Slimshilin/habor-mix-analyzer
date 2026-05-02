@@ -1,0 +1,69 @@
+=== instance_id: uploadcare__pillow-simd-b4045cf
+=== repo: uploadcare/pillow-simd
+=== base_commit: b4045cf34ac771f106e0e12dc0c3db44c423c74b^
+=== opt_commit: b4045cf34ac771f106e0e12dc0c3db44c423c74b
+=== api: Image.resize
+=== test_count: 6
+=== created_at: 2024-08-10 19:52:06
+=== arch: x86_64
+=== instance_image_tag: latest
+
+=== install_commands ===
+uv venv --python 3.9
+source .venv/bin/activate
+which python
+python --version
+uv pip uninstall pillow
+CC="cc -mavx2" uv pip install . --reinstall
+uv pip install requests dill numpy
+
+=== setup_commands ===
+sudo apt update -y && sudo upt upgrade -y
+sudo apt-get install -y libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev
+sudo apt-get install -y libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python3-tk
+sudo apt-get install -y libharfbuzz-dev libfribidi-dev libxcb1-dev libx11-dev libssl-dev
+sudo apt install -y gcc g++ gfortran libopenblas-dev liblapack-dev pkg-config
+sudo apt-get install -y clang
+sudo apt-get install -y llvm
+sudo mkdir -p /tools/llvm/bin
+sudo ln -s $(which llvm-ar) /tools/llvm/bin/llvm-ar
+
+=== gt_commit_message ===
+SIMD Resample. unrolled SSE4 & AVX2
+
+SIMD Resample. optimize coefficients loading for horizontal pass
+
+wtf is xmax / 2
+
+optimize coefficients loading for vertical pass
+
+SIMD Resample. add parentheses around var declarations
+
+SIMD Resample. move files
+
+SIMD Resample. fix wrong usage of xmax for division compensation
+
+SIMD Resample. Correct max coefficient calculation
+
+Minimal test case:
+Image.new('RGB', (341, 60), 'pink').resize((170, 60), Image.LANCZOS).save('_out.png')
+
+=== hints_text ===
+SIMD Resample. unrolled SSE4 & AVX2
+
+SIMD Resample. optimize coefficients loading for horizontal pass
+
+wtf is xmax / 2
+
+optimize coefficients loading for vertical pass
+
+SIMD Resample. add parentheses around var declarations
+
+SIMD Resample. move files
+
+SIMD Resample. fix wrong usage of xmax for division compensation
+
+SIMD Resample. Correct max coefficient calculation
+
+Minimal test case:
+Image.new('RGB', (341, 60), 'pink').resize((170, 60), Image.LANCZOS).save('_out.png')
