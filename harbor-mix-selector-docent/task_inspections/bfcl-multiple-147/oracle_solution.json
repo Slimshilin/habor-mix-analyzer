@@ -1,0 +1,12 @@
+[
+  {
+    "map_service.get_directions": {
+      "start": "New York",
+      "end": "Los Angeles",
+      "avoid": [
+        "highways",
+        "tolls"
+      ]
+    }
+  }
+]

@@ -1,0 +1,32 @@
+Reconstructed from the test_stdout "Expected one of" line of every failing run:
+
+ground_truth = [
+  {
+    "map_service.get_directions": {
+      "start": ["New York", "New York, NY", "NYC"],
+      "end":   ["Los Angeles", "LA"],
+      "avoid": [["highways", "tolls"], ["tolls", "highways"]]
+    }
+  }
+]
+
+Reading of the auto-generated tests/evaluate.py (BfclAdapter._generate_evaluate_script):
+
+* compare_function_calls iterates the predicted list and the ground_truth list
+  in lockstep order. Lengths must match.
+* For each call, function name must match (after replacing "." with "_").
+* compare_parameters iterates ground_truth's parameter map; for each parameter
+  it tries every "acceptable_value" and accepts the prediction if any one matches
+  via values_equal. So:
+    - start: any of "New York", "New York, NY", "NYC" is accepted.
+    - end:   any of "Los Angeles", "LA" is accepted.
+    - avoid: predicted list must positionally equal one of
+             ["highways", "tolls"]  OR  ["tolls", "highways"]
+             (positional element-by-element comparison via values_equal).
+* values_equal handles direct equality, numeric coercion, case-insensitive
+  string equality, and recursively compares lists element-by-element with
+  matching length. There is NO set-equality / sorted-list comparison; the only
+  reason both orderings of "avoid" are accepted is that both are explicitly
+  listed in the BFCL ground truth as separate acceptable values.
+* values_equal also accepts pred=anything when acceptable=="" or None
+  (i.e. an empty acceptable_value functions as "this parameter is optional").

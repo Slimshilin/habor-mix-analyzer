@@ -1,0 +1,8 @@
+{
+  "question": "For the cities we can be confident NEXTDC added additional built capacity in calendar year 2023, how many data centers does Digital Realty have in these cities? As your answer list the cities and number of data centers in ascending order of the amount of built capacity added by NEXTDC in those cities in calendar year 2023.",
+  "expected_answer": "Melbourne - 2, Sydney - 4",
+  "question_id": "18",
+  "document_category": "Company_Documents",
+  "document_set_id": "(set ID — 3 documents)",
+  "num_documents": 3
+}
