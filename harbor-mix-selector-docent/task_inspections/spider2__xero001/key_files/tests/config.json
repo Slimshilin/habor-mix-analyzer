@@ -1,0 +1,21 @@
+{
+  "instance_id": "xero001",
+  "result_db": "/workspace/xero.duckdb",
+  "gold_db": "/tests/gold.duckdb",
+  "condition_tabs": [
+    "xero__balance_sheet_report"
+  ],
+  "condition_cols": [
+    [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ]
+  ],
+  "ignore_orders": [
+    true
+  ]
+}
