@@ -1,0 +1,100 @@
+{
+  "columns": [
+    "id",
+    "agent_run_id",
+    "name",
+    "metadata_json"
+  ],
+  "rows": [
+    [
+      "494c82df-6873-415c-a3bc-94119e47b2ef",
+      "0241a42d-ecf1-4abd-9b0b-c179312732f8",
+      "terminus-2",
+      "{\"agent_name\": \"terminus-2\", \"agent_version\": \"2.0.0\", \"atif_first_timestamp\": \"2026-04-09T11:54:47.248489+00:00\", \"default_model_name\": \"gemini/gemini-3.1-pro-preview\"}"
+    ],
+    [
+      "8637c708-6d8c-497d-9f85-3c54f2a28a10",
+      "0439140e-1e64-4868-8548-56cd6e8e1173",
+      "codex",
+      "{\"agent_name\": \"codex\", \"agent_version\": \"0.115.0\", \"atif_first_timestamp\": \"2026-04-10T22:34:42.502Z\", \"default_model_name\": \"gpt-5.4\"}"
+    ],
+    [
+      "bbb452e1-6c43-45c4-98f4-9c5bd33f09ab",
+      "0d33cc9e-a99c-4e7a-abcf-d22432e502e6",
+      "terminus-2",
+      "{\"agent_name\": \"terminus-2\", \"agent_version\": \"2.0.0\", \"atif_first_timestamp\": \"2026-04-09T03:58:32.345715+00:00\", \"default_model_name\": \"openai/gpt-5.4\"}"
+    ],
+    [
+      "e479cb61-64ea-440a-bc52-f2ea74ce0d19",
+      "136e3a42-7cbb-4094-8071-66031ecf4900",
+      "codex",
+      "{\"agent_name\": \"codex\", \"agent_version\": \"0.115.0\", \"atif_first_timestamp\": \"2026-04-09T12:10:24.851Z\", \"default_model_name\": \"gpt-5.4\"}"
+    ],
+    [
+      "155a170d-c383-4fa7-a8a2-c438c4d916e6",
+      "26162475-bab4-46b0-9979-fddb5e560f6a",
+      "terminus-2",
+      "{\"agent_name\": \"terminus-2\", \"agent_version\": \"2.0.0\", \"atif_first_timestamp\": \"2026-04-10T06:48:33.524181+00:00\", \"default_model_name\": \"anthropic/claude-opus-4-6\"}"
+    ],
+    [
+      "6cd41538-ede8-422d-8f14-6f2c92ca2092",
+      "394234e2-65bf-4279-9099-7b715da9a50c",
+      "terminus-2",
+      "{\"agent_name\": \"terminus-2\", \"agent_version\": \"2.0.0\", \"atif_first_timestamp\": \"2026-04-22T00:57:42.044594+00:00\", \"default_model_name\": \"anthropic/claude-opus-4-6\"}"
+    ],
+    [
+      "012dc023-cef7-4608-9d8b-a490b72fc407",
+      "647609d6-c930-410b-a385-c5d67aa6df8b",
+      "terminus-2",
+      "{\"agent_name\": \"terminus-2\", \"agent_version\": \"2.0.0\", \"atif_first_timestamp\": \"2026-04-09T22:24:11.371069+00:00\", \"default_model_name\": \"gemini/gemini-3.1-pro-preview\"}"
+    ],
+    [
+      "53bd704b-24e5-41af-aef6-d39c4b404d18",
+      "6cefc9fa-4702-4fd7-8175-c2e4dc4d1dae",
+      "terminus-2",
+      "{\"agent_name\": \"terminus-2\", \"agent_version\": \"2.0.0\", \"atif_first_timestamp\": \"2026-04-19T18:54:35.426354+00:00\", \"default_model_name\": \"anthropic/claude-opus-4-6\"}"
+    ],
+    [
+      "df6ca2d7-03d7-40f2-be8c-6e332d1823bf",
+      "8b471998-fb4f-4b00-96fa-80cf516e32ed",
+      "terminus-2",
+      "{\"agent_name\": \"terminus-2\", \"agent_version\": \"2.0.0\", \"atif_first_timestamp\": \"2026-04-10T22:32:48.016748+00:00\", \"default_model_name\": \"gemini/gemini-3.1-pro-preview\"}"
+    ],
+    [
+      "0341df98-53b5-4edc-aac1-d4f001d7f19e",
+      "92eb3056-e486-47f4-b8c6-8d358c05c841",
+      "codex",
+      "{\"agent_name\": \"codex\", \"agent_version\": \"0.115.0\", \"atif_first_timestamp\": \"2026-04-09T23:00:51.729Z\", \"default_model_name\": \"gpt-5.4\"}"
+    ],
+    [
+      "d1cb9461-6af5-4a27-a9f8-af70b209f816",
+      "a0d995b3-a4ec-459e-b510-69e095b86d99",
+      "gemini-cli",
+      "{\"agent_name\": \"gemini-cli\", \"agent_version\": \"0.34.0\", \"atif_first_timestamp\": \"2026-04-10T12:17:39.407Z\", \"default_model_name\": \"gemini-3.1-pro-preview\"}"
+    ],
+    [
+      "a975248d-750e-4df1-b977-eae669cf3df4",
+      "b3298c68-2a45-48af-a118-fa6da57935a7",
+      "terminus-2",
+      "{\"agent_name\": \"terminus-2\", \"agent_version\": \"2.0.0\", \"atif_first_timestamp\": \"2026-04-19T09:13:17.216381+00:00\", \"default_model_name\": \"openai/gpt-5.4\"}"
+    ],
+    [
+      "aa0ede4b-4aee-45c8-ba0c-68a07df65524",
+      "c0feb22b-3670-43e6-97e7-fc618c16c91a",
+      "gemini-cli",
+      "{\"agent_name\": \"gemini-cli\", \"agent_version\": \"0.34.0\", \"atif_first_timestamp\": \"2026-04-09T03:09:47.196Z\", \"default_model_name\": \"gemini-3.1-pro-preview\"}"
+    ],
+    [
+      "9e64d858-2bad-4e1b-9103-7b1b8c90f0cf",
+      "cf63bf46-8e82-4db1-8b00-fbde27ac2f93",
+      "terminus-2",
+      "{\"agent_name\": \"terminus-2\", \"agent_version\": \"2.0.0\", \"atif_first_timestamp\": \"2026-04-10T14:11:25.373310+00:00\", \"default_model_name\": \"openai/gpt-5.4\"}"
+    ],
+    [
+      "599efab5-8d87-4173-bb95-9e3cd5f14d94",
+      "fcfe3b7f-6127-4c89-a161-32ced1b3ad59",
+      "gemini-cli",
+      "{\"agent_name\": \"gemini-cli\", \"agent_version\": \"0.34.0\", \"atif_first_timestamp\": \"2026-04-23T19:46:49.963Z\", \"default_model_name\": \"gemini-3.1-pro-preview\"}"
+    ]
+  ]
+}

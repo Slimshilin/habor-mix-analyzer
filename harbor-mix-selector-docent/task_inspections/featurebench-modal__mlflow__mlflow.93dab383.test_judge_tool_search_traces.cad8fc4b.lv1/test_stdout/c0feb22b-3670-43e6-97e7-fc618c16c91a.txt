@@ -1,0 +1,186 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Obtaining file:///testbed
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: Flask-CORS<7 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (6.0.1)
+Requirement already satisfied: Flask<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.1.2)
+Requirement already satisfied: alembic!=1.10.0,<2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.17.2)
+Requirement already satisfied: cachetools<7,>=5.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (6.2.2)
+Requirement already satisfied: click<9,>=7.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (8.3.1)
+Requirement already satisfied: cloudpickle<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.1.2)
+Requirement already satisfied: cryptography<47,>=43.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (46.0.3)
+Requirement already satisfied: databricks-sdk<1,>=0.20.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.73.0)
+Requirement already satisfied: docker<8,>=4.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (7.1.0)
+Requirement already satisfied: fastapi<1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.121.2)
+Requirement already satisfied: gitpython<4,>=3.1.9 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.1.45)
+Requirement already satisfied: graphene<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.4.3)
+Requirement already satisfied: gunicorn<24 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (23.0.0)
+Requirement already satisfied: huey<3,>=2.5.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.5.4)
+Requirement already satisfied: importlib_metadata!=4.7.0,<9,>=3.7.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (8.7.0)
+Requirement already satisfied: matplotlib<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.10.7)
+Requirement already satisfied: numpy<3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.3.3)
+Requirement already satisfied: opentelemetry-api<3,>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.38.0)
+Requirement already satisfied: opentelemetry-proto<3,>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.38.0)
+Requirement already satisfied: opentelemetry-sdk<3,>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.38.0)
+Requirement already satisfied: packaging<26 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (25.0)
+Requirement already satisfied: pandas<3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.3.3)
+Requirement already satisfied: protobuf<7,>=3.12.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (5.29.5)
+Requirement already satisfied: pyarrow<23,>=4.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (22.0.0)
+Requirement already satisfied: pydantic<3,>=2.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.12.4)
+Requirement already satisfied: python-dotenv<2,>=0.19.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.2.1)
+Requirement already satisfied: pyyaml<7,>=5.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (6.0.3)
+Requirement already satisfied: requests<3,>=2.17.3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.32.5)
+Requirement already satisfied: scikit-learn<2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.7.2)
+Requirement already satisfied: scipy<2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.16.3)
+Requirement already satisfied: sqlalchemy<3,>=1.4.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.0.44)
+Requirement already satisfied: sqlparse<1,>=0.4.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.5.3)
+Requirement already satisfied: typing-extensions<5,>=4.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (4.15.0)
+Requirement already satisfied: uvicorn<1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.38.0)
+Requirement already satisfied: Mako in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from alembic!=1.10.0,<2->mlflow==3.6.1.dev0) (1.3.10)
+Requirement already satisfied: cffi>=2.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from cryptography<47,>=43.0.0->mlflow==3.6.1.dev0) (2.0.0)
+Requirement already satisfied: google-auth~=2.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (2.43.0)
+Requirement already satisfied: urllib3>=1.26.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from docker<8,>=4.0.0->mlflow==3.6.1.dev0) (2.5.0)
+Requirement already satisfied: starlette<0.50.0,>=0.40.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from fastapi<1->mlflow==3.6.1.dev0) (0.49.3)
+Requirement already satisfied: annotated-doc>=0.0.2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from fastapi<1->mlflow==3.6.1.dev0) (0.0.4)
+Requirement already satisfied: blinker>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (1.9.0)
+Requirement already satisfied: itsdangerous>=2.2.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (2.2.0)
+Requirement already satisfied: jinja2>=3.1.2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (3.1.6)
+Requirement already satisfied: markupsafe>=2.1.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (2.1.5)
+Requirement already satisfied: werkzeug>=3.1.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (3.1.3)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from gitpython<4,>=3.1.9->mlflow==3.6.1.dev0) (4.0.12)
+Requirement already satisfied: smmap<6,>=3.0.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from gitdb<5,>=4.0.1->gitpython<4,>=3.1.9->mlflow==3.6.1.dev0) (5.0.2)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (0.4.2)
+Requirement already satisfied: rsa<5,>=3.1.4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (4.9.1)
+Requirement already satisfied: graphql-core<3.3,>=3.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from graphene<4->mlflow==3.6.1.dev0) (3.2.7)
+Requirement already satisfied: graphql-relay<3.3,>=3.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from graphene<4->mlflow==3.6.1.dev0) (3.2.0)
+Requirement already satisfied: python-dateutil<3,>=2.7.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from graphene<4->mlflow==3.6.1.dev0) (2.9.0.post0)
+Requirement already satisfied: zipp>=3.20 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from importlib_metadata!=4.7.0,<9,>=3.7.0->mlflow==3.6.1.dev0) (3.23.0)
+Requirement already satisfied: contourpy>=1.0.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (1.4.9)
+Requirement already satisfied: pillow>=8 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (11.3.0)
+Requirement already satisfied: pyparsing>=3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (3.2.5)
+Requirement already satisfied: opentelemetry-semantic-conventions==0.59b0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from opentelemetry-sdk<3,>=1.9.0->mlflow==3.6.1.dev0) (0.59b0)
+Requirement already satisfied: pytz>=2020.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pandas<3->mlflow==3.6.1.dev0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pandas<3->mlflow==3.6.1.dev0) (2025.2)
+Requirement already satisfied: annotated-types>=0.6.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pydantic<3,>=2.0.0->mlflow==3.6.1.dev0) (0.7.0)
+Requirement already satisfied: pydantic-core==2.41.5 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pydantic<3,>=2.0.0->mlflow==3.6.1.dev0) (2.41.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pydantic<3,>=2.0.0->mlflow==3.6.1.dev0) (0.4.2)
+Requirement already satisfied: six>=1.5 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from python-dateutil<3,>=2.7.0->graphene<4->mlflow==3.6.1.dev0) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from requests<3,>=2.17.3->mlflow==3.6.1.dev0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from requests<3,>=2.17.3->mlflow==3.6.1.dev0) (3.11)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from requests<3,>=2.17.3->mlflow==3.6.1.dev0) (2025.11.12)
+Requirement already satisfied: pyasn1>=0.1.3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from rsa<5,>=3.1.4->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (0.6.1)
+Requirement already satisfied: joblib>=1.2.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from scikit-learn<2->mlflow==3.6.1.dev0) (1.5.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from scikit-learn<2->mlflow==3.6.1.dev0) (3.6.0)
+Requirement already satisfied: greenlet>=1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from sqlalchemy<3,>=1.4.0->mlflow==3.6.1.dev0) (3.2.4)
+Requirement already satisfied: anyio<5,>=3.6.2 in /opt/miniconda3/envs/testbed/lib/python
+
+... [+117311 chars elided] ...
+
+------------------
+2026/04/09 03:16:12 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/04/09 03:16:12 INFO mlflow.store.db.utils: Updating database tables
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade  -> 451aebb31d03, add metric step
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 451aebb31d03 -> 90e64c465722, migrate user column to tags
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 90e64c465722 -> 181f10493468, allow nulls for metric values
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 181f10493468 -> df50e92ffc5e, Add Experiment Tags Table
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade df50e92ffc5e -> 7ac759974ad8, Update run tags with larger limit
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 7ac759974ad8 -> 89d4b8295536, create latest metrics table
+2026-04-09 03:16:12 INFO  [89d4b8295536_create_latest_metrics_table_py] Migration complete!
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 89d4b8295536 -> 2b4d017a5e9b, add model registry tables to db
+2026-04-09 03:16:12 INFO  [2b4d017a5e9b_add_model_registry_tables_to_db_py] Adding registered_models and model_versions tables to database.
+2026-04-09 03:16:12 INFO  [2b4d017a5e9b_add_model_registry_tables_to_db_py] Migration complete!
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 2b4d017a5e9b -> cfd24bdc0731, Update run status constraint with killed
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade cfd24bdc0731 -> 0a8213491aaa, drop_duplicate_killed_constraint
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 0a8213491aaa -> 728d730b5ebd, add registered model tags table
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 728d730b5ebd -> 27a6a02d2cf1, add model version tags table
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 27a6a02d2cf1 -> 84291f40a231, add run_link to model_version
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 84291f40a231 -> a8c4a736bde6, allow nulls for run_id
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade a8c4a736bde6 -> 39d1c3be5f05, add_is_nan_constraint_for_metrics_tables_if_necessary
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 39d1c3be5f05 -> c48cb773bb87, reset_default_value_for_is_nan_in_metrics_table_for_mysql
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade c48cb773bb87 -> bd07f7e963c5, create index on run_uuid
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade bd07f7e963c5 -> 0c779009ac13, add deleted_time field to runs table
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 0c779009ac13 -> cc1f77228345, change param value length to 500
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade cc1f77228345 -> 97727af70f4d, Add creation_time and last_update_time to experiments table
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 97727af70f4d -> 3500859a5d39, Add Model Aliases table
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 3500859a5d39 -> 7f2a7d5fae7d, add datasets inputs input_tags tables
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 7f2a7d5fae7d -> 2d6e25af4d3e, increase max param val length from 500 to 8000
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 2d6e25af4d3e -> acf3f17fdcc7, add storage location field to model versions
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade acf3f17fdcc7 -> 867495a8f9d4, add trace tables
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 867495a8f9d4 -> 5b0e9adcef9c, add cascade deletion to trace tables foreign keys
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 5b0e9adcef9c -> 4465047574b1, increase max dataset schema size
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 4465047574b1 -> f5a4f2784254, increase run tag value limit to 8000
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade f5a4f2784254 -> 0584bdc529eb, add cascading deletion to datasets from experiments
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 0584bdc529eb -> 400f98739977, add logged model tables
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 400f98739977 -> 6953534de441, add step to inputs table
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 6953534de441 -> bda7b8c39065, increase_model_version_tag_value_limit
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade bda7b8c39065 -> cbc13b556ace, add V3 trace schema columns
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade cbc13b556ace -> 770bee3ae1dd, add assessments table
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 770bee3ae1dd -> a1b2c3d4e5f6, add spans table
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade a1b2c3d4e5f6 -> de4033877273, create entity_associations table
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade de4033877273 -> 1a0cddfcaa16, Add webhooks and webhook_events tables
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 1a0cddfcaa16 -> 534353b11cbc, add scorer tables
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 534353b11cbc -> 71994744cf8e, add evaluation datasets
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 71994744cf8e -> 3da73c924c2f, add outputs to dataset record
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Running upgrade 3da73c924c2f -> bf29a5ff90ea, add jobs table
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+2026-04-09 03:16:12 INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+2026/04/09 03:16:12 WARNING mlflow.genai.judges.tools.search_traces: Failed to search traces: invalid literal for int() with base 10: 'exp-456'
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 03:16:12 INFO mlflow.tracking.fluent: Active model is cleared
+============================= slowest 10 durations =============================
+0.88s call     tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_success
+0.69s setup    tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_name
+0.43s call     tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_invalid_trace_json
+0.41s call     tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_empty_results
+0.40s call     tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_with_order_by
+0.40s call     tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_default_order_by
+0.31s call     tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_partial_failure
+0.30s call     tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_search_fails
+0.29s call     tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_no_filter
+
+(1 durations < 0.005s hidden.  Use -vv to show these durations.)
+
+========================= per-file durations (sorted) ==========================
+::group::per-file durations (sorted)
+
+| Rank | File                                                  | Duration | Tests | Min    | Max    | Avg    |
+| ---- | ----------------------------------------------------- | -------- | ----- | ------ | ------ | ------ |
+| 1    | `tests/genai/judges/test_judge_tool_search_traces.py` | 5.65s    | 18    | 0.003s | 1.044s | 0.314s |
+
+::endgroup::
+
+========================= command to run failed tests ==========================
+pytest 'tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_get_definition' 'tests/genai/judges/test_judge_tool_search_traces.py::test_get_experiment_id_no_trace_location' 'tests/genai/judges/test_judge_tool_search_traces.py::test_get_experiment_id_not_mlflow_experiment' 'tests/genai/judges/test_judge_tool_search_traces.py::test_get_experiment_id_no_experiment_id' 'tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_success' 'tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_with_order_by' 'tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_default_order_by' 'tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_empty_results' 'tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_invalid_trace_json' 'tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_partial_failure' 'tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_no_filter'
+
+=========================== short test summary info ============================
+PASSED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_name
+PASSED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_convert_assessments_to_tool_types_with_expectations
+PASSED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_convert_assessments_to_tool_types_with_feedback
+PASSED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_convert_assessments_to_tool_types_with_feedback_no_error
+PASSED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_convert_assessments_to_tool_types_mixed
+PASSED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_get_experiment_id_success
+PASSED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_search_fails
+FAILED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_get_definition
+FAILED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_get_experiment_id_no_trace_location
+FAILED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_get_experiment_id_not_mlflow_experiment
+FAILED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_get_experiment_id_no_experiment_id
+FAILED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_success
+FAILED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_with_order_by
+FAILED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_default_order_by
+FAILED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_empty_results
+FAILED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_invalid_trace_json
+FAILED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_partial_failure
+FAILED | MEM 0.4/1007.0 GB | DISK 1.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_no_filter
+=================== 11 failed, 7 passed, 8 warnings in 5.74s ===================
+Reward: 0

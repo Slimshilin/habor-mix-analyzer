@@ -1,0 +1,176 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Obtaining file:///testbed
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: Flask-CORS<7 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (6.0.1)
+Requirement already satisfied: Flask<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.1.2)
+Requirement already satisfied: alembic!=1.10.0,<2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.17.2)
+Requirement already satisfied: cachetools<7,>=5.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (6.2.2)
+Requirement already satisfied: click<9,>=7.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (8.3.1)
+Requirement already satisfied: cloudpickle<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.1.2)
+Requirement already satisfied: cryptography<47,>=43.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (46.0.3)
+Requirement already satisfied: databricks-sdk<1,>=0.20.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.73.0)
+Requirement already satisfied: docker<8,>=4.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (7.1.0)
+Requirement already satisfied: fastapi<1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.121.2)
+Requirement already satisfied: gitpython<4,>=3.1.9 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.1.45)
+Requirement already satisfied: graphene<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.4.3)
+Requirement already satisfied: gunicorn<24 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (23.0.0)
+Requirement already satisfied: huey<3,>=2.5.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.5.4)
+Requirement already satisfied: importlib_metadata!=4.7.0,<9,>=3.7.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (8.7.0)
+Requirement already satisfied: matplotlib<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.10.7)
+Requirement already satisfied: numpy<3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.3.3)
+Requirement already satisfied: opentelemetry-api<3,>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.38.0)
+Requirement already satisfied: opentelemetry-proto<3,>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.38.0)
+Requirement already satisfied: opentelemetry-sdk<3,>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.38.0)
+Requirement already satisfied: packaging<26 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (25.0)
+Requirement already satisfied: pandas<3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.3.3)
+Requirement already satisfied: protobuf<7,>=3.12.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (5.29.5)
+Requirement already satisfied: pyarrow<23,>=4.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (22.0.0)
+Requirement already satisfied: pydantic<3,>=2.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.12.4)
+Requirement already satisfied: python-dotenv<2,>=0.19.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.2.1)
+Requirement already satisfied: pyyaml<7,>=5.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (6.0.3)
+Requirement already satisfied: requests<3,>=2.17.3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.32.5)
+Requirement already satisfied: scikit-learn<2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.7.2)
+Requirement already satisfied: scipy<2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.16.3)
+Requirement already satisfied: sqlalchemy<3,>=1.4.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.0.44)
+Requirement already satisfied: sqlparse<1,>=0.4.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.5.3)
+Requirement already satisfied: typing-extensions<5,>=4.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (4.15.0)
+Requirement already satisfied: uvicorn<1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.38.0)
+Requirement already satisfied: Mako in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from alembic!=1.10.0,<2->mlflow==3.6.1.dev0) (1.3.10)
+Requirement already satisfied: cffi>=2.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from cryptography<47,>=43.0.0->mlflow==3.6.1.dev0) (2.0.0)
+Requirement already satisfied: google-auth~=2.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (2.43.0)
+Requirement already satisfied: urllib3>=1.26.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from docker<8,>=4.0.0->mlflow==3.6.1.dev0) (2.5.0)
+Requirement already satisfied: starlette<0.50.0,>=0.40.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from fastapi<1->mlflow==3.6.1.dev0) (0.49.3)
+Requirement already satisfied: annotated-doc>=0.0.2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from fastapi<1->mlflow==3.6.1.dev0) (0.0.4)
+Requirement already satisfied: blinker>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (1.9.0)
+Requirement already satisfied: itsdangerous>=2.2.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (2.2.0)
+Requirement already satisfied: jinja2>=3.1.2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (3.1.6)
+Requirement already satisfied: markupsafe>=2.1.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (2.1.5)
+Requirement already satisfied: werkzeug>=3.1.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (3.1.3)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from gitpython<4,>=3.1.9->mlflow==3.6.1.dev0) (4.0.12)
+Requirement already satisfied: smmap<6,>=3.0.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from gitdb<5,>=4.0.1->gitpython<4,>=3.1.9->mlflow==3.6.1.dev0) (5.0.2)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (0.4.2)
+Requirement already satisfied: rsa<5,>=3.1.4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (4.9.1)
+Requirement already satisfied: graphql-core<3.3,>=3.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from graphene<4->mlflow==3.6.1.dev0) (3.2.7)
+Requirement already satisfied: graphql-relay<3.3,>=3.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from graphene<4->mlflow==3.6.1.dev0) (3.2.0)
+Requirement already satisfied: python-dateutil<3,>=2.7.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from graphene<4->mlflow==3.6.1.dev0) (2.9.0.post0)
+Requirement already satisfied: zipp>=3.20 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from importlib_metadata!=4.7.0,<9,>=3.7.0->mlflow==3.6.1.dev0) (3.23.0)
+Requirement already satisfied: contourpy>=1.0.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (1.4.9)
+Requirement already satisfied: pillow>=8 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (11.3.0)
+Requirement already satisfied: pyparsing>=3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (3.2.5)
+Requirement already satisfied: opentelemetry-semantic-conventions==0.59b0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from opentelemetry-sdk<3,>=1.9.0->mlflow==3.6.1.dev0) (0.59b0)
+Requirement already satisfied: pytz>=2020.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pandas<3->mlflow==3.6.1.dev0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pandas<3->mlflow==3.6.1.dev0) (2025.2)
+Requirement already satisfied: annotated-types>=0.6.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pydantic<3,>=2.0.0->mlflow==3.6.1.dev0) (0.7.0)
+Requirement already satisfied: pydantic-core==2.41.5 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pydantic<3,>=2.0.0->mlflow==3.6.1.dev0) (2.41.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pydantic<3,>=2.0.0->mlflow==3.6.1.dev0) (0.4.2)
+Requirement already satisfied: six>=1.5 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from python-dateutil<3,>=2.7.0->graphene<4->mlflow==3.6.1.dev0) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from requests<3,>=2.17.3->mlflow==3.6.1.dev0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from requests<3,>=2.17.3->mlflow==3.6.1.dev0) (3.11)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from requests<3,>=2.17.3->mlflow==3.6.1.dev0) (2025.11.12)
+Requirement already satisfied: pyasn1>=0.1.3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from rsa<5,>=3.1.4->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (0.6.1)
+Requirement already satisfied: joblib>=1.2.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from scikit-learn<2->mlflow==3.6.1.dev0) (1.5.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from scikit-learn<2->mlflow==3.6.1.dev0) (3.6.0)
+Requirement already satisfied: greenlet>=1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from sqlalchemy<3,>=1.4.0->mlflow==3.6.1.dev0) (3.2.4)
+Requirement already satisfied: anyio<5,>=3.6.2 in /opt/miniconda3/envs/testbed/lib/python
+
+... [+210463 chars elided] ...
+
+sts/cli/test_scorers.py::test_list_command_params
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_list_scorers_table_output
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_list_scorers_json_output
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_list_scorers_empty_experiment[table-]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_list_scorers_empty_experiment[json-expected_output1]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_list_scorers_with_experiment_id_env_var
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_list_scorers_missing_experiment_id
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_list_scorers_invalid_output_format
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_list_scorers_special_characters_in_names
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_list_scorers_single_scorer[table]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_list_scorers_single_scorer[json]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_list_scorers_long_names[table]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_list_scorers_long_names[json]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_list_scorers_with_descriptions
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_create_judge_basic
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_create_judge_with_model
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_create_judge_short_options
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_create_judge_with_env_var
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_create_judge_missing_required_params[args0-name]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_create_judge_missing_required_params[args1-instructions]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_create_judge_missing_required_params[args2-experiment-id]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_create_judge_invalid_prompt
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_create_judge_special_characters_in_name
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_create_judge_duplicate_registration
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_create_judge_with_description
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/cli/test_scorers.py::test_create_judge_with_description_short_flag
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/utils/test_doctor.py::test_doctor
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/utils/test_doctor.py::test_doctor_active_run
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/utils/test_doctor.py::test_doctor_databricks_runtime
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_is_logged_model_uri[models:/123-True]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_is_logged_model_uri[models:/name/1-False]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_is_logged_model_uri[/path/to/model-False]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_is_logged_model_uri[uri3-False]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_is_logged_model_uri[s3://bucket/path/to/model-False]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_models_artifact_repo_init_with_uri_containing_profile[models://profile@databricks/MyModel/12]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_models_artifact_repo_init_with_uri_containing_profile[models://profile@databricks/MyModel/Staging]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_models_artifact_repo_init_with_uri_containing_profile[models://profile@databricks/MyModel/Production]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_models_artifact_repo_init_with_db_profile_inferred_from_context[models:/MyModel/12]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_models_artifact_repo_init_with_db_profile_inferred_from_context[models:/MyModel/Staging]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_models_artifact_repo_init_with_db_profile_inferred_from_context[models:/MyModel/Production]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_models_artifact_repo_init_with_uc_registry_db_profile_inferred_from_context
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_models_artifact_repo_init_with_uc_oss_profile_inferred_from_context
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_models_artifact_repo_init_with_version_uri_and_not_using_databricks_registry
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_models_artifact_repo_init_with_stage_uri_and_not_using_databricks_registry
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_models_artifact_repo_uses_repo_download_artifacts
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_models_artifact_repo_download_with_real_files
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_models_artifact_repo_does_not_add_meta_for_file
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_models_artifact_repo_does_not_add_meta_for_directory_without_mlmodel
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_split_models_uri[models:/model/1-models:/model/1-]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_split_models_uri[models:/model/1/-models:/model/1-]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_split_models_uri[models:/model/1/path-models:/model/1-path]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_split_models_uri[models:/model/1/path/to/artifact-models:/model/1-path/to/artifact]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_split_models_uri[models:/model@alias-models:/model@alias-]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_split_models_uri[models:/model@alias/-models:/model@alias-]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_split_models_uri[models:/model@alias/path-models:/model@alias-path]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_split_models_uri[models:/model@alias/path/to/artifact-models:/model@alias-path/to/artifact]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_split_models_uri[models://scope:prefix@databricks/model/1-models://scope:prefix@databricks/model/1-]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/store/artifact/test_models_artifact_repo.py::test_split_models_uri[models://scope:prefix@databricks/model/1/path/to/artifact-models://scope:prefix@databricks/model/1-path/to/artifact]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_strip_markdown_no_markdown_returns_unchanged
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_strip_markdown_json_code_block
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_strip_markdown_code_block_without_language
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_strip_markdown_code_block_with_whitespace
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_strip_markdown_multiline_json
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_strip_markdown_empty_string
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_strip_markdown_only_opening_backticks
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_strip_markdown_backticks_in_middle_not_stripped
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_strip_markdown_nested_backticks_inside_code_block
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_strip_markdown_multiple_lines_before_closing
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_strip_markdown_python_language
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_strip_markdown_closing_with_trailing_content
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_sanitize_removes_step_by_step_prefix
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_sanitize_no_prefix_unchanged
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_sanitize_empty_string
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_sanitize_only_prefix
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_sanitize_prefix_in_middle
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_sanitize_multiple_occurrences
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_sanitize_case_sensitive
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_sanitize_prefix_without_trailing_space
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/genai/judges/utils/test_parsing_utils.py::test_sanitize_with_newlines
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/utils/test_credentials.py::test_read_mlflow_creds_file
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/utils/test_credentials.py::test_read_mlflow_creds_env[username-password]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/utils/test_credentials.py::test_read_mlflow_creds_env[username-None]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/utils/test_credentials.py::test_read_mlflow_creds_env[None-password]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/utils/test_credentials.py::test_read_mlflow_creds_env[None-None]
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/utils/test_credentials.py::test_read_mlflow_creds_env_takes_precedence_over_file
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/utils/test_credentials.py::test_mlflow_login
+PASSED | MEM 0.5/727.7 GB | DISK 0.5/512.0 GB tests/utils/test_credentials.py::test_mlflow_login_noninteractive
+============================= 88 passed in 15.04s ==============================
+Reward: 1

@@ -1,0 +1,164 @@
+{
+  "columns": [
+    "id",
+    "agent",
+    "model",
+    "reward",
+    "exception_type",
+    "trial_id",
+    "task_checksum",
+    "n_succ"
+  ],
+  "runs": [
+    {
+      "agent": "codex",
+      "exception_type": null,
+      "id": "0439140e-1e64-4868-8548-56cd6e8e1173",
+      "model": "gpt-5.4",
+      "n_succ": "1",
+      "reward": "0.0",
+      "task_checksum": "788f509892834539e62dd83a742ee8229c8c80ab9635fabfa8d1569b2796e95a",
+      "trial_id": "876a21cb-47b2-4c9a-9cc8-ff2d1af2b050"
+    },
+    {
+      "agent": "codex",
+      "exception_type": null,
+      "id": "136e3a42-7cbb-4094-8071-66031ecf4900",
+      "model": "gpt-5.4",
+      "n_succ": "1",
+      "reward": "1.0",
+      "task_checksum": "788f509892834539e62dd83a742ee8229c8c80ab9635fabfa8d1569b2796e95a",
+      "trial_id": "24bfaac0-b697-44bf-be9b-bce1082f0d99"
+    },
+    {
+      "agent": "codex",
+      "exception_type": null,
+      "id": "92eb3056-e486-47f4-b8c6-8d358c05c841",
+      "model": "gpt-5.4",
+      "n_succ": "1",
+      "reward": "0.0",
+      "task_checksum": "788f509892834539e62dd83a742ee8229c8c80ab9635fabfa8d1569b2796e95a",
+      "trial_id": "c51460cb-446d-430c-80d8-18806bf86ca6"
+    },
+    {
+      "agent": "gemini-cli",
+      "exception_type": null,
+      "id": "a0d995b3-a4ec-459e-b510-69e095b86d99",
+      "model": "gemini-3.1-pro-preview",
+      "n_succ": "1",
+      "reward": "0.0",
+      "task_checksum": "788f509892834539e62dd83a742ee8229c8c80ab9635fabfa8d1569b2796e95a",
+      "trial_id": "d1bfe0bd-5c8d-4b0f-910d-a30e81978732"
+    },
+    {
+      "agent": "gemini-cli",
+      "exception_type": null,
+      "id": "c0feb22b-3670-43e6-97e7-fc618c16c91a",
+      "model": "gemini-3.1-pro-preview",
+      "n_succ": "1",
+      "reward": "0.0",
+      "task_checksum": "788f509892834539e62dd83a742ee8229c8c80ab9635fabfa8d1569b2796e95a",
+      "trial_id": "b9f86e86-8446-4a55-aa3c-52a8e735b021"
+    },
+    {
+      "agent": "gemini-cli",
+      "exception_type": null,
+      "id": "fcfe3b7f-6127-4c89-a161-32ced1b3ad59",
+      "model": "gemini-3.1-pro-preview",
+      "n_succ": "1",
+      "reward": "0.0",
+      "task_checksum": "788f509892834539e62dd83a742ee8229c8c80ab9635fabfa8d1569b2796e95a",
+      "trial_id": "2e4cd556-c9b6-4b7e-9998-e7c7ef960d7e"
+    },
+    {
+      "agent": "terminus-2",
+      "exception_type": null,
+      "id": "26162475-bab4-46b0-9979-fddb5e560f6a",
+      "model": "claude-opus-4-6",
+      "n_succ": "1",
+      "reward": "0.0",
+      "task_checksum": "788f509892834539e62dd83a742ee8229c8c80ab9635fabfa8d1569b2796e95a",
+      "trial_id": "d4f717ff-63ae-404f-9339-c882fac226a0"
+    },
+    {
+      "agent": "terminus-2",
+      "exception_type": "AgentTimeoutError",
+      "id": "394234e2-65bf-4279-9099-7b715da9a50c",
+      "model": "claude-opus-4-6",
+      "n_succ": "1",
+      "reward": "0.0",
+      "task_checksum": "788f509892834539e62dd83a742ee8229c8c80ab9635fabfa8d1569b2796e95a",
+      "trial_id": "a40d6c71-2234-4cbc-b240-046cc66c62ee"
+    },
+    {
+      "agent": "terminus-2",
+      "exception_type": null,
+      "id": "6cefc9fa-4702-4fd7-8175-c2e4dc4d1dae",
+      "model": "claude-opus-4-6",
+      "n_succ": "1",
+      "reward": "0.0",
+      "task_checksum": "788f509892834539e62dd83a742ee8229c8c80ab9635fabfa8d1569b2796e95a",
+      "trial_id": "3cc37854-fadb-4adc-8b98-b63bfc7101c7"
+    },
+    {
+      "agent": "terminus-2",
+      "exception_type": null,
+      "id": "0241a42d-ecf1-4abd-9b0b-c179312732f8",
+      "model": "gemini-3.1-pro-preview",
+      "n_succ": "1",
+      "reward": "0.0",
+      "task_checksum": "788f509892834539e62dd83a742ee8229c8c80ab9635fabfa8d1569b2796e95a",
+      "trial_id": "75271f18-ea48-423b-907d-90fc1f891595"
+    },
+    {
+      "agent": "terminus-2",
+      "exception_type": null,
+      "id": "647609d6-c930-410b-a385-c5d67aa6df8b",
+      "model": "gemini-3.1-pro-preview",
+      "n_succ": "1",
+      "reward": "0.0",
+      "task_checksum": "788f509892834539e62dd83a742ee8229c8c80ab9635fabfa8d1569b2796e95a",
+      "trial_id": "a3f57f02-0a12-4872-aa6d-0dd5e1cc1f61"
+    },
+    {
+      "agent": "terminus-2",
+      "exception_type": null,
+      "id": "8b471998-fb4f-4b00-96fa-80cf516e32ed",
+      "model": "gemini-3.1-pro-preview",
+      "n_succ": "1",
+      "reward": "0.0",
+      "task_checksum": "788f509892834539e62dd83a742ee8229c8c80ab9635fabfa8d1569b2796e95a",
+      "trial_id": "b0f69328-d043-4653-ac14-002143077025"
+    },
+    {
+      "agent": "terminus-2",
+      "exception_type": null,
+      "id": "0d33cc9e-a99c-4e7a-abcf-d22432e502e6",
+      "model": "gpt-5.4",
+      "n_succ": "1",
+      "reward": "0.0",
+      "task_checksum": "788f509892834539e62dd83a742ee8229c8c80ab9635fabfa8d1569b2796e95a",
+      "trial_id": "092c1bcc-7d9c-4e6b-91a8-967c4f3fa885"
+    },
+    {
+      "agent": "terminus-2",
+      "exception_type": null,
+      "id": "b3298c68-2a45-48af-a118-fa6da57935a7",
+      "model": "gpt-5.4",
+      "n_succ": "1",
+      "reward": "0.0",
+      "task_checksum": "788f509892834539e62dd83a742ee8229c8c80ab9635fabfa8d1569b2796e95a",
+      "trial_id": "47ca3c04-f741-4102-8446-5e782b99887d"
+    },
+    {
+      "agent": "terminus-2",
+      "exception_type": null,
+      "id": "cf63bf46-8e82-4db1-8b00-fbde27ac2f93",
+      "model": "gpt-5.4",
+      "n_succ": "1",
+      "reward": "0.0",
+      "task_checksum": "788f509892834539e62dd83a742ee8229c8c80ab9635fabfa8d1569b2796e95a",
+      "trial_id": "55ca8d24-63d7-4a3e-8047-65d4afd0576f"
+    }
+  ]
+}

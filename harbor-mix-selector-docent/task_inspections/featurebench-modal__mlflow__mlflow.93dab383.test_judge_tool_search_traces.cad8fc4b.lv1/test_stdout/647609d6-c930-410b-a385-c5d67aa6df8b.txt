@@ -1,0 +1,199 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Obtaining file:///testbed
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: Flask-CORS<7 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (6.0.1)
+Requirement already satisfied: Flask<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.1.2)
+Requirement already satisfied: alembic!=1.10.0,<2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.17.2)
+Requirement already satisfied: cachetools<7,>=5.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (6.2.2)
+Requirement already satisfied: click<9,>=7.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (8.3.1)
+Requirement already satisfied: cloudpickle<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.1.2)
+Requirement already satisfied: cryptography<47,>=43.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (46.0.3)
+Requirement already satisfied: databricks-sdk<1,>=0.20.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.73.0)
+Requirement already satisfied: docker<8,>=4.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (7.1.0)
+Requirement already satisfied: fastapi<1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.121.2)
+Requirement already satisfied: gitpython<4,>=3.1.9 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.1.45)
+Requirement already satisfied: graphene<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.4.3)
+Requirement already satisfied: gunicorn<24 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (23.0.0)
+Requirement already satisfied: huey<3,>=2.5.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.5.4)
+Requirement already satisfied: importlib_metadata!=4.7.0,<9,>=3.7.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (8.7.0)
+Requirement already satisfied: matplotlib<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.10.7)
+Requirement already satisfied: numpy<3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.3.3)
+Requirement already satisfied: opentelemetry-api<3,>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.38.0)
+Requirement already satisfied: opentelemetry-proto<3,>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.38.0)
+Requirement already satisfied: opentelemetry-sdk<3,>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.38.0)
+Requirement already satisfied: packaging<26 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (25.0)
+Requirement already satisfied: pandas<3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.3.3)
+Requirement already satisfied: protobuf<7,>=3.12.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (5.29.5)
+Requirement already satisfied: pyarrow<23,>=4.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (22.0.0)
+Requirement already satisfied: pydantic<3,>=2.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.12.4)
+Requirement already satisfied: python-dotenv<2,>=0.19.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.2.1)
+Requirement already satisfied: pyyaml<7,>=5.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (6.0.3)
+Requirement already satisfied: requests<3,>=2.17.3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.32.5)
+Requirement already satisfied: scikit-learn<2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.7.2)
+Requirement already satisfied: scipy<2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.16.3)
+Requirement already satisfied: sqlalchemy<3,>=1.4.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.0.44)
+Requirement already satisfied: sqlparse<1,>=0.4.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.5.3)
+Requirement already satisfied: typing-extensions<5,>=4.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (4.15.0)
+Requirement already satisfied: uvicorn<1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.38.0)
+Requirement already satisfied: Mako in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from alembic!=1.10.0,<2->mlflow==3.6.1.dev0) (1.3.10)
+Requirement already satisfied: cffi>=2.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from cryptography<47,>=43.0.0->mlflow==3.6.1.dev0) (2.0.0)
+Requirement already satisfied: google-auth~=2.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (2.43.0)
+Requirement already satisfied: urllib3>=1.26.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from docker<8,>=4.0.0->mlflow==3.6.1.dev0) (2.5.0)
+Requirement already satisfied: starlette<0.50.0,>=0.40.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from fastapi<1->mlflow==3.6.1.dev0) (0.49.3)
+Requirement already satisfied: annotated-doc>=0.0.2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from fastapi<1->mlflow==3.6.1.dev0) (0.0.4)
+Requirement already satisfied: blinker>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (1.9.0)
+Requirement already satisfied: itsdangerous>=2.2.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (2.2.0)
+Requirement already satisfied: jinja2>=3.1.2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (3.1.6)
+Requirement already satisfied: markupsafe>=2.1.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (2.1.5)
+Requirement already satisfied: werkzeug>=3.1.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (3.1.3)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from gitpython<4,>=3.1.9->mlflow==3.6.1.dev0) (4.0.12)
+Requirement already satisfied: smmap<6,>=3.0.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from gitdb<5,>=4.0.1->gitpython<4,>=3.1.9->mlflow==3.6.1.dev0) (5.0.2)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (0.4.2)
+Requirement already satisfied: rsa<5,>=3.1.4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (4.9.1)
+Requirement already satisfied: graphql-core<3.3,>=3.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from graphene<4->mlflow==3.6.1.dev0) (3.2.7)
+Requirement already satisfied: graphql-relay<3.3,>=3.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from graphene<4->mlflow==3.6.1.dev0) (3.2.0)
+Requirement already satisfied: python-dateutil<3,>=2.7.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from graphene<4->mlflow==3.6.1.dev0) (2.9.0.post0)
+Requirement already satisfied: zipp>=3.20 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from importlib_metadata!=4.7.0,<9,>=3.7.0->mlflow==3.6.1.dev0) (3.23.0)
+Requirement already satisfied: contourpy>=1.0.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (1.4.9)
+Requirement already satisfied: pillow>=8 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (11.3.0)
+Requirement already satisfied: pyparsing>=3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (3.2.5)
+Requirement already satisfied: opentelemetry-semantic-conventions==0.59b0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from opentelemetry-sdk<3,>=1.9.0->mlflow==3.6.1.dev0) (0.59b0)
+Requirement already satisfied: pytz>=2020.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pandas<3->mlflow==3.6.1.dev0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pandas<3->mlflow==3.6.1.dev0) (2025.2)
+Requirement already satisfied: annotated-types>=0.6.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pydantic<3,>=2.0.0->mlflow==3.6.1.dev0) (0.7.0)
+Requirement already satisfied: pydantic-core==2.41.5 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pydantic<3,>=2.0.0->mlflow==3.6.1.dev0) (2.41.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pydantic<3,>=2.0.0->mlflow==3.6.1.dev0) (0.4.2)
+Requirement already satisfied: six>=1.5 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from python-dateutil<3,>=2.7.0->graphene<4->mlflow==3.6.1.dev0) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from requests<3,>=2.17.3->mlflow==3.6.1.dev0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from requests<3,>=2.17.3->mlflow==3.6.1.dev0) (3.11)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from requests<3,>=2.17.3->mlflow==3.6.1.dev0) (2025.11.12)
+Requirement already satisfied: pyasn1>=0.1.3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from rsa<5,>=3.1.4->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (0.6.1)
+Requirement already satisfied: joblib>=1.2.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from scikit-learn<2->mlflow==3.6.1.dev0) (1.5.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from scikit-learn<2->mlflow==3.6.1.dev0) (3.6.0)
+Requirement already satisfied: greenlet>=1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from sqlalchemy<3,>=1.4.0->mlflow==3.6.1.dev0) (3.2.4)
+Requirement already satisfied: anyio<5,>=3.6.2 in /opt/miniconda3/envs/testbed/lib/python
+
+... [+24868 chars elided] ...
+
+...
+E     
+E     ...Full output truncated (15 lines hidden), use '-vv' to show
+        mock_search = <MagicMock name='search_traces' id='47662904643600'>
+        mock_search_traces_list = [Trace(trace_id=trace-1), Trace(trace_id=trace-2)]
+        mock_trace = Trace(trace_id=trace-current)
+        result     = [JudgeToolTraceInfo(trace_id='trace-1', request_time=1000000000, state=<TraceState.OK: 'OK'>, request=None, response=N...me=1000000100, state=<TraceState.ERROR: 'ERROR'>, request=None, response=None, execution_duration=200, assessments=[])]
+        tool       = <mlflow.genai.judges.tools.search_traces.SearchTracesTool object at 0x2b59628015d0>
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 22:40:54 INFO mlflow.tracking.fluent: Active model is cleared
+_______________ test_search_traces_tool_invoke_default_order_by ________________
+tests/genai/judges/test_judge_tool_search_traces.py:340: in test_search_traces_tool_invoke_default_order_by
+    assert call_kwargs["order_by"] == ["timestamp ASC"]
+E   AssertionError: assert None == ['timestamp ASC']
+        call_kwargs = {'experiment_ids': ['exp-456'], 'filter_string': None, 'max_results': 20, 'order_by': None}
+        mock_search = <MagicMock name='search_traces' id='47662904581968'>
+        mock_search_traces_list = [Trace(trace_id=trace-1), Trace(trace_id=trace-2)]
+        mock_trace = Trace(trace_id=trace-current)
+        result     = [JudgeToolTraceInfo(trace_id='trace-1', request_time=1000000000, state=<TraceState.OK: 'OK'>, request=None, response=N...me=1000000100, state=<TraceState.ERROR: 'ERROR'>, request=None, response=None, execution_duration=200, assessments=[])]
+        tool       = <mlflow.genai.judges.tools.search_traces.SearchTracesTool object at 0x2b59627f23d0>
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 22:40:54 INFO mlflow.tracking.fluent: Active model is cleared
+______________ test_search_traces_tool_invoke_invalid_trace_json _______________
+tests/genai/judges/test_judge_tool_search_traces.py:393: in test_search_traces_tool_invoke_invalid_trace_json
+    assert len(result) == 0
+E   AssertionError: assert 2 == 0
+E    +  where 2 = len([JudgeToolTraceInfo(trace_id='trace-1', request_time=1000000000, state=<TraceState.OK: 'OK'>, request=None, response=None, execution_duration=None, assessments=[]), JudgeToolTraceInfo(trace_id='trace-2', request_time=1000000100, state=<TraceState.OK: 'OK'>, request=None, response=None, execution_duration=None, assessments=[])])
+        invalid_list = [Trace(trace_id=trace-1), Trace(trace_id=trace-2)]
+        invalid_trace1 = Trace(trace_id=trace-1)
+        invalid_trace1_info = TraceInfo(trace_id='trace-1', trace_location=TraceLocation(type=<TraceLocationType.MLFLOW_EXPERIMENT: 'MLFLOW_EXPERIME...ne, response_preview=None, client_request_id=None, execution_duration=None, trace_metadata={}, tags={}, assessments=[])
+        invalid_trace2 = Trace(trace_id=trace-2)
+        invalid_trace2_info = TraceInfo(trace_id='trace-2', trace_location=TraceLocation(type=<TraceLocationType.MLFLOW_EXPERIMENT: 'MLFLOW_EXPERIME...ne, response_preview=None, client_request_id=None, execution_duration=None, trace_metadata={}, tags={}, assessments=[])
+        mock_trace = Trace(trace_id=trace-current)
+        result     = [JudgeToolTraceInfo(trace_id='trace-1', request_time=1000000000, state=<TraceState.OK: 'OK'>, request=None, response=N...st_time=1000000100, state=<TraceState.OK: 'OK'>, request=None, response=None, execution_duration=None, assessments=[])]
+        tool       = <mlflow.genai.judges.tools.search_traces.SearchTracesTool object at 0x2b59627e4310>
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 22:40:54 INFO mlflow.tracking.fluent: Active model is cleared
+________________ test_search_traces_tool_invoke_partial_failure ________________
+tests/genai/judges/test_judge_tool_search_traces.py:443: in test_search_traces_tool_invoke_partial_failure
+    assert len(result) == 1
+E   AssertionError: assert 2 == 1
+E    +  where 2 = len([JudgeToolTraceInfo(trace_id='trace-1', request_time=1000000000, state=<TraceState.OK: 'OK'>, request=None, response=None, execution_duration=150, assessments=[]), JudgeToolTraceInfo(trace_id='trace-2', request_time=1000000100, state=<TraceState.ERROR: 'ERROR'>, request=None, response=None, execution_duration=200, assessments=[])])
+        invalid_trace1 = Trace(trace_id=trace-1)
+        invalid_trace1_info = TraceInfo(trace_id='trace-1', trace_location=TraceLocation(type=<TraceLocationType.MLFLOW_EXPERIMENT: 'MLFLOW_EXPERIME...one, response_preview=None, client_request_id=None, execution_duration=150, trace_metadata={}, tags={}, assessments=[])
+        mock_trace = Trace(trace_id=trace-current)
+        otel_span2 = <tests.tracing.helper.create_mock_otel_span.<locals>._MockOTelSpan object at 0x2b59627e5d90>
+        partial_list = [Trace(trace_id=trace-1), Trace(trace_id=trace-2)]
+        result     = [JudgeToolTraceInfo(trace_id='trace-1', request_time=1000000000, state=<TraceState.OK: 'OK'>, request=None, response=N...me=1000000100, state=<TraceState.ERROR: 'ERROR'>, request=None, response=None, execution_duration=200, assessments=[])]
+        span2      = Span(name='root', trace_id=None, span_id='0000000000000066', parent_id=None)
+        tool       = <mlflow.genai.judges.tools.search_traces.SearchTracesTool object at 0x2b59627e6850>
+        valid_trace2 = Trace(trace_id=trace-2)
+        valid_trace2_data = TraceData(spans=[Span(name='root', trace_id=None, span_id='0000000000000066', parent_id=None)])
+        valid_trace2_info = TraceInfo(trace_id='trace-2', trace_location=TraceLocation(type=<TraceLocationType.MLFLOW_EXPERIMENT: 'MLFLOW_EXPERIME...one, response_preview=None, client_request_id=None, execution_duration=200, trace_metadata={}, tags={}, assessments=[])
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 22:40:54 INFO mlflow.tracking.fluent: Active model is cleared
+==================================== PASSES ====================================
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 22:40:54 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 22:40:54 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 22:40:54 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 22:40:54 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 22:40:54 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 22:40:54 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 22:40:54 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 22:40:54 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 22:40:54 INFO mlflow.tracking.fluent: Active model is cleared
+============================= slowest 10 durations =============================
+0.70s setup    tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_name
+
+(9 durations < 0.005s hidden.  Use -vv to show these durations.)
+
+========================= per-file durations (sorted) ==========================
+::group::per-file durations (sorted)
+
+| Rank | File                                                  | Duration | Tests | Min    | Max    | Avg    |
+| ---- | ----------------------------------------------------- | -------- | ----- | ------ | ------ | ------ |
+| 1    | `tests/genai/judges/test_judge_tool_search_traces.py` | 1.09s    | 18    | 0.002s | 0.703s | 0.060s |
+
+::endgroup::
+
+========================= command to run failed tests ==========================
+pytest 'tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_get_definition' 'tests/genai/judges/test_judge_tool_search_traces.py::test_get_experiment_id_no_trace_location' 'tests/genai/judges/test_judge_tool_search_traces.py::test_get_experiment_id_not_mlflow_experiment' 'tests/genai/judges/test_judge_tool_search_traces.py::test_get_experiment_id_no_experiment_id' 'tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_success' 'tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_with_order_by' 'tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_default_order_by' 'tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_invalid_trace_json' 'tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_partial_failure'
+
+=========================== short test summary info ============================
+PASSED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_name
+PASSED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_convert_assessments_to_tool_types_with_expectations
+PASSED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_convert_assessments_to_tool_types_with_feedback
+PASSED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_convert_assessments_to_tool_types_with_feedback_no_error
+PASSED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_convert_assessments_to_tool_types_mixed
+PASSED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_get_experiment_id_success
+PASSED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_empty_results
+PASSED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_search_fails
+PASSED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_no_filter
+FAILED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_get_definition
+FAILED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_get_experiment_id_no_trace_location
+FAILED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_get_experiment_id_not_mlflow_experiment
+FAILED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_get_experiment_id_no_experiment_id
+FAILED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_success
+FAILED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_with_order_by
+FAILED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_default_order_by
+FAILED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_invalid_trace_json
+FAILED | MEM 0.4/1007.0 GB | DISK 0.1/512.0 GB tests/genai/judges/test_judge_tool_search_traces.py::test_search_traces_tool_invoke_partial_failure
+========================= 9 failed, 9 passed in 1.17s ==========================
+Reward: 0
