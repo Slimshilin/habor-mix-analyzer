@@ -1,0 +1,200 @@
+[
+  {
+    "id": "068d7ada-a30a-4c0d-85cd-e06257896805",
+    "agent": "terminus-2",
+    "model": "gemini-3.1-pro-preview",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": null,
+    "cost": "1.1866776",
+    "test_stdout_len": 24032
+  },
+  {
+    "id": "0786daa4-91fb-4888-8bbc-7758c1036a6b",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": "76",
+    "cost": null,
+    "test_stdout_len": 10528
+  },
+  {
+    "id": "3762a573-30ca-4964-8f73-588e85393c66",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": "73",
+    "cost": null,
+    "test_stdout_len": 10670
+  },
+  {
+    "id": "4dc383fa-bcf1-4a99-b1cc-4b32e4bc0aee",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": "101",
+    "cost": null,
+    "test_stdout_len": 24032
+  },
+  {
+    "id": "5ce6b404-24dc-4544-a1c5-4a3310883174",
+    "agent": "terminus-2",
+    "model": "claude-opus-4-6",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": null,
+    "cost": "8.586285000000002",
+    "test_stdout_len": 24032
+  },
+  {
+    "id": "6ae29f02-368d-4817-af40-32023fff2c26",
+    "agent": "terminus-2",
+    "model": "gemini-3.1-pro-preview",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": null,
+    "cost": "1.2632624000000001",
+    "test_stdout_len": 24032
+  },
+  {
+    "id": "72a058c3-57b4-4e34-80fa-aece15f7b84c",
+    "agent": "terminus-2",
+    "model": "gpt-5.4",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": null,
+    "cost": "0.3412175",
+    "test_stdout_len": 24032
+  },
+  {
+    "id": "8627c728-2287-4b52-b593-ab35cf0dd449",
+    "agent": "terminus-2",
+    "model": "gemini-3.1-pro-preview",
+    "reward": "1.0",
+    "role": "success",
+    "exception_type": null,
+    "total_steps": null,
+    "cost": "1.1507847999999998",
+    "test_stdout_len": 24032
+  },
+  {
+    "id": "988a6a2b-f922-42a8-ae60-80ba20a8e15c",
+    "agent": "terminus-2",
+    "model": "gpt-5.4",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": null,
+    "cost": "0.6999865",
+    "test_stdout_len": 24032
+  },
+  {
+    "id": "9e34b692-6783-400b-bbe6-21be28ba651e",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": "67",
+    "cost": null,
+    "test_stdout_len": 24032
+  },
+  {
+    "id": "aa95f9ee-9f80-4801-a78a-e05aa3be519a",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": "105",
+    "cost": null,
+    "test_stdout_len": 24032
+  },
+  {
+    "id": "ad99001f-8c0d-4039-bd29-c71b2381ea04",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": "117",
+    "cost": null,
+    "test_stdout_len": 10702
+  },
+  {
+    "id": "af2ee8d2-5b37-4c4d-911b-22cb3182ed7b",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": "110",
+    "cost": null,
+    "test_stdout_len": 24032
+  },
+  {
+    "id": "b12e6c09-95e8-4b97-a399-e57b583bda3e",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": "60",
+    "cost": null,
+    "test_stdout_len": 24032
+  },
+  {
+    "id": "d2a245a9-a4f1-404c-aa6e-d1fa0bad6077",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": "113",
+    "cost": null,
+    "test_stdout_len": 24032
+  },
+  {
+    "id": "df4131fb-8a5f-44b0-8226-0cc403f6fcd0",
+    "agent": "terminus-2",
+    "model": "claude-opus-4-6",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": null,
+    "cost": "2.0616457500000007",
+    "test_stdout_len": 24032
+  },
+  {
+    "id": "e285690e-d5e4-4ff6-9e3b-2831449ea99c",
+    "agent": "terminus-2",
+    "model": "gpt-5.4",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": null,
+    "cost": "0.503021",
+    "test_stdout_len": 37
+  },
+  {
+    "id": "fde5c8ea-4b50-47f5-a1ad-f26e321faadb",
+    "agent": "terminus-2",
+    "model": "claude-opus-4-6",
+    "reward": "0.0",
+    "role": "failure",
+    "exception_type": null,
+    "total_steps": null,
+    "cost": "1.9267805",
+    "test_stdout_len": 24032
+  }
+]

@@ -1,0 +1,603 @@
+Running tests...
+rm 'stats'
+Removed binary: stats
+Patch size: 54801 bytes
+HEAD is now at ff5cae7783 REF: Avoid np.can_cast for scalar inference for NEP 50 (#55707)
+From https://github.com/pandas-dev/pandas
+ * [new branch]            0.19.x     -> origin/0.19.x
+ * [new branch]            0.20.x     -> origin/0.20.x
+ * [new branch]            0.21.x     -> origin/0.21.x
+ * [new branch]            0.22.x     -> origin/0.22.x
+ * [new branch]            0.23.x     -> origin/0.23.x
+ * [new branch]            0.24.x     -> origin/0.24.x
+ * [new branch]            0.25.x     -> origin/0.25.x
+ * [new branch]            1.0.x      -> origin/1.0.x
+ * [new branch]            1.1.x      -> origin/1.1.x
+ * [new branch]            1.2.x      -> origin/1.2.x
+ * [new branch]            1.3.x      -> origin/1.3.x
+ * [new branch]            1.4.x      -> origin/1.4.x
+ * [new branch]            1.5.x      -> origin/1.5.x
+ * [new branch]            2.0.x      -> origin/2.0.x
+ * [new branch]            2.1.x      -> origin/2.1.x
+ * [new branch]            2.2.x      -> origin/2.2.x
+ * [new branch]            2.3.x      -> origin/2.3.x
+ * [new branch]            3.0.x      -> origin/3.0.x
+ * [new branch]            main       -> origin/main
+ * [new tag]               v3.0.2     -> v3.0.2
+Removing .venv/
+Removing pandas/__pycache__/
+Removing pandas/_config/__pycache__/
+Removing pandas/_libs/__pycache__/
+Removing pandas/compat/__pycache__/
+Removing pandas/compat/numpy/__pycache__/
+Removing pandas/core/__pycache__/
+Removing pandas/util/__pycache__/
+Removing pandas/util/version/__pycache__/
+HEAD is now at fed6f4fe22 CI: Add repo flag to GHA cache cleaup workflow (#65167)
+Checking out base repo...
+Note: switching to 'ccca5df8259923430a2fbf17989cfe4be306660c^'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at ff5cae7783 REF: Avoid np.can_cast for scalar inference for NEP 50 (#55707)
+Installing repo...
+Using CPython 3.10.12 interpreter at: /usr/bin/python3.10
+Creating virtual environment at: .venv
+/testbed/.venv/bin/python
+Python 3.10.12
+Resolved 6 packages in 1m 56s
+Prepared 6 packages in 168ms
+Installed 6 packages in 59ms
+ + numpy==1.26.4
+ + pandas==2.2.0.dev0+463.gff5cae7783 (from file:///testbed)
+ + python-dateutil==2.9.0.post0
+ + pytz==2026.1.post1
+ + six==1.17.0
+ + tzdata==2026.1
+Resolved 7 packages in 76ms
+Prepared 6 packages in 21ms
+Installed 6 packages in 5ms
+ + certifi==2026.2.25
+ + charset-normalizer==3.4.7
+ + dill==0.4.1
+ + idna==3.11
+ + requests==2.33.1
+ + urllib3==2.6.3
+Name: pandas
+Version: 2.2.0.dev0+463.gff5cae7783
+Location: /testbed/.venv/lib/python3.10/site-packages
+Requires: numpy, python-dateutil, pytz, tzdata
+Required-by:
+>>>>> Init Succeeded
+Running performance test before patch...
+Running test /tests/gso_test_0.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_1.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_2.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_3.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_4.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_5.py 5 times...
+  Iteration 1/5
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+  Iteration 2/5
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+  Iteration 3/5
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+  Iteration 4/5
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+  Iteration 5/5
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+>>>>> Tests Passed
+Running test /tests/gso_test_6.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_7.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_8.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Applying patch...
+/tmp/patch.diff:828: trailing whitespace.
+            
+/tmp/patch.diff:832: trailing whitespace.
+            
+/tmp/patch.diff:840: trailing whitespace.
+            
+/tmp/patch.diff:845: trailing whitespace.
+                
+/tmp/patch.diff:1075: trailing whitespace.
+            
+Skipped patch 'ref.json'.
+Checking patch pandas/_libs/groupby.pyx...
+Checking patch pandas/core/groupby/groupby.py...
+Checking patch pandas/core/groupby/ops.py...
+Checking patch patch_cython.py...
+Checking patch patch_groupby.py...
+Checking patch patch_groupby_debug.py...
+Applied patch pandas/_libs/groupby.pyx cleanly.
+Applied patch pandas/core/groupby/groupby.py cleanly.
+Applied patch pandas/core/groupby/ops.py cleanly.
+Applied patch patch_cython.py cleanly.
+Applied patch patch_groupby.py cleanly.
+Applied patch patch_groupby_debug.py cleanly.
+warning: squelched 3 whitespace errors
+warning: 8 lines add whitespace errors.
+Successfully applied patch using git apply --verbose
+>>>>> Applied Patch
+Installing repo...
+Using CPython 3.10.12 interpreter at: /usr/bin/python3.10
+Creating virtual environment at: .venv
+/testbed/.venv/bin/python
+Python 3.10.12
+Resolved 6 packages in 1m 56s
+Prepared 6 packages in 168ms
+Installed 6 packages in 55ms
+ + numpy==1.26.4
+ + pandas==2.2.0.dev0+463.gff5cae7783.dirty (from file:///testbed)
+ + python-dateutil==2.9.0.post0
+ + pytz==2026.1.post1
+ + six==1.17.0
+ + tzdata==2026.1
+Resolved 7 packages in 88ms
+Prepared 6 packages in 34ms
+Installed 6 packages in 7ms
+ + certifi==2026.2.25
+ + charset-normalizer==3.4.7
+ + dill==0.4.1
+ + idna==3.11
+ + requests==2.33.1
+ + urllib3==2.6.3
+Name: pandas
+Version: 2.2.0.dev0+463.gff5cae7783.dirty
+Location: /testbed/.venv/lib/python3.10/site-packages
+Requires: numpy, python-dateutil, pytz, tzdata
+Required-by:
+>>>>> Init Succeeded
+Running performance test after patch...
+Running test /tests/gso_test_0.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_1.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_2.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_3.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_4.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_5.py 5 times...
+  Iteration 1/5
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be exc
+
+... [+6736 chars elided] ...
+
+57s
+Execution time: 0.013941s
+Execution time: 0.014737s
+Execution time: 0.014701s
+>>>>> Test 1
+Execution time: 0.014937s
+Execution time: 0.014656s
+Execution time: 0.014672s
+Execution time: 0.015615s
+Execution time: 0.015059s
+>>>>> Test 2
+Execution time: 0.016424s
+Execution time: 0.020633s
+Execution time: 0.016572s
+Execution time: 0.016407s
+Execution time: 0.016321s
+Execution time: 0.016209s
+Execution time: 0.016549s
+Execution time: 0.016247s
+Execution time: 0.016336s
+Execution time: 0.016186s
+>>>>> Test 3
+Execution time: 0.002410s
+Execution time: 0.001909s
+Execution time: 0.002463s
+Execution time: 0.001952s
+Execution time: 0.002384s
+Execution time: 0.001903s
+Execution time: 0.002861s
+Execution time: 0.002366s
+Execution time: 0.002502s
+Execution time: 0.001951s
+>>>>> Test 4
+Execution time: 0.011823s
+Execution time: 0.007415s
+Execution time: 0.011905s
+Execution time: 0.007765s
+Execution time: 0.011585s
+Execution time: 0.007418s
+Execution time: 0.011851s
+Execution time: 0.007419s
+Execution time: 0.013691s
+Execution time: 0.007465s
+>>>>> Test 5
+Execution time: 0.008296s
+Execution time: 0.007974s
+Execution time: 0.008054s
+Execution time: 0.007895s
+Execution time: 0.008023s
+Execution time: 0.007945s
+Execution time: 0.009926s
+Execution time: 0.009890s
+Execution time: 0.008067s
+Execution time: 0.008170s
+>>>>> Test 6
+Execution time: 0.080718s
+Execution time: 0.080819s
+Execution time: 0.080257s
+Execution time: 0.080921s
+Execution time: 0.087036s
+Execution time: 0.080478s
+Execution time: 0.081384s
+Execution time: 0.081608s
+Execution time: 0.084264s
+Execution time: 0.084601s
+>>>>> Test 7
+Execution time: 0.010210s
+Execution time: 0.010252s
+Execution time: 0.010588s
+Execution time: 0.010275s
+Execution time: 0.010957s
+Execution time: 0.011394s
+Execution time: 0.010552s
+Execution time: 0.010290s
+Execution time: 0.011768s
+Execution time: 0.011696s
+>>>>> Test 8
+Execution time: 0.002107s
+Execution time: 0.001753s
+Execution time: 0.002131s
+Execution time: 0.001747s
+Execution time: 0.002472s
+Execution time: 0.002191s
+Execution time: 0.002148s
+Execution time: 0.001776s
+Execution time: 0.002257s
+Execution time: 0.001844s
+>>>>> End Patch Output
+error: remote origin already exists.
+Removing .url_cache/
+Removing base_0.txt
+Removing base_1.txt
+Removing base_2.txt
+Removing base_3.txt
+Removing base_4.txt
+Removing base_5.txt
+Removing base_6.txt
+Removing base_7.txt
+Removing base_8.txt
+Removing gso_0_result.json
+Removing gso_1_df_idxmin_result.json
+Removing gso_2_result.json
+Removing gso_3_result.json
+Removing gso_4_result.json
+Removing gso_5_result.json
+Removing gso_6_result.json
+Removing gso_7_result.json
+Removing gso_8_result.json
+Removing patch_cython.py
+Removing patch_groupby.py
+Removing patch_groupby_debug.py
+Removing result_0.txt
+Removing result_1.txt
+Removing result_2.txt
+Removing result_3.txt
+Removing result_4.txt
+Removing result_5.txt
+Removing result_6.txt
+Removing result_7.txt
+Removing result_8.txt
+HEAD is now at fed6f4fe22 CI: Add repo flag to GHA cache cleaup workflow (#65167)
+Checking out commit...
+Previous HEAD position was fed6f4fe22 CI: Add repo flag to GHA cache cleaup workflow (#65167)
+HEAD is now at ccca5df825 PERF: Implement groupby idxmax/idxmin in Cython (#54234)
+Installing repo...
+Using CPython 3.10.12 interpreter at: /usr/bin/python3.10
+Creating virtual environment at: .venv
+/testbed/.venv/bin/python
+Python 3.10.12
+Resolved 6 packages in 1m 56s
+Prepared 6 packages in 177ms
+Installed 6 packages in 59ms
+ + numpy==1.26.4
+ + pandas==2.2.0.dev0+464.gccca5df825 (from file:///testbed)
+ + python-dateutil==2.9.0.post0
+ + pytz==2026.1.post1
+ + six==1.17.0
+ + tzdata==2026.1
+Resolved 7 packages in 80ms
+Prepared 6 packages in 18ms
+Installed 6 packages in 4ms
+ + certifi==2026.2.25
+ + charset-normalizer==3.4.7
+ + dill==0.4.1
+ + idna==3.11
+ + requests==2.33.1
+ + urllib3==2.6.3
+Name: pandas
+Version: 2.2.0.dev0+464.gccca5df825
+Location: /testbed/.venv/lib/python3.10/site-packages
+Requires: numpy, python-dateutil, pytz, tzdata
+Required-by:
+>>>>> Init Succeeded
+Running performance test for commit...
+Running test /tests/gso_test_0.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_1.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_2.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_3.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_4.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_5.py 5 times...
+  Iteration 1/5
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+  Iteration 2/5
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+  Iteration 3/5
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+  Iteration 4/5
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+  Iteration 5/5
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+/tests/gso_test_5.py:184: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  df = df.groupby("group", group_keys=False).apply(ensure_valid)
+>>>>> Tests Passed
+Running test /tests/gso_test_6.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_7.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_8.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+>>>>> Start Commit Output
+>>>>> Test 0
+Execution time: 0.014045s
+Execution time: 0.012304s
+Execution time: 0.014644s
+Execution time: 0.013100s
+Execution time: 0.014399s
+Execution time: 0.013548s
+Execution time: 0.014757s
+Execution time: 0.013250s
+Execution time: 0.014731s
+Execution time: 0.013208s
+>>>>> Test 1
+Execution time: 0.012577s
+Execution time: 0.012372s
+Execution time: 0.012314s
+Execution time: 0.012311s
+Execution time: 0.012746s
+>>>>> Test 2
+Execution time: 0.015782s
+Execution time: 0.015666s
+Execution time: 0.015609s
+Execution time: 0.015596s
+Execution time: 0.015672s
+Execution time: 0.015881s
+Execution time: 0.015819s
+Execution time: 0.015554s
+Execution time: 0.018509s
+Execution time: 0.016194s
+>>>>> Test 3
+Execution time: 0.002259s
+Execution time: 0.002307s
+Execution time: 0.002266s
+Execution time: 0.001613s
+Execution time: 0.002276s
+Execution time: 0.001686s
+Execution time: 0.002304s
+Execution time: 0.001632s
+Execution time: 0.002241s
+Execution time: 0.001603s
+>>>>> Test 4
+Execution time: 0.011409s
+Execution time: 0.007093s
+Execution time: 0.011464s
+Execution time: 0.007210s
+Execution time: 0.011417s
+Execution time: 0.007154s
+Execution time: 0.011365s
+Execution time: 0.008376s
+Execution time: 0.011430s
+Execution time: 0.007133s
+>>>>> Test 5
+Execution time: 0.007802s
+Execution time: 0.007595s
+Execution time: 0.007775s
+Execution time: 0.008113s
+Execution time: 0.007814s
+Execution time: 0.007709s
+Execution time: 0.007772s
+Execution time: 0.007737s
+Execution time: 0.007784s
+Execution time: 0.007707s
+>>>>> Test 6
+Execution time: 0.084871s
+Execution time: 0.083068s
+Execution time: 0.083980s
+Execution time: 0.083725s
+Execution time: 0.083014s
+Execution time: 0.083053s
+Execution time: 0.085069s
+Execution time: 0.084428s
+Execution time: 0.086609s
+Execution time: 0.083994s
+>>>>> Test 7
+Execution time: 0.010957s
+Execution time: 0.009698s
+Execution time: 0.010733s
+Execution time: 0.007776s
+Execution time: 0.009754s
+Execution time: 0.007578s
+Execution time: 0.012268s
+Execution time: 0.007598s
+Execution time: 0.010591s
+Execution time: 0.007559s
+>>>>> Test 8
+Execution time: 0.001986s
+Execution time: 0.001658s
+Execution time: 0.002030s
+Execution time: 0.001633s
+Execution time: 0.002022s
+Execution time: 0.001697s
+Execution time: 0.002012s
+Execution time: 0.001618s
+Execution time: 0.001962s
+Execution time: 0.001631s
+>>>>> End Commit Output
+opt_commit: False, reward: 0
