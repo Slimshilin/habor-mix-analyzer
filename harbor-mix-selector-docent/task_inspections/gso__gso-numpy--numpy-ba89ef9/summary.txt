@@ -1,0 +1,181 @@
+=== Per-run breakdown ===
+
+--- 191225fc  claude-code/claude-opus-4-6  expected=success  graded=success closeness=almost_there
+  approach : The agent correctly localized the hot path to the C implementation of `ufunc_at` and identified that the existing code was paying heavy per-element overhead inside a loop that repeatedly reset iterator base pointers and copied through the b
+  strategy : The optimization strategy was to preserve NumPy's existing type resolution and loop selection, but short-circuit the buffered single-element iterator path when no buffering was required, thus avoiding per-element base-pointer resets and cop
+  rebuilt  : Yes
+  overfit  : The overfit risk was moderate rather than low. The agent did not hardcode the benchmark shapes or dtype; it gated the shortcut on whether buffering was unnecessary and validated mixed dtypes, unary, m
+  task/agt : This was more an agent-solution-quality bottleneck than a task bottleneck. The agent found the right file and the right high-level issue quickly [T0B11:<RANGE>ufunc_at(PyUFuncObject *ufunc, PyObject *args)</RANGE>] [T0B15:<RANGE>The key opt
+
+--- b0aa979b  claude-code/claude-opus-4-6  expected=failure  graded=failure closeness=partial
+  approach : The agent correctly localized the hot path in the ufunc-at implementation and recognized that the existing loop was paying heavy per-element iterator-buffer overhead in the selected-item path [T0B13:<RANGE>Iterate over first and second oper
+  strategy : The strategy was to specialize the selected-item execution path by detecting dtype-equivalent cases and bypassing the buffered single-element iterator reset/copy cycle, while leaving the original buffered path as fallback for casting cases 
+  rebuilt  : yes
+  surface  : Despite producing a measurable local improvement and passing visible checks [T0B26:<RANGE>np.add.at: min=0.0128s, mean=0.0139s</RANGE>] [T0B30:<RANGE>All tests passed!</RANGE>], the run still received zero reward [R0M.run.reward]. The hidde
+  rootcause: The patch attacked the right subsystem but not deeply enough. The oracle split the at implementation into a separate fast strided-loop path and also included a SIMD cutoff tweak, whereas this agent only inserted an inline descriptor-equalit
+  overfit  : Moderate. The agent did not hardcode the exact benchmark inputs and explicitly tried to keep a generic no-casting fallback structure [T0B15:<RANGE>Let me add a fast path that skips the NpyIter when no
+  task/agt : Mostly agent bottleneck rather than task impossibility. The task was solvable and the reference direction was indeed in the same area the agent found, but the agent stopped at an intermediate optimization that yielded only about a 3.5x loca
+
+--- 1abad4c5  claude-code/claude-opus-4-6  expected=failure  graded=failure closeness=partial
+  approach : The agent correctly localized the hot path to the `.at` implementation in `numpy/core/src/umath/ufunc_object.c` after identifying `ufunc_at` and reading through the per-element loop structure [T0B11:<RANGE>static PyObject *
+ufunc_at(PyUFunc
+  strategy : The optimization strategy was to remove per-element buffered-iterator overhead inside `.at` by introducing a direct-call fast path whenever operand dtypes already matched the resolved operation descriptors, while leaving the original buffer
+  rebuilt  : yes
+  surface  : The run failed because the hidden grader compares timing behavior against the oracle band, and this patch did not match that target despite improving speed. The run metadata records zero reward and marks the run as a failure [R0M.run.reward
+  rootcause: The root cause is that the agent chose the wrong abstraction level for the fix. Instead of splitting `ufunc_at` into a general fast strided-loop path based on stride/layout preconditions, it added a much narrower dtype-equivalence shortcut 
+  overfit  : High. The agent explicitly optimized around the observed reproduction scenario by checking whether no casting was needed and then directly calling the inner loop one element at a time [T0B15:<RANGE>wh
+  task/agt : Primarily agent bottleneck, not task bottleneck. The task was solvable and the trajectory shows the agent found the right file and identified the iterator overhead correctly [T0B11:<RANGE>ufunc_at(PyUFuncObject *ufunc, PyObject *args)</RANG
+
+--- 519f16c9  terminus-2/claude-opus-4-6  expected=failure  graded=failure closeness=almost_there
+  approach : The agent correctly homed in on NumPy’s C implementation of `ufunc.at`, specifically `numpy/core/src/umath/ufunc_object.c` and the `ufunc_at` function, after listing the repo and grepping for `ufunc_at` [T0B4] [T0B6]. They read through the 
+  strategy : They attempted an oracle-style C-level fast path in `ufunc_at`: bypassing the slow buffered `NpyIter` machinery when no casting was needed, and directly invoking the strided loop on the map iterator’s data pointers [T0B19] [T0B20]. They the
+  rebuilt  : Yes. They rebuilt NumPy with `uv pip install . --reinstall` and then reran the benchmark, observing a reduced runtime around 0.0126s–0.0129s. They also reran correctness checks, including a custom suite that passed, and later verified the exact task script end-to-end with equivalence checking and timing.
+  surface  : The run is classified as failure because the agent’s patch did not make it into the graded final state. The evaluation log shows the submitted patch was not the one the agent had been testing: the grader applied a different patch that touch
+  rootcause: The main root cause is that the agent drifted between multiple optimization ideas and verification environments, and the final graded artifact ended up inconsistent with the locally verified patch. They explored the correct file and built a
+  overfit  : Moderate to low in the local work they demonstrated, because the C fast path they described was based on general preconditions rather than the exact benchmark shape [T0B19] [T0B20]. However, there was
+  task/agt : This looks more like an agent/execution problem than a task-quality problem. The task itself was feasible and the intended fix was present in the repository’s target area (`ufunc_object.c`), and the agent even reproduced a strong speedup lo
+
+--- 679ade5d  terminus-2/claude-opus-4-6  expected=failure  graded=failure closeness=almost_there
+  approach : The agent quickly identified the relevant implementation site for `np.add.at` by locating `numpy/core/src/umath/ufunc_object.c` and reading the `ufunc_at` function in detail [T0B4] [T0B8] [T0B10]. It noticed the slow per-element loop around
+  strategy : They chose an oracle-style C-level `ufunc_at` fast path in `numpy/core/src/umath/ufunc_object.c`, aiming to bypass the buffered `NpyIter` per-element path when the descriptors do not require casting [T0B8] [T0B10] [T0B23]. In the transcript
+  rebuilt  : Yes. It rebuilt the package with `uv pip install . --reinstall`, which completed successfully. It then reran the timing script and saw the runtime drop from roughly 0.044–0.059 s baseline to roughly 0.012–0.014 s after the patch. It also ran functional checks, including a custom equivalence script that passed, the `numpy.core.tests.test_ufunc` subset for `at` which eventually passed 107 tests, and the full `test_ufunc` suite which passed 470 tests.
+  surface  : The eventual patch likely failed hidden grading because it diverged too far from the intended safe optimization shape and was not the actual final state the grader applied. The transcript shows the agent building and validating its own patc
+  rootcause: The main root cause appears to be transcript/solution drift: the agent explored the right area and produced a working optimization, but the recorded solution artifact used for grading was not that same minimal patch. The grader’s patch snap
+  overfit  : The agent’s live optimization was reasonably general, not a trivial special-case on exactly 1M random indices into length-1000 float64. It keyed off descriptor/casting conditions, not on hardcoded siz
+  task/agt : This looks more like an agent/solution-capture issue than a task-design issue. The task itself was feasible and the agent demonstrated that the intended optimization could be implemented and validated: it found the hot path, patched C code,
+
+--- 7b3d3ef1  terminus-2/claude-opus-4-6  expected=failure  graded=failure closeness=almost_there
+  approach : The agent correctly homed in on the NumPy C implementation of `ufunc.at`, locating `numpy/core/src/umath/ufunc_object.c` and reading the `ufunc_at` body and its per-element loop. They also created a local benchmark script in `/workspace/tes
+  strategy : Their intended optimization was a C-level `ufunc_at` fast path: detect when no casting is needed, bypass the `NpyIter` buffer/reset/copy machinery, and invoke the ufunc strided loop directly on the mapped data pointers. That is the right cl
+  rebuilt  : Yes for the exploratory trajectory: they rebuilt NumPy with `uv pip install . --reinstall` and then reran `/workspace/test_opt.py`, reporting a speedup from roughly 0.044s min baseline to roughly 0.0128s min after the change, with identical output sum 33448.617571. They also ran a full `gso_test_*.py`-style workflow in their own environment and manually verified equivalence on several cases, but the grader’s recorded patch for the actual task was not their benchmarked local edit; the run failed because the submitted patch was the wrong one and did not beat the oracle band.
+  surface  : The grading run failed because the final submitted patch was the wrong/invalid patch set relative to the intended task, as shown by the grader’s patch summary: it applied edits to `benchmarks/benchmarks/bench_ufunc.py`, `legacy_array_method
+  rootcause: The main root cause appears to be patch drift: the agent explored the correct file and conceptually understood the hot loop, but the final delivered solution diverged into an unrelated or corrupted patch bundle rather than the precise `ufun
+  overfit  : Low to moderate in the explored idea, because the intended optimization is a general C-level fast path for `ufunc.at` rather than a special-case for `1_000_000` indices or length-1000 outputs. The age
+  task/agt : The bottleneck was correctly identified as the per-element `ufunc_at` machinery in `numpy/core/src/umath/ufunc_object.c`, specifically the loop that resets base pointers, copies through `NpyIter`, calls the strided loop for count 1, and cop
+
+--- d07c100a  codex/gpt-5.4  expected=success  graded=success closeness=perfect
+  approach : The agent quickly focused on NumPy’s `ufunc.at` implementation in `numpy/core/src/umath/ufunc_object.c`, found the hot path around `ufunc_at`, and inspected the surrounding iterator/buffering logic in detail [T0B10] [T0B14]. It also compare
+  strategy : They used a C-level `ufunc_at` fast-path rewrite, matching the oracle-style strategy: skip the per-element buffered iterator machinery when dtype/alignment/promotion conditions are simple, and otherwise fall back to the existing buffered pa
+  rebuilt  : Yes. They created a local benchmark script in `/workspace/test_opt.py`, ran it before the rebuild and got about 0.047s mean / 0.044s best, rebuilt NumPy with `uv pip install . --reinstall`, reran the benchmark and got about 0.0081s mean / 0.0079s best, and also validated behavior with a manual `ufunc.at` script.
+  overfit  : Low. The final change was not a special-case for the prompt’s exact input shape; it was a general `ufunc.at` fast path gated on exact-dtype/alignment and iterator conditions [T0B80]. The benchmark scr
+  task/agt : This looks like an agent-capability success rather than a task-quality issue. The task was feasible and the agent found the right source file and rebuilt correctly [T0B14] [T0B96]. The hidden grading setup was nontrivial, but the agent navi
+
+--- 30511e77  codex/gpt-5.4  expected=failure  graded=failure closeness=almost_there
+  approach : The agent explored the repo layout, identified the relevant C implementation in `numpy/core/src/umath/ufunc_object.c`, and read the `ufunc_at` path plus surrounding iterator helpers before editing [T0B14] [T0B16] [T0B18] [T0B30] [T0B46]. Th
+  strategy : They chose a C-level `ufunc_at` fast path, aiming to bypass the buffered iterator when the resolved loop can run directly on the indexed operands. The patch added helper logic around operand casting/alignment checks and a direct strided-loo
+  rebuilt  : Yes. They rebuilt NumPy with `uv pip install . --reinstall`, which completed successfully, then reran the benchmark and observed a lower median runtime (about 0.012947s after rebuild versus about 0.044645s before). They also ran focused correctness checks and reported success.
+  surface  : The trajectory did not show a local functional failure; the agent’s own rebuild and targeted checks passed [T0B80] [T0B88]. However, the final submitted patch was not the same as the agent’s working patch: the evaluation log shows the submi
+  rootcause: The main root cause is a mismatch between the agent’s in-trajectory successful experimental patch and the patch that was actually evaluated. The agent demonstrated good exploration and measurement, but the final artifact the grader saw was 
+  overfit  : High for the submitted patch. The evaluated diff included a benchmark addition and a SIMD cutoff tweak, which are much more likely to be tailored to particular microbenchmarks than the broad `ufunc.at
+  task/agt : This looks primarily like an agent/process issue, not an inherent task infeasibility. The agent found the right file, read the relevant implementation, built, and measured successfully [T0B14] [T0B16] [T0B60]. The hidden benchmark’s oracle-
+
+--- 127d0978  codex/gpt-5.4  expected=failure  graded=failure closeness=almost_there
+  approach : The agent quickly localized the hot path by searching for `.at` and `PyUFunc_At`, then read the `ufunc_at` implementation in `numpy/core/src/umath/ufunc_object.c` and the nearby `.at` tests in `numpy/core/tests/test_ufunc.py` [T0B6] [T0B8] 
+  strategy : They chose an oracle-style C-level fast path in `ufunc_at`, attempting to bypass the per-element buffered `NpyIter` setup when descriptors and alignment allow direct strided-loop execution [T0B78] [T0B118]. In other words, they pursued the 
+  rebuilt  : Yes. They rebuilt NumPy with `uv pip install . --reinstall` after editing the source, and reran the benchmark script multiple times. The benchmark went from roughly 44 ms median before the change  to about 13 ms median after the rebuild. They also ran direct correctness checks for several `np.add.at` cases and the benchmark-shaped reference loop.
+  surface  : The trajectory is a failure because the patch did not match the hidden grader’s expected improvement profile. The grader reports that after applying the patch, the optimized commit was `False` and reward remained `0` [R0M.run.reward] [R0M.r
+  rootcause: The root issue is that the agent implemented a plausible but incomplete optimization rather than the more specific oracle fix. The intended fix was to split `ufunc_at` into a fast strided-loop path that avoids the buffered `NpyIter` when th
+  overfit  : Moderate. The patch is not a blatant special-case for exactly 1M indices / length-1000 / float64, but it is narrowly targeted at the `.at` scatter-update pattern and depends on descriptor/alignment co
+  task/agt : This looks like an agent-capability / implementation-quality miss more than a task infeasibility issue. The repo and hot path were discoverable, and the agent did rebuild and measure instead of editing blindly [T0B6] [T0B44] [T0B100] [T0B10
+
+--- fa7f1bb3  terminus-2/gpt-5.4  expected=success  graded=success closeness=perfect
+  approach : The agent quickly localized the hot path to NumPy’s C-level `ufunc_at` implementation in `numpy/core/src/umath/ufunc_object.c` and confirmed the benchmark was dominated by the generic map-iterator/buffered inner loop. They created a local b
+  strategy : They chose a C-level `ufunc_at` fast path rather than a Python-level workaround. Specifically, they inserted a specialized `np.add.at` path in `ufunc_object.c` that handles 1-D contiguous aligned destinations, contiguous `intp` indices, and
+  rebuilt  : They did both: rebuilt NumPy and reran timing. The successful rebuild/install is visible from the uv reinstall output, and they reran the benchmark script afterward. The benchmark output also preserved the checksum and sample values, indicating equivalence.
+  overfit  : Low-to-moderate. The final patch is not a hard-coded special case for 1M indices or length-1000 destinations; it is a general C fast path gated by type/shape/alignment preconditions and it preserves f
+  task/agt : This looks like an agent-capability win rather than a task-quality problem. The task statement was enough to infer that `np.add.at` on random indices should be optimized in NumPy internals, and the hidden oracle’s behavior is consistent wit
+
+--- 5466cd23  terminus-2/gpt-5.4  expected=success  graded=success closeness=perfect
+  approach : The agent first explored the repo, created a local benchmark script at /workspace/test_opt.py matching the provided workload, and measured a baseline for np.add.at on the installed NumPy build [T0B2:<RANGE>python /workspace/test_opt.py
+nump
+  strategy : They implemented a C-level fast path inside ufunc_at in numpy/core/src/umath/ufunc_object.c. The patch added a helper that directly walks the MapIter and the broadcasted second operand, performing in-place addition for primitive numeric dty
+  rebuilt  : Yes. The agent rebuilt/reinstalled NumPy with uv pip install . --reinstall and then reran the benchmark script. The rebuild completed successfully. The rerun showed a much faster average runtime while preserving the checksum.
+  overfit  : Moderate. The helper was specialized to np.add and primitive same-dtype aligned arrays, which is broadly sensible, but it is still a narrow fast path keyed specifically to add and a curated set of dty
+  task/agt : The bottleneck was agent capability/implementation quality, not task ambiguity. The task statement did not obscure the real target: the agent correctly found the core C implementation and applied the right class of optimization, which is co
+
+--- 25caae67  terminus-2/gpt-5.4  expected=success  graded=success closeness=almost_there
+  approach : The agent first reproduced the workload by creating and running a benchmark script, measuring a baseline around 0.0456 s for the target `np.add.at` pattern [T0B4:<RANGE>python /workspace/test_opt.py
+numpy 1.25.0.dev0+293.g9f1b3efef4
+time 0.
+  strategy : The implemented strategy was a narrow C-level specialization inside `ufunc_at`: add a helper that directly iterates `PyArrayMapIterObject` and the broadcasted second-operand iterator for float64 addition, and dispatch to it when the ufunc n
+  rebuilt  : yes
+  overfit  : Moderate. The patch is not a pure one-off hack for exactly one array length, because it accelerates a broader pattern of `add.at` on float64 arrays with broadcastable RHS values [T0B28:<RANGE>if (iter
+  task/agt : Mostly task-side difficulty, not gross agent failure. The agent correctly diagnosed the hotspot, found a viable internal pattern to copy, handled a compile failure, rebuilt, and achieved the accepted performance band [T0B18:<RANGE>static vo
+
+--- ba359698  gemini-cli/gemini-3.1-pro-preview  expected=success  graded=success closeness=perfect
+  approach : The agent quickly narrowed the target to `np.add.at` / `ufunc.at`, searched for the method implementation in NumPy’s C sources, and inspected `numpy/core/src/umath/ufunc_object.c` where `ufunc_at` is defined [T0B5:T0B12]. It then pulled a p
+  strategy : C-level ufunc fast-path optimization. The agent adopted an oracle-style `ufunc_at` rewrite: bypass the buffered `NpyIter` path when the descriptors are already compatible and aligned, and call the strided inner loop directly. The patch also
+  rebuilt  : Yes. The agent created and ran a benchmark script at `/workspace/test_opt.py` and measured an initial time of `0.04541 s`. It then rebuilt NumPy with `uv pip install . --reinstall`, reran the script in the project environment, and observed `0.00817 s`. It later reran the benchmark again and saw `0.00863 s`, confirming the optimization stayed in effect.
+  overfit  : Low. The chosen patch is general-purpose C-level infrastructure, not a hard-coded special case for 1M indices, length-1000 destinations, or float64. The fast path is gated by generic descriptor/alignm
+  task/agt : This was mostly an agent-success story rather than a task-quality issue. The task was feasible and the hidden oracle patch was inferable from upstream NumPy history, which the agent discovered and applied [T0B22:T0B30]. The hidden grading s
+
+--- 7f33f099  gemini-cli/gemini-3.1-pro-preview  expected=failure  graded=failure closeness=almost_there
+  approach : The agent quickly moved from measuring the test script to source inspection, first creating `/workspace/test_opt.py` and timing `np.add.at` to establish a baseline [T0B1:<RANGE>I've begun to dissect the interactions within the test environm
+  strategy : The strategy was a C-level fast path inside `ufunc_at` in `numpy/core/src/umath/ufunc_object.c`, not a Python-level workaround. The agent first tried bypassing `NpyIter_ResetBasePointers` when buffering was unnecessary [T0B25:<RANGE>I've di
+  rebuilt  : Yes. The agent rebuilt NumPy multiple times with `uv pip install . --reinstall` and reran its timing script after each major edit; e.g. after the first iterator change it rebuilt and got `Time: 1.3230s`, then after more edits rebuilt again and got `Time: 1.1609s`, and later `Time: 1.0274s`. It also ran functional checks against NumPy tests, including `pytest --pyargs numpy.core.tests.test_ufunc`, which passed 470 tests  and later again.
+  surface  : The run ultimately failed because the patch did not survive cleanly into the verifier’s fresh checkout, and the injected patch shown by the verifier was unrelated to the agent’s actual C-level iterator work. The verification log shows the h
+  rootcause: The agent correctly identified the bottleneck class, but its exploration wandered into speculative micro-optimizations and ad hoc iterator manipulation rather than converging on the oracle-style refactor. It spent many steps inventing custo
+  overfit  : High. The agent increasingly tuned behavior for the specific prompt scenario of 1M random indices into a length-1000 destination, even though it later claimed generality. It repeatedly focused on the 
+  task/agt : This is mostly an agent-capability issue rather than task ambiguity. The task description was actually quite specific about the intended direction: a fast strided-loop path in `ufunc_at` and a small SIMD cutoff, with the hidden grader rewar
+
+--- 41b24f84  gemini-cli/gemini-3.1-pro-preview  expected=failure  graded=failure closeness=almost_there
+  approach : The agent quickly focused on NumPy’s `ufunc_at` implementation in `numpy/core/src/umath/ufunc_object.c`, locating the `ufunc_at` function and reading the whole loop that drives `np.add.at` [T0B16] [T0B20]. They also inspected iterator inter
+  strategy : They pursued an oracle-style C-level `ufunc_at` fast path. The final diff in the transcript shows a new branch in `numpy/core/src/umath/ufunc_object.c` that checks `NpyIter_RequiresBuffering(iter_buffer)` and, when buffering is not needed, 
+  rebuilt  : Yes. They created and ran `/workspace/test_opt.py` early on and measured the baseline around 0.0478s. They then rebuilt/reinstalled NumPy multiple times and re-ran the timing script after edits, with observations like 0.0445s after editable install, 0.0126s after a patch, and 0.0656s when reverted to baseline. They also ran functional validation via `test_verify.py` and `pytest -W ignore numpy/core/tests/test_ufunc.py`, which passed.
+  surface  : Their first attempted fast path was functionally wrong: the verification script reported `INCORRECT!` and showed mismatched results after the custom iterator update logic [T0B100]. After reverting to the simpler `requires_buffering` split, 
+  rootcause: The deeper issue was overcomplication and incomplete understanding of NumPy’s map-iterator state machine. The agent spent a long time exploring internals and even tried to inline `PyArray_MapIterNext`-style logic, but missed how `iter_count
+  overfit  : Moderate to low in the final patch. The final change is a generic C-level optimization keyed on `NpyIter_RequiresBuffering(iter_buffer)` rather than on the specific benchmark shape, dtype, or 1M/1000 
+  task/agt : This looks mostly like an agent capability issue rather than an inherently ambiguous or infeasible task. The hidden oracle solution described in the prompt was to split `ufunc_at` into a fast strided-loop path and add a small SIMD cutoff, w
+
+--- aadb3dcc  terminus-2/gemini-3.1-pro-preview  expected=failure  graded=failure closeness=almost_there
+  approach : The agent quickly focused on the NumPy C ufunc implementation, especially the `ufunc_at` path in `numpy/core/src/umath/ufunc_object.c`, after identifying `ufunc_at` via grep and inspecting the function body with `sed` [T0B12:<RANGE>numpy/co
+  strategy : They chose a C-level `ufunc_at` fast path in `numpy/core/src/umath/ufunc_object.c`, explicitly aimed at bypassing the buffered `NpyIter` machinery when the operand descriptors and alignment conditions are favorable [T0B18:<RANGE>/* Reset Np
+  rebuilt  : Yes. They first built NumPy successfully with `uv pip install . --reinstall`, then measured the baseline script runtime at about 0.044585 seconds. After editing `numpy/core/src/umath/ufunc_object.c`, they rebuilt again  and reran the script, getting about 0.014487 seconds, then 0.012931 seconds after the refined patch. They also ran the equivalence path via the same script setup with `eqcheck=True`, and there was no reported assertion failure.
+  surface  : The trajectory does not show a functional crash or build failure; the patch built and the test script ran successfully. The most obvious surface issue is that the agent’s final patch was not the actual minimal oracle fix: the diff shown inc
+  rootcause: The main root cause was incomplete convergence to the known optimal implementation. The agent correctly inspected `ufunc_object.c`, but then spent effort on an ad hoc fast-path patch rather than reproducing the smaller, known-good split of 
+  overfit  : Moderate. The agent’s gating logic is generic enough that it is not a blatant hard-code to the exact 1M/1000/float64 example; it checks descriptors and alignment instead of input sizes [T0B24:<RANGE>i
+  task/agt : This looks primarily like an agent capability / implementation-quality issue, not a task infeasibility issue. The task was challenging but the repository and bottleneck were discoverable; the agent did inspect the right source file and rebu
+
+--- c49197b1  terminus-2/gemini-3.1-pro-preview  expected=failure  graded=failure closeness=almost_there
+  approach : The agent first set up a local reproduction script for the provided workload and measured a baseline for `np.add.at` on 1M random indices into a length-1000 float64 array [T0B1:T0B1]. It then explored the NumPy C sources, zeroing in on `num
+  strategy : The chosen strategy was a C-level fast path in `ufunc_at` inside `numpy/core/src/umath/ufunc_object.c`, bypassing `NpyIter_ResetBasePointers`, `NpyIter_GetDataPtrArray`, and `iternext` when buffering is unnecessary. The agent explicitly use
+  rebuilt  : Yes. It rebuilt NumPy after patching, using the provided install/rebuild flow, and then reran the local script. The baseline was about 0.0470s, and after the patch the same script reported about 0.0132s, with the equivalence check also passing at about 0.0130s.
+  surface  : The local benchmark improved substantially and equivalence passed, but the submitted solution still failed the hidden grader. The grader’s oracle output shows much faster timings in the oracle commit band (for example, Test 0 around 0.008–0
+  rootcause: The agent did not reconstruct the actual reference fix described in the task background; instead it implemented a simpler buffering-skip fast path based on `NpyIter_RequiresBuffering` inside `ufunc_object.c` [T0B30] [T0B31]. That improved t
+  overfit  : Moderate. The patch does not obviously hard-code the exact 1M/1000/float64 input, so it is not a literal special-case for the prompt’s numbers. However, it is still a fairly narrow optimization around
+  task/agt : This looks more like an agent-capability / search-direction issue than a task-quality issue. The task description was sufficiently specific about the expected oracle-style direction (fast `ufunc_at` path plus a small SIMD cutoff), and the r
+
+--- eba92257  terminus-2/gemini-3.1-pro-preview  expected=failure  graded=failure closeness=almost_there
+  approach : The agent did explore the repository and immediately focused on the NumPy C implementation of `ufunc.at` in `numpy/core/src/umath/ufunc_object.c`, locating `ufunc_at` and inspecting the loop that drives `np.add.at` [T0B6:<RANGE>grep -rn "uf
+  strategy : They attempted an oracle-style C-level fast path in `ufunc_at`: adding a branch based on `NpyIter_RequiresBuffering(iter_buffer)` to bypass the expensive buffered iterator path when no buffering is needed, and call `strided_loop` directly o
+  rebuilt  : Yes. They rebuilt NumPy after editing, using the provided install command, and then reran the benchmark script. The baseline before changes was measured at `0.04422s`. After the patch and rebuild, they reran the script and reported `Check time: 0.01309s` and `Baseline time: 0.01289s`. They also reran after adding a casting test and saw `Baseline time: 0.01535s` plus `Casting test passed!`.
+  surface  : The patch they produced was not the one actually evaluated by the grader. The grader’s patch diff shows unrelated edits to `benchmarks/benchmarks/bench_ufunc.py`, `legacy_array_method.c`, `loops_arithm_fp.dispatch.c.src`, and a rewrite of `
+  rootcause: This looks like a task-execution mismatch and overreach rather than a conceptual misunderstanding of the bottleneck. The agent correctly identified the relevant file and the expensive `ufunc_at` buffering loop, but then diverged into a spec
+  overfit  : Moderate. The agent’s explored idea was not a hard-coded special case for `1_000_000` or `1000`, so it was not obviously overfit to the sample input. However, the benchmark measurements and added ad h
+  task/agt : The dominant bottleneck was agent execution quality, not task ambiguity. The task description was sufficiently informative about the goal (`np.add.at(res, indices, vals)` speedup) and even pointed toward the correct kind of repository area 
+
+=== Aggregate ===
+status counts    : {'success': 6, 'failure': 12}
+closeness counts : {'almost_there': 12, 'partial': 2, 'perfect': 4}
+bottleneck votes : {'agent (mostly)': 18}
+
+=== Strategy buckets ===
+  C-level ufunc_at fast path (oracle-style) (18):
+   - 191225fc (claude-code/claude-opus-4-6, success)
+   - b0aa979b (claude-code/claude-opus-4-6, failure)
+   - 1abad4c5 (claude-code/claude-opus-4-6, failure)
+   - 519f16c9 (terminus-2/claude-opus-4-6, failure)
+   - 679ade5d (terminus-2/claude-opus-4-6, failure)
+   - 7b3d3ef1 (terminus-2/claude-opus-4-6, failure)
+   - d07c100a (codex/gpt-5.4, success)
+   - 30511e77 (codex/gpt-5.4, failure)
+   - 127d0978 (codex/gpt-5.4, failure)
+   - fa7f1bb3 (terminus-2/gpt-5.4, success)
+   - 5466cd23 (terminus-2/gpt-5.4, success)
+   - 25caae67 (terminus-2/gpt-5.4, success)
+   - ba359698 (gemini-cli/gemini-3.1-pro-preview, success)
+   - 7f33f099 (gemini-cli/gemini-3.1-pro-preview, failure)
+   - 41b24f84 (gemini-cli/gemini-3.1-pro-preview, failure)
+   - aadb3dcc (terminus-2/gemini-3.1-pro-preview, failure)
+   - c49197b1 (terminus-2/gemini-3.1-pro-preview, failure)
+   - eba92257 (terminus-2/gemini-3.1-pro-preview, failure)

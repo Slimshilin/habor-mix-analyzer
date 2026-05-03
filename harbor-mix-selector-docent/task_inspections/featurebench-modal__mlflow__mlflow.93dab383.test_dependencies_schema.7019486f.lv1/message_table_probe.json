@@ -1,0 +1,14 @@
+{
+  "blocks": {
+    "error": "HTTPError: HTTP 400: Expression type 'Star' is not allowed in Docent Query Language.\n\nOffending DQL fragment: *\n\nHint: If using COUNT(*), try count() or count(1) instead."
+  },
+  "events": {
+    "error": "HTTPError: HTTP 400: Expression type 'Star' is not allowed in Docent Query Language.\n\nOffending DQL fragment: *\n\nHint: If using COUNT(*), try count() or count(1) instead."
+  },
+  "messages": {
+    "error": "HTTPError: HTTP 400: Expression type 'Star' is not allowed in Docent Query Language.\n\nOffending DQL fragment: *\n\nHint: If using COUNT(*), try count() or count(1) instead."
+  },
+  "transcript_messages": {
+    "error": "HTTPError: HTTP 400: Expression type 'Star' is not allowed in Docent Query Language.\n\nOffending DQL fragment: *\n\nHint: If using COUNT(*), try count() or count(1) instead."
+  }
+}

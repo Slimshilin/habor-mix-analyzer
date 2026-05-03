@@ -1,0 +1,208 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Obtaining file:///testbed
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: Flask-CORS<7 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (6.0.1)
+Requirement already satisfied: Flask<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.1.2)
+Requirement already satisfied: alembic!=1.10.0,<2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.17.2)
+Requirement already satisfied: cachetools<7,>=5.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (6.2.2)
+Requirement already satisfied: click<9,>=7.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (8.3.1)
+Requirement already satisfied: cloudpickle<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.1.2)
+Requirement already satisfied: cryptography<47,>=43.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (46.0.3)
+Requirement already satisfied: databricks-sdk<1,>=0.20.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.73.0)
+Requirement already satisfied: docker<8,>=4.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (7.1.0)
+Requirement already satisfied: fastapi<1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.121.2)
+Requirement already satisfied: gitpython<4,>=3.1.9 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.1.45)
+Requirement already satisfied: graphene<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.4.3)
+Requirement already satisfied: gunicorn<24 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (23.0.0)
+Requirement already satisfied: huey<3,>=2.5.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.5.4)
+Requirement already satisfied: importlib_metadata!=4.7.0,<9,>=3.7.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (8.7.0)
+Requirement already satisfied: matplotlib<4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (3.10.7)
+Requirement already satisfied: numpy<3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.3.3)
+Requirement already satisfied: opentelemetry-api<3,>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.38.0)
+Requirement already satisfied: opentelemetry-proto<3,>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.38.0)
+Requirement already satisfied: opentelemetry-sdk<3,>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.38.0)
+Requirement already satisfied: packaging<26 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (25.0)
+Requirement already satisfied: pandas<3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.3.3)
+Requirement already satisfied: protobuf<7,>=3.12.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (5.29.5)
+Requirement already satisfied: pyarrow<23,>=4.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (22.0.0)
+Requirement already satisfied: pydantic<3,>=2.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.12.4)
+Requirement already satisfied: python-dotenv<2,>=0.19.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.2.1)
+Requirement already satisfied: pyyaml<7,>=5.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (6.0.3)
+Requirement already satisfied: requests<3,>=2.17.3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.32.5)
+Requirement already satisfied: scikit-learn<2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.7.2)
+Requirement already satisfied: scipy<2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (1.16.3)
+Requirement already satisfied: sqlalchemy<3,>=1.4.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (2.0.44)
+Requirement already satisfied: sqlparse<1,>=0.4.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.5.3)
+Requirement already satisfied: typing-extensions<5,>=4.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (4.15.0)
+Requirement already satisfied: uvicorn<1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from mlflow==3.6.1.dev0) (0.38.0)
+Requirement already satisfied: Mako in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from alembic!=1.10.0,<2->mlflow==3.6.1.dev0) (1.3.10)
+Requirement already satisfied: cffi>=2.0.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from cryptography<47,>=43.0.0->mlflow==3.6.1.dev0) (2.0.0)
+Requirement already satisfied: google-auth~=2.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (2.43.0)
+Requirement already satisfied: urllib3>=1.26.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from docker<8,>=4.0.0->mlflow==3.6.1.dev0) (2.5.0)
+Requirement already satisfied: starlette<0.50.0,>=0.40.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from fastapi<1->mlflow==3.6.1.dev0) (0.49.3)
+Requirement already satisfied: annotated-doc>=0.0.2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from fastapi<1->mlflow==3.6.1.dev0) (0.0.4)
+Requirement already satisfied: blinker>=1.9.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (1.9.0)
+Requirement already satisfied: itsdangerous>=2.2.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (2.2.0)
+Requirement already satisfied: jinja2>=3.1.2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (3.1.6)
+Requirement already satisfied: markupsafe>=2.1.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (2.1.5)
+Requirement already satisfied: werkzeug>=3.1.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from Flask<4->mlflow==3.6.1.dev0) (3.1.3)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from gitpython<4,>=3.1.9->mlflow==3.6.1.dev0) (4.0.12)
+Requirement already satisfied: smmap<6,>=3.0.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from gitdb<5,>=4.0.1->gitpython<4,>=3.1.9->mlflow==3.6.1.dev0) (5.0.2)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (0.4.2)
+Requirement already satisfied: rsa<5,>=3.1.4 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (4.9.1)
+Requirement already satisfied: graphql-core<3.3,>=3.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from graphene<4->mlflow==3.6.1.dev0) (3.2.7)
+Requirement already satisfied: graphql-relay<3.3,>=3.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from graphene<4->mlflow==3.6.1.dev0) (3.2.0)
+Requirement already satisfied: python-dateutil<3,>=2.7.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from graphene<4->mlflow==3.6.1.dev0) (2.9.0.post0)
+Requirement already satisfied: zipp>=3.20 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from importlib_metadata!=4.7.0,<9,>=3.7.0->mlflow==3.6.1.dev0) (3.23.0)
+Requirement already satisfied: contourpy>=1.0.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (1.4.9)
+Requirement already satisfied: pillow>=8 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (11.3.0)
+Requirement already satisfied: pyparsing>=3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from matplotlib<4->mlflow==3.6.1.dev0) (3.2.5)
+Requirement already satisfied: opentelemetry-semantic-conventions==0.59b0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from opentelemetry-sdk<3,>=1.9.0->mlflow==3.6.1.dev0) (0.59b0)
+Requirement already satisfied: pytz>=2020.1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pandas<3->mlflow==3.6.1.dev0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pandas<3->mlflow==3.6.1.dev0) (2025.2)
+Requirement already satisfied: annotated-types>=0.6.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pydantic<3,>=2.0.0->mlflow==3.6.1.dev0) (0.7.0)
+Requirement already satisfied: pydantic-core==2.41.5 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pydantic<3,>=2.0.0->mlflow==3.6.1.dev0) (2.41.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from pydantic<3,>=2.0.0->mlflow==3.6.1.dev0) (0.4.2)
+Requirement already satisfied: six>=1.5 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from python-dateutil<3,>=2.7.0->graphene<4->mlflow==3.6.1.dev0) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from requests<3,>=2.17.3->mlflow==3.6.1.dev0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from requests<3,>=2.17.3->mlflow==3.6.1.dev0) (3.11)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from requests<3,>=2.17.3->mlflow==3.6.1.dev0) (2025.11.12)
+Requirement already satisfied: pyasn1>=0.1.3 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from rsa<5,>=3.1.4->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow==3.6.1.dev0) (0.6.1)
+Requirement already satisfied: joblib>=1.2.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from scikit-learn<2->mlflow==3.6.1.dev0) (1.5.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from scikit-learn<2->mlflow==3.6.1.dev0) (3.6.0)
+Requirement already satisfied: greenlet>=1 in /opt/miniconda3/envs/testbed/lib/python3.11/site-packages (from sqlalchemy<3,>=1.4.0->mlflow==3.6.1.dev0) (3.2.4)
+Requirement already satisfied: anyio<5,>=3.6.2 in /opt/miniconda3/envs/testbed/lib/python
+
+... [+155265 chars elided] ...
+
+stderr teardown ---------------------------
+2026/04/09 05:34:27 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 05:34:27 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 05:34:27 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 05:34:27 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 05:34:27 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 05:34:27 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 05:34:27 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 05:34:28 INFO mlflow.tracking.fluent: Active model is cleared
+____________ test_traces_buffer_expires_and_log_when_timeout_is_set ____________
+----------------------------- Captured stderr call -----------------------------
+2026/04/09 05:34:29 WARNING mlflow.entities.span: Failed to end span 000000000000007b: create_mock_otel_span.<locals>._MockOTelSpan.end() got an unexpected keyword argument 'end_time'. For full traceback, set logging level to debug.
+2026/04/09 05:34:29 INFO mlflow.tracing.utils.timeout: Trace tr-1 is timed out after 1 seconds. The operation may be stuck or taking too long to complete. To increase the timeout, set the environment variable MLFLOW_TRACE_TIMEOUT_SECONDS to a larger value. You can find the aborted trace in the MLflow UI.
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 05:34:32 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 05:34:32 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 05:34:32 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 05:34:32 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 05:34:32 INFO mlflow.tracking.fluent: Active model is cleared
+--------------------------- Captured stderr teardown ---------------------------
+2026/04/09 05:34:32 INFO mlflow.tracking.fluent: Active model is cleared
+============================= slowest 10 durations =============================
+3.00s call     tests/tracing/test_trace_manager.py::test_traces_buffer_expires_and_log_when_timeout_is_set
+1.63s setup    tests/genai/optimize/test_optimize.py::test_optimize_prompts_single_prompt
+1.00s call     tests/tracing/test_trace_manager.py::test_traces_buffer_expires_after_ttl
+1.00s teardown tests/tracing/test_trace_manager.py::test_traces_buffer_expires_and_log_when_timeout_is_set
+0.75s call     tests/test_runs.py::test_link_traces_generic_error
+0.72s call     tests/test_runs.py::test_create_run_with_tags
+0.62s setup    tests/genai/optimize/test_optimize.py::test_optimize_prompts_validation_errors[train_data1-Either `inputs` or `trace` column is required]
+0.57s setup    tests/genai/optimize/test_optimize.py::test_optimize_prompts_with_model_name
+0.55s setup    tests/genai/optimize/test_optimize.py::test_optimize_prompts_multiple_prompts
+0.55s setup    tests/projects/test_databricks.py::test_run_databricks_extended_cluster_spec_json
+
+========================= per-file durations (sorted) ==========================
+::group::per-file durations (sorted)
+
+| Rank | File                                    | Duration | Tests | Min    | Max    | Avg    |
+| ---- | --------------------------------------- | -------- | ----- | ------ | ------ | ------ |
+| 1    | `tests/genai/optimize/test_optimize.py` | 7.47s    | 11    | 0.365s | 1.930s | 0.679s |
+| 2    | `tests/test_runs.py`                    | 5.62s    | 21    | 0.003s | 0.756s | 0.268s |
+| 3    | `tests/tracing/test_trace_manager.py`   | 5.08s    | 10    | 0.003s | 4.007s | 0.508s |
+| 4    | `tests/projects/test_databricks.py`     | 2.53s    | 16    | 0.003s | 0.627s | 0.158s |
+
+::endgroup::
+
+=========================== short test summary info ============================
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/genai/optimize/test_optimize.py::test_optimize_prompts_single_prompt
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/genai/optimize/test_optimize.py::test_optimize_prompts_multiple_prompts
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/genai/optimize/test_optimize.py::test_optimize_prompts_eval_function_behavior
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/genai/optimize/test_optimize.py::test_optimize_prompts_with_list_dataset
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/genai/optimize/test_optimize.py::test_optimize_prompts_with_model_name
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/genai/optimize/test_optimize.py::test_optimize_prompts_warns_on_unused_prompt
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/genai/optimize/test_optimize.py::test_optimize_prompts_with_custom_scorers
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/genai/optimize/test_optimize.py::test_optimize_prompts_validation_errors[train_data0-The dataset is empty]
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/genai/optimize/test_optimize.py::test_optimize_prompts_validation_errors[train_data1-Either `inputs` or `trace` column is required]
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/genai/optimize/test_optimize.py::test_optimize_prompts_validation_errors[train_data2-Record 0 is missing required 'inputs' field or it is empty]
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/genai/optimize/test_optimize.py::test_optimize_prompts_with_chat_prompt
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_upload_project_to_dbfs
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_upload_existing_project_to_dbfs
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_dbfs_path_exists_error_response_handling[response_mock0]
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_dbfs_path_exists_error_response_handling[response_mock1]
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_dbfs_path_exists_error_response_handling[response_mock2]
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_run_databricks_validations
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_run_databricks
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_run_databricks_cluster_spec_json
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_run_databricks_extended_cluster_spec_json
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_run_databricks_extended_cluster_spec_json_without_libraries
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_run_databricks_throws_exception_when_spec_uses_existing_cluster
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_run_databricks_cancel
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_get_tracking_uri_for_run
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_databricks_http_request_integration
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_run_databricks_failed
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/projects/test_databricks.py::test_run_databricks_generates_valid_mlflow_run_cmd
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_list_run
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_list_run_experiment_id_required
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_csv_generation
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_create_run_with_experiment_id
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_create_run_with_experiment_name
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_create_run_with_custom_name_and_description
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_create_run_with_tags
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_create_run_with_different_status[FAILED]
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_create_run_with_different_status[KILLED]
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_create_run_missing_experiment
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_create_run_both_experiment_params
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_create_run_invalid_tag_format
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_create_run_duplicate_tag_key
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_link_traces_single_trace
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_link_traces_multiple_traces
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_link_traces_with_short_option
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_link_traces_file_store_error
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_link_traces_too_many_traces_error
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_link_traces_missing_run_id
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_link_traces_missing_trace_id
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/test_runs.py::test_link_traces_generic_error
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/models/test_auth_policy.py::test_complete_auth_policy
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/models/test_auth_policy.py::test_user_auth_policy
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/models/test_auth_policy.py::test_system_auth_policy
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/models/test_auth_policy.py::test_empty_auth_policy
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/tracing/test_trace_manager.py::test_aggregator_singleton
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/tracing/test_trace_manager.py::test_add_spans
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/tracing/test_trace_manager.py::test_add_and_pop_span_thread_safety
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/tracing/test_trace_manager.py::test_traces_buffer_expires_after_ttl
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/tracing/test_trace_manager.py::test_traces_buffer_expires_and_log_when_timeout_is_set
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/tracing/test_trace_manager.py::test_traces_buffer_max_size_limit
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/tracing/test_trace_manager.py::test_get_span_from_id
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/tracing/test_trace_manager.py::test_get_root_span_id
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/tracing/test_trace_manager.py::test_register_prompt
+PASSED | MEM 0.6/1007.0 GB | DISK 0.1/512.0 GB tests/tracing/test_trace_manager.py::test_register_prompt_thread_safety
+======================= 62 passed, 15 warnings in 21.24s =======================
+Reward: 1
