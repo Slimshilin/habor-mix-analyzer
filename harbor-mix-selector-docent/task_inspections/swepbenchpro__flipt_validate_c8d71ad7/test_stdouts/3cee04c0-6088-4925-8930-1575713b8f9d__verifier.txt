@@ -1,0 +1,9 @@
+# agent=codex model=gpt-5.4 reward=0.0 exc=None
+
+Running gold tests checkout: git checkout c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b -- internal/cue/validate_fuzz_test.go internal/cue/validate_test.go internal/storage/fs/snapshot_test.go
+Required tests: 8
+Passed tests: 4
+Required tests that passed: 4
+
+RESULT: FAILED
+Missing tests: ['TestFS_Invalid_VariantFlag_Segment', 'TestFS_Invalid_VariantFlag_Distribution', 'TestFS_Invalid_BooleanFlag_Segment', 'TestValidate_Failure']

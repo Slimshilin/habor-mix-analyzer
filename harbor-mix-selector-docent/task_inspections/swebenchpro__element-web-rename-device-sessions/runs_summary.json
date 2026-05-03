@@ -1,0 +1,146 @@
+[
+  {
+    "id": "0aef9630-ce20-43aa-ba82-0ad90e454885",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "exception": null,
+    "stdout_len": 3070,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/0aef9630-ce20-43aa-ba82-0ad90e454885__claude-code__claude-opus-4-6.txt"
+  },
+  {
+    "id": "1f78cf59-e38b-4756-9782-1517b58570dd",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "exception": "AgentTimeoutError",
+    "stdout_len": 3070,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/1f78cf59-e38b-4756-9782-1517b58570dd__claude-code__claude-opus-4-6.txt"
+  },
+  {
+    "id": "50c89a30-394c-499a-9e4b-bc93dc4ca8ca",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "exception": null,
+    "stdout_len": 3070,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/50c89a30-394c-499a-9e4b-bc93dc4ca8ca__claude-code__claude-opus-4-6.txt"
+  },
+  {
+    "id": "073520d4-ae57-47ac-9688-12a2a06948a8",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "exception": null,
+    "stdout_len": 3070,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/073520d4-ae57-47ac-9688-12a2a06948a8__codex__gpt-5.4.txt"
+  },
+  {
+    "id": "2ca5fe0e-cdd6-4e2c-85ea-90485c9a1471",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "exception": null,
+    "stdout_len": 3070,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/2ca5fe0e-cdd6-4e2c-85ea-90485c9a1471__codex__gpt-5.4.txt"
+  },
+  {
+    "id": "f309e195-fb7f-480e-9864-d0d9155f0317",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "exception": null,
+    "stdout_len": 3070,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/f309e195-fb7f-480e-9864-d0d9155f0317__codex__gpt-5.4.txt"
+  },
+  {
+    "id": "489aff6c-7d61-4333-9225-50dfe780cfde",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "exception": null,
+    "stdout_len": 3070,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/489aff6c-7d61-4333-9225-50dfe780cfde__gemini-cli__gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "5e4d82a2-b4e3-4b39-b9c8-eeaa6d365e8a",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "exception": null,
+    "stdout_len": 3070,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/5e4d82a2-b4e3-4b39-b9c8-eeaa6d365e8a__gemini-cli__gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "e40088f9-1534-493e-88fd-af6905b32c44",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "exception": null,
+    "stdout_len": 3070,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/e40088f9-1534-493e-88fd-af6905b32c44__gemini-cli__gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "210b26e6-e98b-420d-81dc-6039a6b6e0f8",
+    "agent": "terminus-2",
+    "model": "anthropic/claude-opus-4-6",
+    "exception": null,
+    "stdout_len": 3070,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/210b26e6-e98b-420d-81dc-6039a6b6e0f8__terminus-2__anthropic_claude-opus-4-6.txt"
+  },
+  {
+    "id": "3a95facc-93fb-4223-80c6-f1b387ada3db",
+    "agent": "terminus-2",
+    "model": "anthropic/claude-opus-4-6",
+    "exception": "AgentTimeoutError",
+    "stdout_len": 3983,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/3a95facc-93fb-4223-80c6-f1b387ada3db__terminus-2__anthropic_claude-opus-4-6.txt"
+  },
+  {
+    "id": "ca7a3f01-b7e4-41c1-8804-3d9043c16513",
+    "agent": "terminus-2",
+    "model": "anthropic/claude-opus-4-6",
+    "exception": null,
+    "stdout_len": 3070,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/ca7a3f01-b7e4-41c1-8804-3d9043c16513__terminus-2__anthropic_claude-opus-4-6.txt"
+  },
+  {
+    "id": "4b791725-49df-44d3-b1bc-0e66a0e325ea",
+    "agent": "terminus-2",
+    "model": "gemini/gemini-3.1-pro-preview",
+    "exception": null,
+    "stdout_len": 3070,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/4b791725-49df-44d3-b1bc-0e66a0e325ea__terminus-2__gemini_gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "57fdaca4-b2cf-4249-9eb4-788c6603708a",
+    "agent": "terminus-2",
+    "model": "gemini/gemini-3.1-pro-preview",
+    "exception": null,
+    "stdout_len": 3070,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/57fdaca4-b2cf-4249-9eb4-788c6603708a__terminus-2__gemini_gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "adf2f8f0-1f3f-4f63-8956-93a1c822ef15",
+    "agent": "terminus-2",
+    "model": "gemini/gemini-3.1-pro-preview",
+    "exception": null,
+    "stdout_len": 3070,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/adf2f8f0-1f3f-4f63-8956-93a1c822ef15__terminus-2__gemini_gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "284403c9-856f-4c86-b609-435a6395287e",
+    "agent": "terminus-2",
+    "model": "openai/gpt-5.4",
+    "exception": null,
+    "stdout_len": 7233,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/284403c9-856f-4c86-b609-435a6395287e__terminus-2__openai_gpt-5.4.txt"
+  },
+  {
+    "id": "2b5b1172-8232-4a8d-9e18-46cda8f12bb0",
+    "agent": "terminus-2",
+    "model": "openai/gpt-5.4",
+    "exception": null,
+    "stdout_len": 3070,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/2b5b1172-8232-4a8d-9e18-46cda8f12bb0__terminus-2__openai_gpt-5.4.txt"
+  },
+  {
+    "id": "9c286dba-2e8d-4c18-9834-b625d1a20c94",
+    "agent": "terminus-2",
+    "model": "openai/gpt-5.4",
+    "exception": null,
+    "stdout_len": 5123,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__element-web-rename-device-sessions/test_stdouts/9c286dba-2e8d-4c18-9834-b625d1a20c94__terminus-2__openai_gpt-5.4.txt"
+  }
+]

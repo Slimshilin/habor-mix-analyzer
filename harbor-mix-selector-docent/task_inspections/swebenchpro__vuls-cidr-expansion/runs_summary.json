@@ -1,0 +1,182 @@
+[
+  {
+    "id": "0131b9a4-0867-4ce0-bafc-6246e07dce47",
+    "agent": "terminus-2",
+    "model": "gemini-3.1-pro-preview",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/0131b9a4-0867-4ce0-bafc-6246e07dce47__terminus-2__gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "11a8e3ca-2172-4208-9f02-bd0b0131657b",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/11a8e3ca-2172-4208-9f02-bd0b0131657b__codex__gpt-5.4.txt"
+  },
+  {
+    "id": "1d292b62-5b62-4ecb-b36b-134e356e74df",
+    "agent": "terminus-2",
+    "model": "gpt-5.4",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/1d292b62-5b62-4ecb-b36b-134e356e74df__terminus-2__gpt-5.4.txt"
+  },
+  {
+    "id": "25e11d86-4b91-425d-b3aa-2dfb0adb5f1a",
+    "agent": "terminus-2",
+    "model": "claude-opus-4-6",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/25e11d86-4b91-425d-b3aa-2dfb0adb5f1a__terminus-2__claude-opus-4-6.txt"
+  },
+  {
+    "id": "2bf4556d-8d15-49fe-be10-d490e62c5703",
+    "agent": "terminus-2",
+    "model": "gpt-5.4",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/2bf4556d-8d15-49fe-be10-d490e62c5703__terminus-2__gpt-5.4.txt"
+  },
+  {
+    "id": "4bc7d10e-c2c9-450d-a9c7-3ba4c915312c",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/4bc7d10e-c2c9-450d-a9c7-3ba4c915312c__gemini-cli__gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "6e5c4d68-00b4-4bc7-9550-e225c513b92b",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/6e5c4d68-00b4-4bc7-9550-e225c513b92b__codex__gpt-5.4.txt"
+  },
+  {
+    "id": "8090e1f2-72cc-4765-a213-42138aecac3a",
+    "agent": "terminus-2",
+    "model": "claude-opus-4-6",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/8090e1f2-72cc-4765-a213-42138aecac3a__terminus-2__claude-opus-4-6.txt"
+  },
+  {
+    "id": "884a3495-1561-425f-a519-5589ef14ac2e",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/884a3495-1561-425f-a519-5589ef14ac2e__claude-code__claude-opus-4-6.txt"
+  },
+  {
+    "id": "893f17d3-a5a9-4945-a9dc-3427628fa27a",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/893f17d3-a5a9-4945-a9dc-3427628fa27a__gemini-cli__gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "8a2cc8c4-6043-4187-b8af-4052ffa70a04",
+    "agent": "terminus-2",
+    "model": "gemini-3.1-pro-preview",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/8a2cc8c4-6043-4187-b8af-4052ffa70a04__terminus-2__gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "8e63cfcb-56b6-4f1f-abbe-1f261fac4709",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/8e63cfcb-56b6-4f1f-abbe-1f261fac4709__claude-code__claude-opus-4-6.txt"
+  },
+  {
+    "id": "935b273d-9be6-4fd1-95ed-05e48917e397",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/935b273d-9be6-4fd1-95ed-05e48917e397__codex__gpt-5.4.txt"
+  },
+  {
+    "id": "98cf9be8-6efb-4af2-aedd-ae64d4c7e9bb",
+    "agent": "terminus-2",
+    "model": "claude-opus-4-6",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/98cf9be8-6efb-4af2-aedd-ae64d4c7e9bb__terminus-2__claude-opus-4-6.txt"
+  },
+  {
+    "id": "a2590785-c8be-40bf-9728-c20e3993a838",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/a2590785-c8be-40bf-9728-c20e3993a838__gemini-cli__gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "b0a4652a-9fba-4a71-ad1b-02c3260470bd",
+    "agent": "terminus-2",
+    "model": "gemini-3.1-pro-preview",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/b0a4652a-9fba-4a71-ad1b-02c3260470bd__terminus-2__gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "b2b27972-6c98-4ed0-a2ea-beebb930ed1d",
+    "agent": "terminus-2",
+    "model": "gpt-5.4",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 221,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/b2b27972-6c98-4ed0-a2ea-beebb930ed1d__terminus-2__gpt-5.4.txt"
+  },
+  {
+    "id": "d3ec08e4-5ed6-4f99-a06c-9c6bece11b8d",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 222,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__vuls-cidr-expansion/test_stdouts/d3ec08e4-5ed6-4f99-a06c-9c6bece11b8d__claude-code__claude-opus-4-6.txt"
+  }
+]

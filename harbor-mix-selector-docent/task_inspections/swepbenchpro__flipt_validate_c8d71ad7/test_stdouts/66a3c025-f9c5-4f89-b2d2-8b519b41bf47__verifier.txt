@@ -1,0 +1,9 @@
+# agent=gemini-cli model=gemini-3.1-pro-preview reward=0.0 exc=None
+
+Running gold tests checkout: git checkout c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b -- internal/cue/validate_fuzz_test.go internal/cue/validate_test.go internal/storage/fs/snapshot_test.go
+Required tests: 8
+Passed tests: 4
+Required tests that passed: 2
+
+RESULT: FAILED
+Missing tests: ['TestFS_Invalid_BooleanFlag_Segment', 'TestFS_Invalid_VariantFlag_Segment', 'TestValidate_Latest_Segments_V2', 'TestValidate_Latest_Success', 'TestValidate_V1_Success', 'TestFS_Invalid_VariantFlag_Distribution']

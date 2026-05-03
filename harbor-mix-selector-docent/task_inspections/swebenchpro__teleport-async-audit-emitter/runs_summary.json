@@ -1,0 +1,162 @@
+[
+  {
+    "id": "0e6c4aa6-fa14-4835-afc8-bd6224809f98",
+    "agent": "terminus-2",
+    "model": "gemini-3.1-pro-preview",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 531,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/0e6c4aa6-fa14-4835-afc8-bd6224809f98__terminus-2__gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "22f80a22-90fd-4237-84ba-c057bf891525",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 314,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/22f80a22-90fd-4237-84ba-c057bf891525__codex__gpt-5.4.txt"
+  },
+  {
+    "id": "291f680b-4b19-4564-b744-6e0dc207d1c9",
+    "agent": "terminus-2",
+    "model": "claude-opus-4-6",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 314,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/291f680b-4b19-4564-b744-6e0dc207d1c9__terminus-2__claude-opus-4-6.txt"
+  },
+  {
+    "id": "315401c2-9ad1-48ff-a7e3-2cf219593e75",
+    "agent": "terminus-2",
+    "model": "gpt-5.4",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 314,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/315401c2-9ad1-48ff-a7e3-2cf219593e75__terminus-2__gpt-5.4.txt"
+  },
+  {
+    "id": "3201fb14-6307-45eb-a9d8-742fe194904f",
+    "agent": "terminus-2",
+    "model": "claude-opus-4-6",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 314,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/3201fb14-6307-45eb-a9d8-742fe194904f__terminus-2__claude-opus-4-6.txt"
+  },
+  {
+    "id": "4aef1e57-ac02-4cf4-888a-36f70e4585d0",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 314,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/4aef1e57-ac02-4cf4-888a-36f70e4585d0__codex__gpt-5.4.txt"
+  },
+  {
+    "id": "5db1b402-08f3-433d-b21c-4952335ecd2d",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 314,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/5db1b402-08f3-433d-b21c-4952335ecd2d__claude-code__claude-opus-4-6.txt"
+  },
+  {
+    "id": "6c4bff86-e43e-4118-ad0b-494eb215710f",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "exception": "AgentTimeoutError",
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 314,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/6c4bff86-e43e-4118-ad0b-494eb215710f__gemini-cli__gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "7097c8b6-5c72-41b8-98e8-b0003067bac3",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "exception": "AgentTimeoutError",
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 531,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/7097c8b6-5c72-41b8-98e8-b0003067bac3__gemini-cli__gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "8645bf19-58ce-4e66-b696-7985e73d31d6",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "exception": "AgentTimeoutError",
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 531,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/8645bf19-58ce-4e66-b696-7985e73d31d6__gemini-cli__gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "a6bd191b-a2e1-42dc-9d46-3d6f768cc009",
+    "agent": "terminus-2",
+    "model": "claude-opus-4-6",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 531,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/a6bd191b-a2e1-42dc-9d46-3d6f768cc009__terminus-2__claude-opus-4-6.txt"
+  },
+  {
+    "id": "ad5ac085-a8ee-4b23-a5da-dd64c8771295",
+    "agent": "terminus-2",
+    "model": "gemini-3.1-pro-preview",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 314,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/ad5ac085-a8ee-4b23-a5da-dd64c8771295__terminus-2__gemini-3.1-pro-preview.txt"
+  },
+  {
+    "id": "c08801f8-6980-43fd-8560-0ac7b98c9cec",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 314,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/c08801f8-6980-43fd-8560-0ac7b98c9cec__codex__gpt-5.4.txt"
+  },
+  {
+    "id": "c875aa2e-219c-474b-b918-fa58ac026d39",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 314,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/c875aa2e-219c-474b-b918-fa58ac026d39__claude-code__claude-opus-4-6.txt"
+  },
+  {
+    "id": "cf286d60-e421-45ec-9243-b537d9aaa897",
+    "agent": "terminus-2",
+    "model": "gpt-5.4",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 531,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/cf286d60-e421-45ec-9243-b537d9aaa897__terminus-2__gpt-5.4.txt"
+  },
+  {
+    "id": "e4d82317-9e57-4d65-a1c1-69186ff156d5",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "exception": null,
+    "reward": "0.0",
+    "role": "failure",
+    "stdout_len": 314,
+    "file": "/home/shilin/T-Bench/habor-mix-analyzer/harbor-mix-selector-docent/task_inspections/swebenchpro__teleport-async-audit-emitter/test_stdouts/e4d82317-9e57-4d65-a1c1-69186ff156d5__claude-code__claude-opus-4-6.txt"
+  }
+]

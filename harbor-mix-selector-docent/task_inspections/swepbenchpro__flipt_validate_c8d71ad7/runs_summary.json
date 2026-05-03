@@ -1,0 +1,182 @@
+[
+  {
+    "id": "21da9bb6-e49f-4de7-a7d5-4db9337a9149",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "15042dbb-e874-4958-974a-3962bc65bf69",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "299da343-f4dc-4e70-8d2b-b21ee926475a",
+    "agent": "terminus-2",
+    "model": "gpt-5.4",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "b19f0cb2-2972-45df-b6ea-c640d2334cfe",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "3cee04c0-6088-4925-8930-1575713b8f9d",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "b371176d-bf45-422a-8027-895e10059c49",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "3fab2ac0-d827-473c-9460-966b18ea154c",
+    "agent": "terminus-2",
+    "model": "gemini-3.1-pro-preview",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "2de1c44d-acf7-4d70-863a-da7766deaf78",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "512520b0-c555-423c-83a8-76e03c8af5cf",
+    "agent": "terminus-2",
+    "model": "claude-opus-4-6",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "9bfd7685-749c-48c0-be8f-22186b69d87b",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "66a3c025-f9c5-4f89-b2d2-8b519b41bf47",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "32c3e99e-d918-4ee5-8d18-4f1915b9b24f",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "68700f01-dfb4-491b-851c-79e1856c2ea7",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "de548318-6254-43df-82b8-306c0a4159a8",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "99826d2d-82e9-4732-b088-1a0fb591f801",
+    "agent": "terminus-2",
+    "model": "gemini-3.1-pro-preview",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "ca001b5e-adb0-40dd-ab0a-29b7245b026f",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "9e8da770-fb5d-4d1f-8027-abe012817bf5",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "811b76f7-ece6-490c-9c11-6e1841d96778",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "aec30231-a728-4634-bb78-1ea690044f60",
+    "agent": "terminus-2",
+    "model": "claude-opus-4-6",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "8ca18f50-8d6d-4d92-8b26-3875ec8810e2",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "b553ccdd-3653-4ebb-a090-6ddbde351d82",
+    "agent": "terminus-2",
+    "model": "gpt-5.4",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "0f4bf661-fdb8-4d51-911c-40d23064ad21",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "c1579e91-1190-4d5b-b6dc-d84e3065f5ce",
+    "agent": "terminus-2",
+    "model": "claude-opus-4-6",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "e20f512e-1f62-4054-9b9b-03fdc5864787",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "ccaa50e9-e115-41bc-86d7-6ccfcb07c6a0",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "24e68302-ae70-46b7-930e-57e453063b01",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "d9961e66-509f-4c9d-9fed-9caaa5e4b543",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "08215b5d-4c99-4baa-bd2e-258626321166",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "dc90550f-b733-476c-878c-972c8313bbd1",
+    "agent": "terminus-2",
+    "model": "gemini-3.1-pro-preview",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "d1c1ca1e-39e6-468a-8f63-d997e2c684ac",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "dfc96d46-15ae-4a4d-b4f6-0a9b544609e6",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "a0c140bb-520c-443c-9d55-985e191d797d",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "e5662348-4405-4893-a84f-b3d734928059",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "1e91cd94-fc16-4a9f-ab88-16173ae6437d",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  },
+  {
+    "id": "f1261115-9fb4-4b57-a464-08121d54796b",
+    "agent": "terminus-2",
+    "model": "gpt-5.4",
+    "reward": "0.0",
+    "role": "failure",
+    "trial_id": "c8ba9972-485f-458b-862e-0d98f5e1ffbd",
+    "task_name": "swebenchpro/instance_flipt-io__flipt-c8d71ad7ea98d97546f01cce4ccb451dbcf37d3b",
+    "task_checksum": "b7dc06bba0950450dd0ac2c2bb6dda955f1d716d83a3500c5105f334941ca97b"
+  }
+]
