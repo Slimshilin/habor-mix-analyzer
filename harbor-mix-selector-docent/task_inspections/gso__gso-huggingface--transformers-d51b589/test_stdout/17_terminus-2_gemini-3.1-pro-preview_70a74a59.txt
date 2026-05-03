@@ -1,0 +1,460 @@
+Running tests...
+Patch size: 5594 bytes
+HEAD is now at 391db836ab fix #1260 - remove special logic for decoding pairs of sequence
+From https://github.com/huggingface/transformers
+ * [new branch]            'delete-delete-doc'     -> origin/'delete-delete-doc'
+ * [new branch]            29625_add_prefix_space  -> origin/29625_add_prefix_space
+ * [new branch]            29625_prefix_space      -> origin/29625_prefix_space
+ * [new branch]            30824-spmconverter-user-defined-symbol -> origin/30824-spmconverter-user-defined-symbol
+ * [new branch]            35597_custom_tokenizer  -> origin/35597_custom_tokenizer
+ * [new branch]            4.55.0-GLM-4.5V-preview-GLM-4.5V-release -> origin/4.55.0-GLM-4.5V-preview-GLM-4.5V-release
+ * [new branch]            4.55.0-GLM-4.5V-release -> origin/4.55.0-GLM-4.5V-release
+ * [new branch]            5-to-50gb               -> origin/5-to-50gb
+ * [new branch]            8a734ea2                -> origin/8a734ea2
+ * [new branch]            BC_added_tokens_encoder -> origin/BC_added_tokens_encoder
+ * [new branch]            BritneyMuller-housekeeping-patch -> origin/BritneyMuller-housekeeping-patch
+ * [new branch]            LysandreJik-patch-1     -> origin/LysandreJik-patch-1
+ * [new branch]            PP                      -> origin/PP
+ * [new branch]            _dummy_fix_weight_only_usage -> origin/_dummy_fix_weight_only_usage
+ * [new branch]            _dummy_fix_weight_only_usage_2 -> origin/_dummy_fix_weight_only_usage_2
+ * [new branch]            action_to_notify_new_model_push_backup -> origin/action_to_notify_new_model_push_backup
+ * [new branch]            add-amd-runners-to-run-slow-command -> origin/add-amd-runners-to-run-slow-command
+ * [new branch]            add-block-tables        -> origin/add-block-tables
+ * [new branch]            add-deci-lm             -> origin/add-deci-lm
+ * [new branch]            add-deepseek-exp        -> origin/add-deepseek-exp
+ * [new branch]            add-ep                  -> origin/add-ep
+ * [new branch]            add-flash-decoding      -> origin/add-flash-decoding
+ * [new branch]            add-flash-opt           -> origin/add-flash-opt
+ * [new branch]            add-fp8-llama-script    -> origin/add-fp8-llama-script
+ * [new branch]            add-missing-truncate    -> origin/add-missing-truncate
+ * [new branch]            add-mlx-llamacpp        -> origin/add-mlx-llamacpp
+ * [new branch]            add-model-arcinstitute-state -> origin/add-model-arcinstitute-state
+ * [new branch]            add-modular-sarvam      -> origin/add-modular-sarvam
+ * [new branch]            add-pocr-conversion     -> origin/add-pocr-conversion
+ * [new branch]            add-qgalore             -> origin/add-qgalore
+ * [new branch]            add-rwkv5               -> origin/add-rwkv5
+ * [new branch]            add-sarvam-model        -> origin/add-sarvam-model
+ * [new branch]            add-spinquant           -> origin/add-spinquant
+ * [new branch]            add-warning-4bit-opti   -> origin/add-warning-4bit-opti
+ * [new branch]            add_amd_daily_ci        -> origin/add_amd_daily_ci
+ * [new branch]            add_back_generative_class -> origin/add_back_generative_class
+ * [new branch]            add_chat_template_tests -> origin/add_chat_template_tests
+ * [new branch]            add_deformable_detr     -> origin/add_deformable_detr
+ * [new branch]            add_diffusers           -> origin/add_diffusers
+ * [new branch]            add_eagle               -> origin/add_eagle
+ * [new branch]            add_fa2_bart            -> origin/add_fa2_bart
+ * [new branch]            add_fixed_cross_entropy_kwargs -> origin/add_fixed_cross_entropy_kwargs
+ * [new branch]            add_important_warning_padding_attention_mask -> origin/add_important_warning_padding_attention_mask
+ * [new branch]            add_kosmos_2_remote     -> origin/add_kosmos_2_remote
+ * [new branch]            add_kosmos_2_temp       -> origin/add_kosmos_2_temp
+ * [new branch]            add_kosmos_2_utm5_attn  -> origin/add_kosmos_2_utm5_attn
+ * [new branch]            add_kosmos_2_utm5_attn_rebased -> origin/add_kosmos_2_utm5_attn_rebased
+ * [new branch]            add_kosmos_2_utm5_attn_rebased_flat_layer_structure -> origin/add_kosmos_2_utm5_attn_rebased_flat_layer_structure
+ * [new branch]            add_mistral_common_support -> origin/add_mistral_common_support
+ * [new branch]            add_num_workers_for_tf  -> origin/add_num_workers_for_tf
+ * [new branch]            add_pipeline_equivalence_testing -> origin/add_pipeline_equivalence_testing
+ * [new branch]            add_prefix_space_clean  -> origin/add_prefix_space_clean
+ * [new branch]            add_qat_fp8             -> origin/add_qat_fp8
+ * [new branch]            add_tf_export_doc       -> origin/add_tf_export_doc
+ * [new branch]            add_word_level_timestamp_long -> origin/add_word_level_timestamp_long
+ * [new branch]            agent-first-cli         -> origin/agent-first-cli
+ * [new branch]            agent-first-cli-with-skill -> origin/agent-first-cli-with-skill
+ * [new branch]            agent_callback          -> origin/agent_callback
+ * [new branch]            agents-count-tokens     -> origin/agents-count-tokens
+ * [new branch]            agents-make-easier-tags -> origin/agents-make-easier-tags
+ * [new branch]            agents-messages         -> origin/agents-messages
+ * [new branch]            albertvillanova-patch-1 -> origin/albertvillanova-patch-1
+ * [new branch]            all_jobs_can_compare_against_prev_runs_clean_trigger -> origin/all_jobs_can_compare_against_prev_runs_clean_trigger
+ * [new branch]            allow-disabling-compile -> origin/allow-disabling-compile
+ * [new branch]            allow_ci_to_use_a10     -> origin/allow_ci_to_use_a10
+ * [new branch]            allow_old_falcon_name   -> origin/allow_old_falcon_name
+ * [new branch]            alm-base-model-class    -> origin/alm-base-model-class
+ * [new branch]            amd-hf-ci-branch        -> origin/amd-hf-ci-branch
+ * [new branch]            amd-nightly-ci          -> origin/amd-nightly-ci
+ * [new branch]            amdgpu-multi-gpu-tests  -> origin/amdgpu-multi-gpu-tests
+ * [new branch]            another_fix             -> origin/another_fix
+ * [new branch]            another_prepare_dataset_fix -> origin/another_prepare_dataset_fix
+ * [new branch]            api_big2                -> origin/api_big2
+ * [new branch]            app                     -> origin/app
+ * [new branch]            arijitx/wav2vec2_alignment -> origin/arijitx/wav2vec2_alignment
+ * [new branch]            asr-pipeline-feature-extractor -> origin/asr-pipeline-feature-extractor
+ * [new branch]            assistant_decoding_batch -> origin/assistant_decoding_batch
+ * [new branch]            attn-implementation-vision-enc-dec -> origin/attn-implementation-vision-enc-dec
+ * [new branch]            audio-processor         -> origin/audio-processor
+ * [new branch]            auot-convert-tekken     -> origin/auot-convert-tekken
+ * [new branch]            auto-detect-wrong-mapping-models -> origin/auto-detect-wrong-mapping-models
+ * [new branch]            auto-reparent-causal-lm-tests -> origin/auto-reparent-causal-lm-tests
+ * [new branch]            auto_gpt4_conversion    -> origin/auto_gpt4_conversion
+ * [new branch]            auto_tok_remote         -> origin/auto_tok_remote
+ * [new branch]            base-model-loading      -> origin/base-model-loading
+ * [new branch]            base_8a734ea2           -> origin/base_8a734ea2
+ * [new branch]            basic-app               -> origin/basic-app
+ * [new branch]            batched-mm-index-select -> origin/batched-mm-index-select
+ * [new branch]            batched_handle_empty_string -> origin/batched_handle_empty_string
+ * [new branch]            best_benchmark          -> origin/best_benchmark
+ * [new branch]            best_benchmark_new      -> origin/best_benchmark_new
+ * [new branch]            best_benchmark_on_static_cache -> origin/best_benchmark_on_static_cache
+ * [new branch]            best_benchmark_on_static_cache_new -> origin/best_benchmark_on_static_cache_new
+ * [new branch]            better-fa-handling      -> origin/better-fa-handling
+ * [new branch]            better_loss             -> origin/better_loss
+ * [new branch]            better_sec              -> origin/better_sec
+ * [new branch]            bloom_big               -> origin/bloom_big
+ * [new branch]            bnb-parametrize-4bit    -> origin/bnb-parametrize-4bit
+ * [new branch]            bos_eos_token_fix       -> origin/bos_eos_token_fix
+ * [new branch]            build-check-deepspeed-image -> origin/build-check-deepspeed-image
+ * [new branch]            build-docker-torch-2.2  -> origin/build-docker-torch-2.2
+ * [new branch]            build_cache_test_files_in_docker -> origin/build_cache_test_files_in_docker
+ * [new branch]            build_ci_docker_image_amd1 -> origin/build_ci_docker_image_amd1
+ * [new branch]            build_ci_docker_image_amd2 -> origin/build_ci_docker_image_amd2
+ * [new branch]            build_ci_docker_image_amd3 -> origin/build_ci_docker_image_amd3
+ * [new branch]            build_ci_docker_image_amd_libjpeg_test -> origin/build_ci_docker_image_amd_libjpeg_test
+ * [new branch]            build_ci_docker_image_test_cache -> origin/build_ci_docker_image_test_cache
+ * [new branch]            build_ci_image          -> origin/build_ci_image
+ * [new branch]            build_ci_image2         -> origin/build_ci_image2
+ * [new branch]            build_docker_on_kube    -> origin/build_docker_on_kube
+ * [new branch]            build_docker_on_kube_2  -> origin/build_docker_on_kube_2
+ * [new branch]            build_docker_on_kube_3  -> origin/build_docker_on_kube_3
+ * [new branch]            build_image_abc         -> origin/build_image_abc
+ * [new branch]            build_image_circleci    -> origin/build_image_circleci
+ * [new branch]            build_with_2404         -> origin/build_with_2404
+ * [new branch]            bump-hfh-prerelease     -> origin/bump-hfh-prerelease
+ * [new branch]            bump-pytest-asyncio     -> origin/bump-pytest-asyncio
+ * [new branch]            byebye                  -> origin/byebye
+ * [new branch]            byebye_py_37            -> origin/byebye_py_37
+ * [new branch]            cache-refactor-1        -> origin/cache-refactor-1
+ * [new branch]            cache_exp               -> origin/cache_exp
+ * [new branch]            camembert_incorrect     -> origin/camembert_incorrect
+ * [new branch]            cb-cpu-offload          -> origin/cb-cpu-offload
+ * [new branch]            cb-very-long-gen        -> origin/cb-very-long-gen
+ * [new branch]            change-ci               -> origin/change-ci
+ * [new branch]            change_build_input_tests -> origin/change_build_input_tests
+ * [new branch]            change_to_draft_2       -> origin/change_to_draft_2
+ * [new branch]            change_to_draft_3       -> origin/change_to_draft_3
+ * [new branch]            change_to_draft_4       -> origin/change_to_draft_4
+ * [new branch]            change_to_draft_4-release -> origin/change_to_draft_4-release
+ * [new branch]            chase_tokenizersbackend_issue -> origin/chase_tokenizersbackend_issue
+ * [new branch]            chat-extra              -> origin/chat-extra
+ * [new branch]            chat-template-quick-fix -> origin/chat-template-quick-fix
+ * [new branch]            chat_template_kwargs    -> origin/chat_template_kwargs
+ * [new branch]            check-deepspeed         -> origin/check-deepspeed
+ * [new branch]            check-docstring         -> origin/check-docstring
+ * [new branch]            check-refactor-weight-loading -> origin/check-refactor-weight-loading
+ * [new branch]            check-send-headers-when-converting-safetensors -> origin/check-send-headers-when-converting-safetensors
+ * [new branch]            check-v4.49-release     -> origin/check-v
+
+... [+90221 chars elided] ...
+
+ime-perfs
+ * [new branch]            warn-pre-allocation     -> origin/warn-pre-allocation
+ * [new branch]            whisper-proc-specific-kwargs -> origin/whisper-proc-specific-kwargs
+ * [new branch]            whisper_chunking        -> origin/whisper_chunking
+ * [new branch]            whisper_token_fix       -> origin/whisper_token_fix
+ * [new branch]            who_crash               -> origin/who_crash
+ * [new branch]            why_no_trigger          -> origin/why_no_trigger
+ * [new branch]            wip_test_safetensors_rc -> origin/wip_test_safetensors_rc
+ * [new branch]            workflows-fix           -> origin/workflows-fix
+ * [new branch]            working                 -> origin/working
+ * [new branch]            working-version         -> origin/working-version
+ * [new branch]            worktree-fsdp-meta      -> origin/worktree-fsdp-meta
+ * [new branch]            xla_concrete_fn_dynamic_shape_debug -> origin/xla_concrete_fn_dynamic_shape_debug
+ * [new branch]            yaml_safeload           -> origin/yaml_safeload
+ * [new branch]            ydshieh-add-record_expectations-decorator-to-integration-tests -> origin/ydshieh-add-record_expectations-decorator-to-integration-tests
+ * [new branch]            ydshieh-check-audioflamingo3 -> origin/ydshieh-check-audioflamingo3
+ * [new branch]            ydshieh-default-fast-image-proc-all-models -> origin/ydshieh-default-fast-image-proc-all-models
+ * [new branch]            ydshieh-default-fast-image-proc-all-models-full -> origin/ydshieh-default-fast-image-proc-all-models-full
+ * [new branch]            ydshieh-push-ci-image   -> origin/ydshieh-push-ci-image
+ * [new branch]            ydshieh_check_run_nightly_ci_test_new_runner -> origin/ydshieh_check_run_nightly_ci_test_new_runner
+ * [new branch]            yih-dar-try-compile_models -> origin/yih-dar-try-compile_models
+ * [new branch]            younes-opt-350-m        -> origin/younes-opt-350-m
+ * [new branch]            younes-test-workflow    -> origin/younes-test-workflow
+ * [new branch]            younesbelkada-patch-1   -> origin/younesbelkada-patch-1
+ * [new branch]            zach-accelerate-integration -> origin/zach-accelerate-integration
+ * [new tag]               v5.3.0                  -> v5.3.0
+ * [new tag]               v5.4.0                  -> v5.4.0
+ * [new tag]               v5.5.4                  -> v5.5.4
+ * [new tag]               v5.5.0                  -> v5.5.0
+ * [new tag]               v5.5.1                  -> v5.5.1
+ * [new tag]               v5.5.2                  -> v5.5.2
+ * [new tag]               v5.5.3                  -> v5.5.3
+Removing .venv/
+Removing build/
+Removing transformers.egg-info/
+HEAD is now at f048e84568 [modular] Fix modular logic broken in #45045 (#45539)
+Checking out base repo...
+Note: switching to 'd51b589404accd5ee6b3e658785ea9e384b1ff40^'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 391db836ab fix #1260 - remove special logic for decoding pairs of sequence
+Installing repo...
+downloading uv 0.5.4 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+Using CPython 3.9.20
+Creating virtual environment at: .venv
+/testbed/.venv/bin/python
+Python 3.9.20
+Resolved 13 packages in 1.10s
+Prepared 13 packages in 3.74s
+Installed 13 packages in 318ms
+ + filelock==3.19.1
+ + fsspec==2025.10.0
+ + jinja2==3.1.6
+ + markupsafe==3.0.2
+ + mpmath==1.3.0
+ + networkx==3.2.1
+ + numpy==2.0.2
+ + pillow==11.3.0
+ + sympy==1.14.0
+ + torch==2.8.0+cpu
+ + torchaudio==2.8.0+cpu
+ + torchvision==0.23.0+cpu
+ + typing-extensions==4.15.0
+Resolved 19 packages in 1.03s
+Prepared 19 packages in 649ms
+Uninstalled 1 package in 41ms
+Installed 19 packages in 88ms
+ + boto3==1.42.93
+ + botocore==1.42.93
+ + certifi==2026.2.25
+ + charset-normalizer==3.4.7
+ + click==8.1.8
+ + idna==3.12
+ + jmespath==1.1.0
+ + joblib==1.5.3
+ ~ numpy==2.0.2
+ + python-dateutil==2.9.0.post0
+ + regex==2026.1.15
+ + requests==2.32.5
+ + s3transfer==0.16.0
+ + sacremoses==0.1.1
+ + sentencepiece==0.2.1
+ + six==1.17.0
+ + tqdm==4.67.3
+ + transformers==2.0.0 (from file:///testbed)
+ + urllib3==1.26.20
+Resolved 36 packages in 689ms
+Prepared 23 packages in 892ms
+Installed 23 packages in 68ms
+ + aiohappyeyeballs==2.6.1
+ + aiohttp==3.13.5
+ + aiosignal==1.4.0
+ + async-timeout==5.0.1
+ + attrs==26.1.0
+ + datasets==2.2.1
+ + dill==0.4.1
+ + frozenlist==1.8.0
+ + hf-xet==1.4.3
+ + huggingface-hub==0.36.2
+ + multidict==6.7.1
+ + multiprocess==0.70.19
+ + packaging==26.1
+ + pandas==2.3.3
+ + propcache==0.4.1
+ + pyarrow==21.0.0
+ + pytz==2026.1.post1
+ + pyyaml==6.0.3
+ + responses==0.18.0
+ + tiktoken==0.12.0
+ + tzdata==2026.1
+ + xxhash==3.6.0
+ + yarl==1.22.0
+Name: transformers
+Version: 2.0.0
+Location: /testbed/.venv/lib/python3.9/site-packages
+Requires: boto3, numpy, regex, requests, sacremoses, sentencepiece, tqdm
+Required-by:
+>>>>> Init Succeeded
+Running performance test before patch...
+Running test /tests/gso_test_0.py 5 times...
+  Iteration 1/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 2/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 3/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 4/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 5/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+>>>>> Tests Passed
+Running test /tests/gso_test_1.py 5 times...
+  Iteration 1/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 2/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 3/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 4/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 5/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+>>>>> Tests Passed
+Running test /tests/gso_test_2.py 5 times...
+  Iteration 1/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 2/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 3/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 4/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 5/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+>>>>> Tests Passed
+Running test /tests/gso_test_3.py 5 times...
+  Iteration 1/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 2/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 3/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 4/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 5/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+>>>>> Tests Passed
+Running test /tests/gso_test_4.py 5 times...
+  Iteration 1/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 2/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 3/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 4/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 5/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+>>>>> Tests Passed
+Running test /tests/gso_test_5.py 5 times...
+  Iteration 1/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 2/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 3/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 4/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+  Iteration 5/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+>>>>> Tests Passed
+Applying patch...
+Skipped patch 'reference_result.json'.
+Checking patch transformers/modeling_xlnet.py...
+Applied patch transformers/modeling_xlnet.py cleanly.
+Successfully applied patch using git apply --verbose
+>>>>> Applied Patch
+Installing repo...
+downloading uv 0.5.4 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+Using CPython 3.9.20
+Creating virtual environment at: .venv
+/testbed/.venv/bin/python
+Python 3.9.20
+Resolved 13 packages in 1.42s
+Prepared 13 packages in 3.02s
+Installed 13 packages in 299ms
+ + filelock==3.19.1
+ + fsspec==2025.10.0
+ + jinja2==3.1.6
+ + markupsafe==3.0.2
+ + mpmath==1.3.0
+ + networkx==3.2.1
+ + numpy==2.0.2
+ + pillow==11.3.0
+ + sympy==1.14.0
+ + torch==2.8.0+cpu
+ + torchaudio==2.8.0+cpu
+ + torchvision==0.23.0+cpu
+ + typing-extensions==4.15.0
+Resolved 19 packages in 978ms
+Prepared 19 packages in 465ms
+Uninstalled 1 package in 44ms
+Installed 19 packages in 568ms
+ + boto3==1.42.93
+ + botocore==1.42.93
+ + certifi==2026.2.25
+ + charset-normalizer==3.4.7
+ + click==8.1.8
+ + idna==3.12
+ + jmespath==1.1.0
+ + joblib==1.5.3
+ ~ numpy==2.0.2
+ + python-dateutil==2.9.0.post0
+ + regex==2026.1.15
+ + requests==2.32.5
+ + s3transfer==0.16.0
+ + sacremoses==0.1.1
+ + sentencepiece==0.2.1
+ + six==1.17.0
+ + tqdm==4.67.3
+ + transformers==2.0.0 (from file:///testbed)
+ + urllib3==1.26.20
+Resolved 36 packages in 586ms
+Prepared 23 packages in 678ms
+Installed 23 packages in 48ms
+ + aiohappyeyeballs==2.6.1
+ + aiohttp==3.13.5
+ + aiosignal==1.4.0
+ + async-timeout==5.0.1
+ + attrs==26.1.0
+ + datasets==2.2.1
+ + dill==0.4.1
+ + frozenlist==1.8.0
+ + hf-xet==1.4.3
+ + huggingface-hub==0.36.2
+ + multidict==6.7.1
+ + multiprocess==0.70.19
+ + packaging==26.1
+ + pandas==2.3.3
+ + propcache==0.4.1
+ + pyarrow==21.0.0
+ + pytz==2026.1.post1
+ + pyyaml==6.0.3
+ + responses==0.18.0
+ + tiktoken==0.12.0
+ + tzdata==2026.1
+ + xxhash==3.6.0
+ + yarl==1.22.0
+Name: transformers
+Version: 2.0.0
+Location: /testbed/.venv/lib/python3.9/site-packages
+Requires: boto3, numpy, regex, requests, sacremoses, sentencepiece, tqdm
+Required-by:
+>>>>> Init Succeeded
+Running performance test after patch...
+Running test /tests/gso_test_0.py 5 times...
+  Iteration 1/5
+To use data.metrics please install scikit-learn. See https://scikit-learn.org/stable/index.html
+Traceback (most recent call last):
+  File "/tests/gso_test_0.py", line 373, in <module>
+    main()
+  File "/tests/gso_test_0.py", line 365, in main
+    execution_time = run_test(args.eqcheck, args.reference, args.file_prefix)
+  File "/tests/gso_test_0.py", line 326, in run_test
+    check_equivalence(ref_result, result)
+  File "/tests/gso_test_0.py", line 288, in check_equivalence
+    assert (
+AssertionError: logits_sum differs: -3512301384.484338 vs -3512301640.648031 with tolerance 1e-05
+>>>>> Tests Errored
+opt_commit: False, reward: 0

@@ -1,0 +1,272 @@
+Running tests...
+Patch size: 4235 bytes
+HEAD is now at 3aea17514 use RGBX rawmode for JPEG encoding as well
+From https://github.com/python-pillow/Pillow
+ * [new branch]          1.x             -> origin/1.x
+ * [new branch]          10.0.x          -> origin/10.0.x
+ * [new branch]          10.1.x          -> origin/10.1.x
+ * [new branch]          10.2.x          -> origin/10.2.x
+ * [new branch]          10.3.x          -> origin/10.3.x
+ * [new branch]          10.4.x          -> origin/10.4.x
+ * [new branch]          11.0.x          -> origin/11.0.x
+ * [new branch]          11.1.x          -> origin/11.1.x
+ * [new branch]          11.2.x          -> origin/11.2.x
+ * [new branch]          11.3.x          -> origin/11.3.x
+ * [new branch]          12.0.x          -> origin/12.0.x
+ * [new branch]          12.1.x          -> origin/12.1.x
+ * [new branch]          12.2.x          -> origin/12.2.x
+ * [new branch]          2.2.x           -> origin/2.2.x
+ * [new branch]          2.3.x           -> origin/2.3.x
+ * [new branch]          2.5.x           -> origin/2.5.x
+ * [new branch]          2.6.x           -> origin/2.6.x
+ * [new branch]          2.7.x           -> origin/2.7.x
+ * [new branch]          2.8.x           -> origin/2.8.x
+ * [new branch]          2.9.x           -> origin/2.9.x
+ * [new branch]          3.0.x           -> origin/3.0.x
+ * [new branch]          3.1.x           -> origin/3.1.x
+ * [new branch]          3.2.x           -> origin/3.2.x
+ * [new branch]          3.3.x           -> origin/3.3.x
+ * [new branch]          3.4.x           -> origin/3.4.x
+ * [new branch]          4.0.x           -> origin/4.0.x
+ * [new branch]          4.1.x           -> origin/4.1.x
+ * [new branch]          4.2.x           -> origin/4.2.x
+ * [new branch]          4.3.x           -> origin/4.3.x
+ * [new branch]          5.0.x           -> origin/5.0.x
+ * [new branch]          5.1.x           -> origin/5.1.x
+ * [new branch]          5.2.x           -> origin/5.2.x
+ * [new branch]          5.3.x           -> origin/5.3.x
+ * [new branch]          5.4.x           -> origin/5.4.x
+ * [new branch]          6.0.x           -> origin/6.0.x
+ * [new branch]          6.1.x           -> origin/6.1.x
+ * [new branch]          6.2.x           -> origin/6.2.x
+ * [new branch]          7.0.x           -> origin/7.0.x
+ * [new branch]          7.1.x           -> origin/7.1.x
+ * [new branch]          7.2.x           -> origin/7.2.x
+ * [new branch]          8.0.x           -> origin/8.0.x
+ * [new branch]          8.1.x           -> origin/8.1.x
+ * [new branch]          8.2.x           -> origin/8.2.x
+ * [new branch]          8.3.x           -> origin/8.3.x
+ * [new branch]          8.4.x           -> origin/8.4.x
+ * [new branch]          9.0.x           -> origin/9.0.x
+ * [new branch]          9.1.x           -> origin/9.1.x
+ * [new branch]          9.2.x           -> origin/9.2.x
+ * [new branch]          9.3.x           -> origin/9.3.x
+ * [new branch]          9.4.x           -> origin/9.4.x
+ * [new branch]          9.5.x           -> origin/9.5.x
+ * [new branch]          gh-pages        -> origin/gh-pages
+ * [new branch]          imaging-cleanup -> origin/imaging-cleanup
+ * [new branch]          irp             -> origin/irp
+ * [new branch]          main            -> origin/main
+ * [new branch]          sbom            -> origin/sbom
+ * [new tag]             12.2.0          -> 12.2.0
+Removing .venv/
+Removing PIL/__pycache__/
+Removing Pillow.egg-info/
+Removing __pycache__/
+Removing build/
+HEAD is now at 3a3dab8bb Updated raqm to 0.10.5 (#9557)
+Checking out base repo...
+Note: switching to 'd8af3fc23a730dd5e9a6e556263e7be7d8de1c7e^'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 3aea17514 use RGBX rawmode for JPEG encoding as well
+Installing repo...
+Using CPython 3.9.20
+Creating virtual environment at: .venv
+/testbed/.venv/bin/python
+Python 3.9.20
+Resolved 2 packages in 545ms
+Prepared 2 packages in 4.83s
+Installed 2 packages in 4ms
+ + olefile==0.47
+ + pillow==4.3.0.dev0 (from file:///testbed)
+Resolved 7 packages in 68ms
+Prepared 7 packages in 235ms
+Installed 7 packages in 24ms
+ + certifi==2026.2.25
+ + charset-normalizer==3.4.7
+ + dill==0.4.1
+ + idna==3.11
+ + numpy==2.0.2
+ + requests==2.32.5
+ + urllib3==2.6.3
+Name: pillow
+Version: 4.3.0.dev0
+Location: /testbed/.venv/lib/python3.9/site-packages
+Requires: olefile
+Required-by:
+>>>>> Init Succeeded
+Running performance test before patch...
+Running test /tests/gso_test_0.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_1.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_2.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_3.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_4.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_5.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_6.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_7.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_8.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_9.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_10.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Applying patch...
+/tmp/patch.diff:55: trailing whitespace.
+    
+Skipped patch 'reference_split.json'.
+Checking patch PIL/Image.py...
+Checking patch _imaging.c...
+Applied patch PIL/Image.py cleanly.
+Applied patch _imaging.c cleanly.
+warning: 1 line adds whitespace errors.
+Successfully applied patch using git apply --verbose
+>>>>> Applied Patch
+Installing repo...
+Using CPython 3.9.20
+Creating virtual environment at: .venv
+/testbed/.venv/bin/python
+Python 3.9.20
+Resolved 2 packages in 521ms
+Prepared 2 packages in 3.52s
+Installed 2 packages in 4ms
+ + olefile==0.47
+ + pillow==4.3.0.dev0 (from file:///testbed)
+Resolved 7 packages in 68ms
+Prepared 7 packages in 253ms
+Installed 7 packages in 23ms
+ + certifi==2026.2.25
+ + charset-normalizer==3.4.7
+ + dill==0.4.1
+ + idna==3.11
+ + numpy==2.0.2
+ + requests==2.32.5
+ + urllib3==2.6.3
+Name: pillow
+Version: 4.3.0.dev0
+Location: /testbed/.venv/lib/python3.9/site-packages
+Requires: olefile
+Required-by:
+>>>>> Init Succeeded
+Running performance test after patch...
+Running test /tests/gso_test_0.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_1.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_2.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_3.py 5 times...
+  Iteration 1/5
+Traceback (most recent call last):
+  File "/tests/gso_test_3.py", line 325, in <module>
+    main()
+  File "/tests/gso_test_3.py", line 318, in main
+    execution_time = run_test(args.eqcheck, args.reference, args.file_prefix)
+  File "/tests/gso_test_3.py", line 276, in run_test
+    execution_time, result = timeit.timeit(lambda: experiment(), number=1)
+  File "/root/.local/share/uv/python/cpython-3.9.20-linux-x86_64-gnu/lib/python3.9/timeit.py", line 233, in timeit
+    return Timer(stmt, setup, timer, globals).timeit(number)
+  File "/root/.local/share/uv/python/cpython-3.9.20-linux-x86_64-gnu/lib/python3.9/timeit.py", line 177, in timeit
+    timing = self.inner(it, self.timer)
+  File "<timeit-src>", line 6, in inner
+  File "/tests/gso_test_3.py", line 276, in <lambda>
+    execution_time, result = timeit.timeit(lambda: experiment(), number=1)
+  File "/tests/gso_test_3.py", line 202, in experiment
+    channels = img.split()
+  File "/testbed/.venv/lib/python3.9/site-packages/PIL/Image.py", line 1955, in split
+    return tuple(map(self._new, self.im.split()))
+ValueError: image has wrong mode
+>>>>> Tests Errored
+opt_commit: False, reward: 0

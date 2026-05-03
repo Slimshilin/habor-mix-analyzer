@@ -1,0 +1,27 @@
+{
+  "task_name": "gso/gso-numpy--numpy-ba89ef9",
+  "task_checksum": "6cde286c82e28ddbc341c7f110d378416de73fdb6290d23b2bf4dfb720cde365",
+  "benchmark": "gso",
+  "collection_id": "640e920a-aef3-4b7c-9487-69899ef19e9d",
+  "summary_role_counts": {"success": 6, "failure": 12, "total": 18},
+  "runs": [
+    {"id": "191225fc-9e49-4f59-9100-216c6a5a6d23", "agent": "claude-code", "model": "claude-opus-4-6", "role": "success"},
+    {"id": "b0aa979b-3fa3-41f5-bf68-dbe9a2df5598", "agent": "claude-code", "model": "claude-opus-4-6", "role": "failure"},
+    {"id": "1abad4c5-9f78-4f0a-b197-40a1c81f119b", "agent": "claude-code", "model": "claude-opus-4-6", "role": "failure"},
+    {"id": "519f16c9-e009-4c7a-aac8-39a456e25837", "agent": "terminus-2", "model": "claude-opus-4-6", "role": "failure"},
+    {"id": "679ade5d-a658-42a5-820f-a33d26e7b13f", "agent": "terminus-2", "model": "claude-opus-4-6", "role": "failure"},
+    {"id": "7b3d3ef1-ab92-43a8-b872-00feadc2838f", "agent": "terminus-2", "model": "claude-opus-4-6", "role": "failure"},
+    {"id": "d07c100a-3f15-4aec-9990-5e388530c111", "agent": "codex", "model": "gpt-5.4", "role": "success"},
+    {"id": "30511e77-9980-48bb-ab7e-abf7b57f50b0", "agent": "codex", "model": "gpt-5.4", "role": "failure"},
+    {"id": "127d0978-dbfd-4c6a-8314-e3637878390e", "agent": "codex", "model": "gpt-5.4", "role": "failure"},
+    {"id": "fa7f1bb3-235a-496a-9036-8343bd42f8b1", "agent": "terminus-2", "model": "gpt-5.4", "role": "success"},
+    {"id": "5466cd23-0e3a-4a62-ac84-43a8fa7c09af", "agent": "terminus-2", "model": "gpt-5.4", "role": "success"},
+    {"id": "25caae67-a01f-4554-92e4-2be7f1a3c0db", "agent": "terminus-2", "model": "gpt-5.4", "role": "success"},
+    {"id": "ba359698-0027-44eb-a279-c74654ba5361", "agent": "gemini-cli", "model": "gemini-3.1-pro-preview", "role": "success"},
+    {"id": "7f33f099-58ec-4f05-a6de-00513dbb5d58", "agent": "gemini-cli", "model": "gemini-3.1-pro-preview", "role": "failure"},
+    {"id": "41b24f84-09ec-4256-8024-aeec1b5984d8", "agent": "gemini-cli", "model": "gemini-3.1-pro-preview", "role": "failure"},
+    {"id": "aadb3dcc-d44c-44b4-ac12-1e1d1b8749e0", "agent": "terminus-2", "model": "gemini-3.1-pro-preview", "role": "failure"},
+    {"id": "c49197b1-acd5-4036-9289-2ce98e0b8e92", "agent": "terminus-2", "model": "gemini-3.1-pro-preview", "role": "failure"},
+    {"id": "eba92257-9fa5-4c37-ad41-a907c3e41221", "agent": "terminus-2", "model": "gemini-3.1-pro-preview", "role": "failure"}
+  ]
+}

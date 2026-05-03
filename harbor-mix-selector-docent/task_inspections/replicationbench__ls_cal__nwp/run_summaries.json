@@ -1,0 +1,542 @@
+[
+  {
+    "idx": 1,
+    "run_id": "59f970f4-3a44-4847-a3e3-44b11c7576fb",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/59f970f4-3a44-4847-a3e3-44b11c7576fb",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "role": "success",
+    "reward": 1.0,
+    "trial_id": "222e6bb5-a290-4336-8012-99f024ca6fd7",
+    "prediction": null,
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": null,
+    "exception_type": null
+  },
+  {
+    "idx": 2,
+    "run_id": "3835c984-9ad6-48ce-a1f4-357b9e1cd307",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/3835c984-9ad6-48ce-a1f4-357b9e1cd307",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "e9231a1e-3622-4d42-bc9f-baa9b0d5e8f2",
+    "prediction": [
+      265.2834139717102,
+      15.868648200659225,
+      150.14041184515114,
+      1162.8594241912285,
+      301.70180051545606
+    ],
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": [
+      0.9834139717102062,
+      -41.531351799340776,
+      -7.459588154848859,
+      5.6594241912284815,
+      -0.5981994845439544
+    ],
+    "exception_type": null
+  },
+  {
+    "idx": 3,
+    "run_id": "456ddd09-ca17-488f-b312-d169e4ddc32d",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/456ddd09-ca17-488f-b312-d169e4ddc32d",
+    "agent": "claude-code",
+    "model": "claude-opus-4-6",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "0fb3a92b-8aab-454f-91cf-8ecacf5ed029",
+    "prediction": [
+      262.55349675021785,
+      67.96186320899932,
+      -134.02456341723033,
+      1157.6418920205458,
+      303.0521239234027
+    ],
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": [
+      -1.7465032497821653,
+      10.56186320899932,
+      -291.6245634172303,
+      0.44189202054576526,
+      0.752123923402678
+    ],
+    "exception_type": null
+  },
+  {
+    "idx": 4,
+    "run_id": "5dfb31c6-c0bd-4806-8967-f925ef0d4ede",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/5dfb31c6-c0bd-4806-8967-f925ef0d4ede",
+    "agent": "terminus-2",
+    "model": "claude-opus-4-6",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "f5eb1be9-a9f4-4b59-9551-a3273f77c68b",
+    "prediction": [
+      935.8439945059814,
+      69.96209777260783,
+      -142.07993514849713,
+      -43.68564153119906,
+      302.9838441361672
+    ],
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": [
+      671.5439945059813,
+      12.562097772607835,
+      -299.6799351484971,
+      -1200.885641531199,
+      0.6838441361671812
+    ],
+    "exception_type": null
+  },
+  {
+    "idx": 5,
+    "run_id": "76918009-469a-4131-b763-e41d7e03c95f",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/76918009-469a-4131-b763-e41d7e03c95f",
+    "agent": "terminus-2",
+    "model": "claude-opus-4-6",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "d685c20d-dda7-464b-8bf6-5121e292d3de",
+    "prediction": [
+      262.78734307283537,
+      84.2348866949792,
+      9.470953291568453,
+      1162.564145016426,
+      301.26413114066634
+    ],
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": [
+      -1.5126569271646417,
+      26.834886694979197,
+      -148.12904670843153,
+      5.364145016425937,
+      -1.0358688593336751
+    ],
+    "exception_type": null
+  },
+  {
+    "idx": 6,
+    "run_id": "e6075cbc-8a13-4664-ade0-839637996f86",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/e6075cbc-8a13-4664-ade0-839637996f86",
+    "agent": "terminus-2",
+    "model": "claude-opus-4-6",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "35cc07b8-eb14-4a3d-98de-dec75994218c",
+    "prediction": [
+      -263.7185119238868,
+      34.8754627131714,
+      -70.74406207865174,
+      1162.9950916265257,
+      39.72266970969651
+    ],
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": [
+      -528.0185119238868,
+      -22.524537286828597,
+      -228.34406207865175,
+      5.795091626525618,
+      -262.5773302903035
+    ],
+    "exception_type": null
+  },
+  {
+    "idx": 7,
+    "run_id": "01c8a98e-4dbf-49d4-bda5-1464ea2a85d1",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/01c8a98e-4dbf-49d4-bda5-1464ea2a85d1",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "13d13358-dd0d-42fa-88b6-9234487badb3",
+    "prediction": [
+      -306.03759468425085,
+      -8.732575898253428,
+      -9.560239882950196,
+      300.4589939863585,
+      304.05400657768377
+    ],
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": [
+      -570.3375946842509,
+      -66.13257589825342,
+      -167.16023988295018,
+      -856.7410060136415,
+      1.7540065776837537
+    ],
+    "exception_type": null
+  },
+  {
+    "idx": 8,
+    "run_id": "02501ee6-75ee-43a8-bef9-a0411c3cd63a",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/02501ee6-75ee-43a8-bef9-a0411c3cd63a",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "8d807233-b5a7-4f30-9821-9dbaf5b9023c",
+    "prediction": [
+      268.733764757946,
+      111.15893287900981,
+      149.62339503854182,
+      1106.3703343948714,
+      303.7941595342901
+    ],
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": [
+      4.433764757945994,
+      53.75893287900981,
+      -7.976604961458179,
+      -50.82966560512864,
+      1.4941595342900769
+    ],
+    "exception_type": null
+  },
+  {
+    "idx": 9,
+    "run_id": "fe264e03-2683-4fdb-9a9e-4b7ff7275af6",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/fe264e03-2683-4fdb-9a9e-4b7ff7275af6",
+    "agent": "codex",
+    "model": "gpt-5.4",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "0bc5a549-b583-4bb1-a333-58ffb1b991aa",
+    "prediction": [
+      -266.56834957746537,
+      -57.45927691602975,
+      -157.8833634332358,
+      1157.67961624607,
+      302.2711350772441
+    ],
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": [
+      -530.8683495774653,
+      -114.85927691602976,
+      -315.4833634332358,
+      0.47961624607000886,
+      -0.028864922755929
+    ],
+    "exception_type": null
+  },
+  {
+    "idx": 10,
+    "run_id": "6ee66b74-5d13-4aab-a3d6-9de751c89725",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/6ee66b74-5d13-4aab-a3d6-9de751c89725",
+    "agent": "terminus-2",
+    "model": "gpt-5.4",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "84dcf149-647a-4083-8ee2-2a446379955b",
+    "prediction": null,
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": null,
+    "exception_type": null
+  },
+  {
+    "idx": 11,
+    "run_id": "f00e76b7-cad5-40c2-9e12-0bece4077730",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/f00e76b7-cad5-40c2-9e12-0bece4077730",
+    "agent": "terminus-2",
+    "model": "gpt-5.4",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "6c1710d3-3583-4cbf-b8c5-525c64290ec6",
+    "prediction": null,
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": null,
+    "exception_type": null
+  },
+  {
+    "idx": 12,
+    "run_id": "67ca71ae-c3a4-4b8c-854a-18c93c974f65",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/67ca71ae-c3a4-4b8c-854a-18c93c974f65",
+    "agent": "terminus-2",
+    "model": "gpt-5.4",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "bf11b47f-8a57-46ea-86d9-4baf50be6d15",
+    "prediction": [
+      88.06625293423959,
+      85.07999362472925,
+      -9.940115750077945,
+      174.43541400312324,
+      -86.0553387733343
+    ],
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": [
+      -176.23374706576044,
+      27.679993624729256,
+      -167.54011575007794,
+      -982.7645859968768,
+      -388.3553387733343
+    ],
+    "exception_type": null
+  },
+  {
+    "idx": 13,
+    "run_id": "05795219-84c5-490e-a216-25349b253a67",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/05795219-84c5-490e-a216-25349b253a67",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "44d94766-f1e0-4abf-a4f8-4c92ac805361",
+    "prediction": [
+      266.1855349040597,
+      165.2781177262544,
+      19.214904055935325,
+      1156.676767641062,
+      302.45095329796635
+    ],
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": [
+      1.885534904059682,
+      107.8781177262544,
+      -138.38509594406466,
+      -0.523232358938003,
+      0.15095329796633905
+    ],
+    "exception_type": null
+  },
+  {
+    "idx": 14,
+    "run_id": "2279415c-31b0-48b9-80d3-a625326852c2",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/2279415c-31b0-48b9-80d3-a625326852c2",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "b6558c21-f97b-4bc1-898e-9e08dec4500d",
+    "prediction": [
+      267.57692038379577,
+      161.14524379020648,
+      18.863574991747353,
+      1128.7067060098939,
+      304.0920226858124
+    ],
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": [
+      3.276920383795755,
+      103.74524379020647,
+      -138.73642500825264,
+      -28.493293990106167,
+      1.7920226858124124
+    ],
+    "exception_type": null
+  },
+  {
+    "idx": 15,
+    "run_id": "2c525c6e-9b38-4e19-8304-bd26f56bc8d1",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/2c525c6e-9b38-4e19-8304-bd26f56bc8d1",
+    "agent": "gemini-cli",
+    "model": "gemini-3.1-pro-preview",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "1a10e6e6-ffaa-4598-90b8-f0f638208742",
+    "prediction": [
+      266.1924419537756,
+      165.23735806111998,
+      19.556143927754004,
+      1156.5855022344088,
+      302.4514783354959
+    ],
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": [
+      1.892441953775574,
+      107.83735806111997,
+      -138.043856072246,
+      -0.6144977655912953,
+      0.15147833549588086
+    ],
+    "exception_type": null
+  },
+  {
+    "idx": 16,
+    "run_id": "dfd339ac-6ec5-4b88-925d-eaaa8f91ed94",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/dfd339ac-6ec5-4b88-925d-eaaa8f91ed94",
+    "agent": "terminus-2",
+    "model": "gemini-3.1-pro-preview",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "3dc0359b-9763-4001-9a6e-55e485e29991",
+    "prediction": [
+      288.1009104361919,
+      80.72271265650832,
+      92.20110689445914,
+      734.559048498821,
+      306.12575878160686
+    ],
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": [
+      23.800910436191884,
+      23.322712656508322,
+      -65.39889310554085,
+      -422.6409515011791,
+      3.825758781606851
+    ],
+    "exception_type": null
+  },
+  {
+    "idx": 17,
+    "run_id": "37742491-90ed-4e66-9618-45a732eb9715",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/37742491-90ed-4e66-9618-45a732eb9715",
+    "agent": "terminus-2",
+    "model": "gemini-3.1-pro-preview",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "f04a4093-6eb3-4cdf-8d10-cfbae4abc730",
+    "prediction": [
+      291.8842541077563,
+      15.402385014114733,
+      37.0854800163412,
+      699.3721758039396,
+      306.59594325121384
+    ],
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": [
+      27.584254107756294,
+      -41.997614985885264,
+      -120.5145199836588,
+      -457.8278241960604,
+      4.295943251213828
+    ],
+    "exception_type": null
+  },
+  {
+    "idx": 18,
+    "run_id": "49bd7bec-c7ca-4a0e-9b8a-5e7dcb646143",
+    "url": "https://docent.transluce.org/dashboard/640e920a-aef3-4b7c-9487-69899ef19e9d/agent_run/49bd7bec-c7ca-4a0e-9b8a-5e7dcb646143",
+    "agent": "terminus-2",
+    "model": "gemini-3.1-pro-preview",
+    "role": "failure",
+    "reward": 0.0,
+    "trial_id": "76b0fa28-12ba-4ddd-a82a-a407b5e8142c",
+    "prediction": [
+      267.5448117936737,
+      161.19214415630447,
+      18.867372141325134,
+      1128.741780693622,
+      304.0902671195744
+    ],
+    "expected": [
+      264.3,
+      57.4,
+      157.6,
+      1157.2,
+      302.3
+    ],
+    "deltas": [
+      3.244811793673705,
+      103.79214415630446,
+      -138.73262785867485,
+      -28.45821930637794,
+      1.7902671195743665
+    ],
+    "exception_type": null
+  }
+]

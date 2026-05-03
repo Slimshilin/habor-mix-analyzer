@@ -1,0 +1,779 @@
+Running tests...
+Patch size: 7171 bytes
+HEAD is now at 3aea17514 use RGBX rawmode for JPEG encoding as well
+From https://github.com/python-pillow/Pillow
+ * [new branch]          1.x             -> origin/1.x
+ * [new branch]          10.0.x          -> origin/10.0.x
+ * [new branch]          10.1.x          -> origin/10.1.x
+ * [new branch]          10.2.x          -> origin/10.2.x
+ * [new branch]          10.3.x          -> origin/10.3.x
+ * [new branch]          10.4.x          -> origin/10.4.x
+ * [new branch]          11.0.x          -> origin/11.0.x
+ * [new branch]          11.1.x          -> origin/11.1.x
+ * [new branch]          11.2.x          -> origin/11.2.x
+ * [new branch]          11.3.x          -> origin/11.3.x
+ * [new branch]          12.0.x          -> origin/12.0.x
+ * [new branch]          12.1.x          -> origin/12.1.x
+ * [new branch]          12.2.x          -> origin/12.2.x
+ * [new branch]          2.2.x           -> origin/2.2.x
+ * [new branch]          2.3.x           -> origin/2.3.x
+ * [new branch]          2.5.x           -> origin/2.5.x
+ * [new branch]          2.6.x           -> origin/2.6.x
+ * [new branch]          2.7.x           -> origin/2.7.x
+ * [new branch]          2.8.x           -> origin/2.8.x
+ * [new branch]          2.9.x           -> origin/2.9.x
+ * [new branch]          3.0.x           -> origin/3.0.x
+ * [new branch]          3.1.x           -> origin/3.1.x
+ * [new branch]          3.2.x           -> origin/3.2.x
+ * [new branch]          3.3.x           -> origin/3.3.x
+ * [new branch]          3.4.x           -> origin/3.4.x
+ * [new branch]          4.0.x           -> origin/4.0.x
+ * [new branch]          4.1.x           -> origin/4.1.x
+ * [new branch]          4.2.x           -> origin/4.2.x
+ * [new branch]          4.3.x           -> origin/4.3.x
+ * [new branch]          5.0.x           -> origin/5.0.x
+ * [new branch]          5.1.x           -> origin/5.1.x
+ * [new branch]          5.2.x           -> origin/5.2.x
+ * [new branch]          5.3.x           -> origin/5.3.x
+ * [new branch]          5.4.x           -> origin/5.4.x
+ * [new branch]          6.0.x           -> origin/6.0.x
+ * [new branch]          6.1.x           -> origin/6.1.x
+ * [new branch]          6.2.x           -> origin/6.2.x
+ * [new branch]          7.0.x           -> origin/7.0.x
+ * [new branch]          7.1.x           -> origin/7.1.x
+ * [new branch]          7.2.x           -> origin/7.2.x
+ * [new branch]          8.0.x           -> origin/8.0.x
+ * [new branch]          8.1.x           -> origin/8.1.x
+ * [new branch]          8.2.x           -> origin/8.2.x
+ * [new branch]          8.3.x           -> origin/8.3.x
+ * [new branch]          8.4.x           -> origin/8.4.x
+ * [new branch]          9.0.x           -> origin/9.0.x
+ * [new branch]          9.1.x           -> origin/9.1.x
+ * [new branch]          9.2.x           -> origin/9.2.x
+ * [new branch]          9.3.x           -> origin/9.3.x
+ * [new branch]          9.4.x           -> origin/9.4.x
+ * [new branch]          9.5.x           -> origin/9.5.x
+ * [new branch]          gh-pages        -> origin/gh-pages
+ * [new branch]          imaging-cleanup -> origin/imaging-cleanup
+ * [new branch]          irp             -> origin/irp
+ * [new branch]          main            -> origin/main
+ * [new branch]          sbom            -> origin/sbom
+ * [new branch]          stride          -> origin/stride
+ * [new tag]             12.2.0          -> 12.2.0
+Removing .pytest_cache/
+Removing .venv/
+Removing PIL/__pycache__/
+Removing Pillow.egg-info/
+Removing Tests/__pycache__/
+Removing __pycache__/
+Removing build/
+HEAD is now at 082cf04e8 Add python-pillow GitHub Sponsors to FUNDING.yml (#9563)
+Checking out base repo...
+Note: switching to 'd8af3fc23a730dd5e9a6e556263e7be7d8de1c7e^'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 3aea17514 use RGBX rawmode for JPEG encoding as well
+Installing repo...
+Using CPython 3.9.20
+Creating virtual environment at: .venv
+/testbed/.venv/bin/python
+Python 3.9.20
+Resolved 2 packages in 542ms
+Prepared 2 packages in 4.85s
+Installed 2 packages in 12ms
+ + olefile==0.47
+ + pillow==4.3.0.dev0 (from file:///testbed)
+Resolved 7 packages in 83ms
+Prepared 7 packages in 262ms
+Installed 7 packages in 25ms
+ + certifi==2026.2.25
+ + charset-normalizer==3.4.7
+ + dill==0.4.1
+ + idna==3.11
+ + numpy==2.0.2
+ + requests==2.32.5
+ + urllib3==2.6.3
+Name: pillow
+Version: 4.3.0.dev0
+Location: /testbed/.venv/lib/python3.9/site-packages
+Requires: olefile
+Required-by:
+>>>>> Init Succeeded
+Running performance test before patch...
+Running test /tests/gso_test_0.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_1.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_2.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_3.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_4.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_5.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_6.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_7.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_8.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_9.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_10.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Applying patch...
+/tmp/patch.diff:41: trailing whitespace.
+    
+Skipped patch 'reference_split.json'.
+Checking patch PIL/Image.py...
+Checking patch _imaging.c...
+Applied patch PIL/Image.py cleanly.
+Applied patch _imaging.c cleanly.
+warning: 1 line adds whitespace errors.
+Successfully applied patch using git apply --verbose
+>>>>> Applied Patch
+Installing repo...
+Using CPython 3.9.20
+Creating virtual environment at: .venv
+/testbed/.venv/bin/python
+Python 3.9.20
+Resolved 2 packages in 621ms
+Prepared 2 packages in 3.52s
+Installed 2 packages in 12ms
+ + olefile==0.47
+ + pillow==4.3.0.dev0 (from file:///testbed)
+Resolved 7 packages in 80ms
+Prepared 7 packages in 266ms
+Installed 7 packages in 24ms
+ + certifi==2026.2.25
+ + charset-normalizer==3.4.7
+ + dill==0.4.1
+ + idna==3.11
+ + numpy==2.0.2
+ + requests==2.32.5
+ + urllib3==2.6.3
+Name: pillow
+Version: 4.3.0.dev0
+Location: /testbed/.venv/lib/python3.9/site-packages
+Requires: olefile
+Required-by:
+>>>>> Init Succeeded
+Running performance test after patch...
+Running test /tests/gso_test_0.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_1.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_2.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_3.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_4.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_5.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_6.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_7.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_8.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_9.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_10.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+>>>>> Start Base Output
+>>>>> Test 0
+Execution time: 0.003719s
+Execution time: 0.003743s
+Execution time: 0.003787s
+Execution time: 0.003635s
+Execution time: 0.003668s
+>>>>> Test 1
+Execution time: 0.018673s
+Execution time: 0.017760s
+Execution time: 0.018669s
+Execution time: 0.017989s
+Execution time: 0.018500s
+Execution time: 0.017937s
+Execution time: 0.018416s
+Execution time: 0.017639s
+Execution time: 0.018573s
+Execution time: 0.017846s
+>>>>> Test 2
+Execution time: 0.008649s
+Execution time: 0.007645s
+Execution time: 0.015375s
+Execution time: 0.007927s
+Execution time: 0.008516s
+Execution time: 0.007587s
+Execution time: 0.008660s
+Execution time: 0.007607s
+Execution time: 0.008547s
+Execution time: 0.007671s
+>>>>> Test 3
+Execution time: 0.002620s
+Execution time: 0.002599s
+Execution time: 0.002561s
+Execution time: 0.002648s
+Execution time: 0.002602s
+>>>>> Test 4
+Execution time: 0.001306s
+Execution time: 0.001311s
+Execution time: 0.001316s
+Execution time: 0.001393s
+Execution time: 0.001308s
+>>>>> Test 5
+Execution time: 0.001133s
+Execution time: 0.000736s
+Execution time: 0.001222s
+Execution time: 0.000735s
+Execution time: 0.001205s
+Execution time: 0.000747s
+Execution time: 0.001206s
+Execution time: 0.000766s
+Execution time: 0.001213s
+Execution time: 0.000935s
+>>>>> Test 6
+Execution time: 0.000036s
+Execution time: 0.000034s
+Execution time: 0.000038s
+Execution time: 0.000035s
+Execution time: 0.000036s
+Execution time: 0.000034s
+Execution time: 0.000038s
+Execution time: 0.000036s
+Execution time: 0.000036s
+Execution time: 0.000034s
+>>>>> Test 7
+Execution time: 0.000750s
+Execution time: 0.000744s
+Execution time: 0.000753s
+Execution time: 0.000726s
+Execution time: 0.000758s
+Execution time: 0.000717s
+Execution time: 0.000777s
+Execution time: 0.000711s
+Execution time: 0.000748s
+Execution time: 0.000707s
+>>>>> Test 8
+Execution time: 0.005599s
+Execution time: 0.004666s
+Execution time: 0.005505s
+Execution time: 0.004661s
+Execution time: 0.005519s
+Execution time: 0.004642s
+Execution time: 0.005417s
+Execution time: 0.004622s
+Execution time: 0.005571s
+Execution time: 0.004650s
+>>>>> Test 9
+Execution time: 0.001400s
+Execution time: 0.000986s
+Execution time: 0.001384s
+Execution time: 0.000977s
+Execution time: 0.001391s
+Execution time: 0.000988s
+Execution time: 0.001398s
+Execution time: 0.000972s
+Execution time: 0.001444s
+Execution time: 0.000989s
+>>>>> Test 10
+Execution time: 0.003602s
+Execution time: 0.003177s
+Execution time: 0.003771s
+Execution time: 0.003194s
+Execution time: 0.003707s
+Execution time: 0.003198s
+Execution time: 0.003643s
+Execution time: 0.003172s
+Execution time: 0.003695s
+Execution time: 0.003178s
+>>>>> End Base Output
+>>>>> Start Patch Output
+>>>>> Test 0
+Execution time: 0.001956s
+Execution time: 0.001996s
+Execution time: 0.001991s
+Execution time: 0.001955s
+Execution time: 0.002064s
+>>>>> Test 1
+Execution time: 0.011363s
+Execution time: 0.010498s
+Execution time: 0.013162s
+Execution time: 0.010659s
+Execution time: 0.011436s
+Execution time: 0.010557s
+Execution time: 0.011467s
+Execution time: 0.010573s
+Execution time: 0.011494s
+Execution time: 0.010614s
+>>>>> Test 2
+Execution time: 0.006661s
+Execution time: 0.005705s
+Execution time: 0.006781s
+Execution time: 0.005807s
+Execution time: 0.006695s
+Execution time: 0.005766s
+Execution time: 0.006678s
+Execution time: 0.005709s
+Execution time: 0.006721s
+Execution time: 0.005800s
+>>>>> Test 3
+Execution time: 0.001931s
+Execution time: 0.001900s
+Execution time: 0.001886s
+Execution time: 0.001891s
+Execution time: 0.001867s
+>>>>> Test 4
+Execution time: 0.000878s
+Execution time: 0.000870s
+Execution time: 0.000865s
+Execution time: 0.000864s
+Execution time: 0.000854s
+>>>>> Test 5
+Execution time: 0.000848s
+Execution time: 0.000409s
+Execution time: 0.000858s
+Execution time: 0.000411s
+Execution time: 0.000849s
+Execution time: 0.000397s
+Execution time: 0.000851s
+Execution time: 0.000402s
+Execution time: 0.000852s
+Execution time: 0.000397s
+>>>>> Test 6
+Execution time: 0.000024s
+Execution time: 0.000022s
+Execution time: 0.000025s
+Execution time: 0.000021s
+Execution time: 0.000024s
+Execution time: 0.000023s
+Execution time: 0.000025s
+Execution time: 0.000023s
+Execution time: 0.000032s
+Execution time: 0.000023s
+>>>>> Test 7
+Execution time: 0.000558s
+Execution time: 0.000513s
+Execution time: 0.000562s
+Execution time: 0.000511s
+Execution time: 0.000584s
+Execution time: 0.000519s
+Execution time: 0.000580s
+Execution time: 0.000509s
+Execution time: 0.000565s
+Execution time: 0.000522s
+>>>>> Test 8
+Execution time: 0.004414s
+Execution time: 0.003477s
+Execution time: 0.004276s
+Execution time: 0.003452s
+Execution time: 0.004298s
+Execution time: 0.003451s
+Execution time: 0.004383s
+Execution time: 0.003477s
+Execution time: 0.004318s
+Execution time: 0.003446s
+>>>>> Test 9
+Execution time: 0.001103s
+Execution time: 0.000688s
+Execution time: 0.001130s
+Execution time: 0.000720s
+Execution time: 0.001114s
+Execution time: 0.000693s
+Execution time: 0.001122s
+Execution time: 0.000703s
+Execution time: 0.001166s
+Execution time: 0.000703s
+>>>>> Test 10
+Execution time: 0.003210s
+Execution time: 0.002799s
+Execution time: 0.003204s
+Execution time: 0.002763s
+Execution time: 0.003224s
+Execution time: 0.002767s
+Execution time: 0.003312s
+Execution time: 0.002754s
+Execution time: 0.003204s
+Execution time: 0.002752s
+>>>>> End Patch Output
+error: remote origin already exists.
+Removing .url_cache/
+Removing Pillow.egg-info/
+Removing __pycache__/
+Removing base_0.txt
+Removing base_1.txt
+Removing base_10.txt
+Removing base_2.txt
+Removing base_3.txt
+Removing base_4.txt
+Removing base_5.txt
+Removing base_6.txt
+Removing base_7.txt
+Removing base_8.txt
+Removing base_9.txt
+Removing build/
+Removing gso_0_split.json
+Removing gso_10_result.json
+Removing gso_1_split_result.json
+Removing gso_2_result.json
+Removing gso_3_result.json
+Removing gso_4_split_ref.json
+Removing gso_5_result.json
+Removing gso_6_result.json
+Removing gso_7_result.json
+Removing gso_8_result.json
+Removing gso_9_result.json
+Removing result_0.txt
+Removing result_1.txt
+Removing result_10.txt
+Removing result_2.txt
+Removing result_3.txt
+Removing result_4.txt
+Removing result_5.txt
+Removing result_6.txt
+Removing result_7.txt
+Removing result_8.txt
+Removing result_9.txt
+HEAD is now at 082cf04e8 Add python-pillow GitHub Sponsors to FUNDING.yml (#9563)
+Checking out commit...
+Previous HEAD position was 082cf04e8 Add python-pillow GitHub Sponsors to FUNDING.yml (#9563)
+HEAD is now at d8af3fc23 Merge branch 'master' into jpeg-loading-without-convertion
+Installing repo...
+Using CPython 3.9.20
+Creating virtual environment at: .venv
+/testbed/.venv/bin/python
+Python 3.9.20
+Resolved 2 packages in 567ms
+Prepared 2 packages in 4.88s
+Installed 2 packages in 7ms
+ + olefile==0.47
+ + pillow==4.3.0.dev0 (from file:///testbed)
+Resolved 7 packages in 81ms
+Prepared 7 packages in 317ms
+Installed 7 packages in 24ms
+ + certifi==2026.2.25
+ + charset-normalizer==3.4.7
+ + dill==0.4.1
+ + idna==3.11
+ + numpy==2.0.2
+ + requests==2.32.5
+ + urllib3==2.6.3
+Name: pillow
+Version: 4.3.0.dev0
+Location: /testbed/.venv/lib/python3.9/site-packages
+Requires: olefile
+Required-by:
+>>>>> Init Succeeded
+Running performance test for commit...
+Running test /tests/gso_test_0.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_1.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_2.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_3.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_4.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_5.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_6.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_7.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_8.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_9.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+Running test /tests/gso_test_10.py 5 times...
+  Iteration 1/5
+  Iteration 2/5
+  Iteration 3/5
+  Iteration 4/5
+  Iteration 5/5
+>>>>> Tests Passed
+>>>>> Start Commit Output
+>>>>> Test 0
+Execution time: 0.001395s
+Execution time: 0.001387s
+Execution time: 0.001376s
+Execution time: 0.001386s
+Execution time: 0.001379s
+>>>>> Test 1
+Execution time: 0.008765s
+Execution time: 0.007971s
+Execution time: 0.008692s
+Execution time: 0.007947s
+Execution time: 0.008732s
+Execution time: 0.007880s
+Execution time: 0.008852s
+Execution time: 0.007910s
+Execution time: 0.008912s
+Execution time: 0.008061s
+>>>>> Test 2
+Execution time: 0.005978s
+Execution time: 0.004942s
+Execution time: 0.005989s
+Execution time: 0.005049s
+Execution time: 0.006047s
+Execution time: 0.004921s
+Execution time: 0.006257s
+Execution time: 0.004956s
+Execution time: 0.005922s
+Execution time: 0.004959s
+>>>>> Test 3
+Execution time: 0.001615s
+Execution time: 0.001660s
+Execution time: 0.001615s
+Execution time: 0.001650s
+Execution time: 0.001659s
+>>>>> Test 4
+Execution time: 0.000737s
+Execution time: 0.000699s
+Execution time: 0.000704s
+Execution time: 0.000709s
+Execution time: 0.000692s
+>>>>> Test 5
+Execution time: 0.000651s
+Execution time: 0.000273s
+Execution time: 0.000728s
+Execution time: 0.000272s
+Execution time: 0.000725s
+Execution time: 0.000280s
+Execution time: 0.000726s
+Execution time: 0.000280s
+Execution time: 0.000726s
+Execution time: 0.000272s
+>>>>> Test 6
+Execution time: 0.000021s
+Execution time: 0.000017s
+Execution time: 0.000020s
+Execution time: 0.000017s
+Execution time: 0.000020s
+Execution time: 0.000018s
+Execution time: 0.000020s
+Execution time: 0.000017s
+Execution time: 0.000020s
+Execution time: 0.000018s
+>>>>> Test 7
+Execution time: 0.000501s
+Execution time: 0.000448s
+Execution time: 0.000513s
+Execution time: 0.000461s
+Execution time: 0.000501s
+Execution time: 0.000440s
+Execution time: 0.000495s
+Execution time: 0.000476s
+Execution time: 0.000498s
+Execution time: 0.000442s
+>>>>> Test 8
+Execution time: 0.003917s
+Execution time: 0.003069s
+Execution time: 0.003980s
+Execution time: 0.003132s
+Execution time: 0.003965s
+Execution time: 0.003052s
+Execution time: 0.003841s
+Execution time: 0.003046s
+Execution time: 0.003799s
+Execution time: 0.003028s
+>>>>> Test 9
+Execution time: 0.001407s
+Execution time: 0.000607s
+Execution time: 0.001011s
+Execution time: 0.000607s
+Execution time: 0.001018s
+Execution time: 0.000616s
+Execution time: 0.001049s
+Execution time: 0.000628s
+Execution time: 0.001023s
+Execution time: 0.000606s
+>>>>> Test 10
+Execution time: 0.003121s
+Execution time: 0.002602s
+Execution time: 0.003097s
+Execution time: 0.002590s
+Execution time: 0.003077s
+Execution time: 0.002595s
+Execution time: 0.003056s
+Execution time: 0.002608s
+Execution time: 0.003134s
+Execution time: 0.002576s
+>>>>> End Commit Output
+opt_commit: False, reward: 0

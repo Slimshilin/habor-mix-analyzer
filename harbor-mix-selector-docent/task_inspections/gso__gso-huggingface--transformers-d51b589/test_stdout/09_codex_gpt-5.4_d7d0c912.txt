@@ -1,0 +1,172 @@
+Running tests...
+Patch size: 7913 bytes
+HEAD is now at 391db836ab fix #1260 - remove special logic for decoding pairs of sequence
+error: remote origin already exists.
+warning: could not lstat .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/dataframe/structures.py
+: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/iter/combinatorics.py: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/iter/combining.py: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/iter/fileopener.py: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/iter/grouping.py: No such file or directory
+warning: could not lstat .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/iter/routeddecoder.py
+: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/map/__pycache__/callable.cpython-39.pyc: No such file or directory
+warning: could not lstat .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/map/__pycache__/combinatorics.cpython-39.pyc
+: No such file or directory
+warning: could not lstat .venv/lib/python3.9/site-packages/torch/utils/model_dump/__main__.py
+: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/utils/serialization/__pycache__: No such file or directory
+warning: could not lstat .venv/lib/python3.9/site-packages/torch/utils/tensorboard/_convert_np.py
+: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/utils/__pycache__/backend_registration.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/utils/__pycache__/cpp_backtrace.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/utils/__pycache__/throughput_benchmark.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/utils/__pycache__/_python_dispatch.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/utils/__pycache__/_pytree.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/utils/__pycache__/_exposed_in.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/utils/__pycache__/_foreach_utils.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/utils/__pycache__/_dtype_abbrs.cpython-39.pyc: No such file or directory
+Removing .url_cache/
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/dataframe/__init__.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/dataframe/dataframe_wrapper.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/dataframe/dataframes.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/dataframe/datapipes.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/iter/filelister.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/__init__.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/_decorator.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/_hook_iterator.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/_typing.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/datapipe.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/datapipe.pyi
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/gen_pyi.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/utils
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/datapipes/__pycache__
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/__init__.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/backward_compatibility.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/dataloader.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/dataset.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/distributed.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/graph.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/graph_settings.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/sampler.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/_utils
+Removing .venv/lib/python3.9/site-packages/torch/utils/data/__pycache__
+Removing .venv/lib/python3.9/site-packages/torch/utils/model_dump/__init__.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/__init__.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/collect_env.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/_typing_utils.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/_import_utils.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/deterministic.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/hooks.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/_contextlib.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/_traceback.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/weak.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/_backport_slots.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/_mode_utils.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/_stats.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/_thunk.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/checkpoint.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/dlpack.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/_content_store.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__pycache__/_config_module.cpython-39.pyc
+Removing .venv/lib/python3.9/site-packages/torch/utils/__init__.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_appending_byte_serializer.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_backport_slots.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_config_module.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_config_typing.pyi
+Removing .venv/lib/python3.9/site-packages/torch/utils/_content_store.py
+Removing .venv/lib/python3.warning: failed to remove .venv/lib/python3.9/site-packages/torch/__pycache__/_compile.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/__pycache__/_VF.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/__pycache__/functional.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/__pycache__/_jit_internal.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/__pycache__/_vmap_internals.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/__pycache__/_ops.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/__pycache__/_torch_docs.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/__pycache__/library.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/__pycache__/_lowrank.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/__pycache__/_linalg_utils.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/__pycache__/__config__.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/__pycache__/_classes.cpython-39.pyc: No such file or directory
+warning: failed to remove .venv/lib/python3.9/site-packages/torch/__pycache__/hub.cpython-39.pyc: No such file or directory
+9/site-packages/torch/utils/_contextlib.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_cpp_embed_headers.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_cpp_extension_versioner.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_cxx_pytree.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_device.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_dtype_abbrs.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_exposed_in.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_filelock.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_foreach_utils.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_freeze.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_functools.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_get_clean_triton.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_helion.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_import_utils.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_mode_utils.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_ordered_set.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_python_dispatch.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_pytree.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_stats.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_thunk.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_traceback.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_triton.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_typing_utils.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_zip.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/backend_registration.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/bundled_inputs.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/checkpoint.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/collect_env.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/cpp_backtrace.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/cpp_extension.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/deterministic.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/dlpack.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/file_baton.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/flop_counter.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/hooks.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/mkldnn.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/mobile_optimizer.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/model_zoo.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/module_tracker.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/show_pickle.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/throughput_benchmark.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/weak.py
+Removing .venv/lib/python3.9/site-packages/torch/utils/_strobelight
+Removing .venv/lib/python3.9/site-packages/torch/utils/_sympy
+Removing .venv/lib/python3.9/site-packages/torch/utils/backcompat
+Removing .venv/lib/python3.9/site-packages/torch/utils/benchmark
+Removing .venv/lib/python3.9/site-packages/torch/utils/bottleneck
+Removing .venv/lib/python3.9/site-packages/torch/utils/hipify
+Removing .venv/lib/python3.9/site-packages/torch/utils/jit
+Removing .venv/lib/python3.9/site-packages/torch/utils/viz
+Re
+
+... [+88317 chars elided] ...
+
+>>>>> Tests Passed
+Applying patch...
+Skipped patch 'base_0.txt'.
+Skipped patch 'base_1.txt'.
+Skipped patch 'base_2.txt'.
+Skipped patch 'base_3.txt'.
+Skipped patch 'base_4.txt'.
+Skipped patch 'base_5.txt'.
+Skipped patch 'gso_0_result.json'.
+Skipped patch 'gso_1_result.json'.
+Skipped patch 'gso_2_result.json'.
+Skipped patch 'gso_3_xlnet_forward.json'.
+Skipped patch 'gso_4_edge_result.json'.
+Skipped patch 'gso_5_result.json'.
+Successfully applied patch using git apply --verbose
+>>>>> Applied Patch
+Installing repo...
+downloading uv 0.5.4 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+Using CPython 3.9.20
+Creating virtual environment at: .venv
+/testbed/.venv/bin/python
+Python 3.9.20
+Resolved 13 packages in 637ms
