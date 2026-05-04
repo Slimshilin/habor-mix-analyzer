@@ -300,3 +300,34 @@ None of those would BH-correct over all 2,725 Reactome pathways; they typically 
 
 The original §1–§6 REJECT verdict over-indexed on "the instruction doesn't pin every parameter" as a brokenness criterion. Reapplying that criterion would also disqualify most graduate-level take-home exams. The right standard is "can a domain expert solve it from the artifacts provided," and that standard is met here.
 
+---
+
+## 8. New evidence — a passing trial confirms the ACCEPT verdict
+
+A 19th trial was provided after the initial 18: **claude-code + claude-sonnet-4-6** (trial `2b81d40b`, batch1__phase4), Trial 2 of 5 → **PASS, reward = 1.0**, submitted `<answer>25%</answer>`. The other four sub-trials were 0 / 0 / 0 / ERR, so even for this model+harness the task discriminates: **1/5 success rate**.
+
+### What the passing trial actually did
+The run took 23 minutes and 41 steps (vs. 50–80 for the failing claude-opus-4-6 trials). The successful pipeline:
+
+1. **Loaded** the same Excel + GMT + empty notebook.
+2. **Mapped** RefSeq → gene symbols via `mygene.querymany(...)` → 18,856 unique genes.
+3. **Defined immune pathways** by keyword filter — 150 Reactome pathways. Notable: the keyword list **included `'jak', 'stat'`** (so it picks up "STAT3 nuclear events downstream of ALK signaling" — a critical hit), and was broader than the 12-pathway gemini filter and narrower than the 178-pathway 0c6d filter.
+4. **First tried Fisher's combined-p-values + GSEA prerank against 4 collapsed conditions** → 0/4 = 0% → noticed the result was implausibly null, did *not* submit.
+5. **Then tried ORA** with all pathways → 0/8 → again refused to settle.
+6. **Then ran GSEA prerank per individual S1/S2 column** (rank metric `-log10(p)`, `min_size=10, max_size=500, permutation_num=1000, seed=42`) → found:
+   - `Chronic Round1 S1`: 1 immune pathway at FDR q < 0.05 — **STAT3 nuclear events downstream of ALK signaling** (NES 1.60, q 0.045)
+   - `Chronic Round1 S2`: 2 immune pathways at FDR q < 0.05 — **RUNX1 and FOXP3 control the development of regulatory T lymphocytes (Tregs)** (NES 1.66, q 0.010) and **Nef mediated downregulation of MHC class I** (NES 1.57, q 0.048)
+   - All other 6 conditions: 0 significant.
+7. **Both denominators agree on 25%**: per-column 2/8 = 25%, grouped 1/4 = 25%. The agent submitted `<answer>25%</answer>`.
+
+### What this evidence resolves
+
+- **The 25% answer is reproducible from the capsule.** A domain-aware GSEA prerank pipeline with a defensible immune keyword set (~150 pathways including `jak/stat`) lands on 25% deterministically. Previous concerns about the answer being unreachable from `(instruction, /workspace/)` are refuted.
+- **The "right" enriched conditions are Chronic Round1 S1 + S2**, not Acute Tcells as I had hypothesized from the 12.5% near-miss trajectory. The 12.5% run (`dd4bd80a`) used a slightly *narrower* keyword filter that missed `STAT3` and `RUNX1`-named pathways and instead picked up Acute Tcells S2 by chance — that was actually further from the right answer than I'd thought. The correct answer-locating signal is in the **chronic rounds**, biologically consistent with chronic T-cell exposure selecting for genes in immune-related resistance pathways (Tregs, MHC class I downregulation, STAT3 — all canonical tumor immune-evasion mechanisms).
+- **The capability gap is sharp.** The same harness (claude-code) on claude-opus-4-6 failed all 3 trials (0%, 50%, 100%); on claude-sonnet-4-6 it passed 1/5. The difference between the failing 50%/100% Opus runs and the passing Sonnet run is *method discipline*: Sonnet rejected the early null result, kept iterating, and landed on per-column GSEA prerank with the right keyword filter. Opus collapsed replicates (4 conditions), pivoted to a custom z-test after GSEA OOM'd, and committed to method choices that the data didn't actually support.
+- **The 1/5 pass rate even for sonnet-4-6 indicates significant variance.** This is not a "set the model to claude-sonnet-4-6 and you always pass" task. It's a hard analytical task where even a capable model needs to make several correct method choices in sequence: don't collapse replicates, use GSEA prerank not ORA, pick a broad-enough immune keyword set, recover from GSEA OOM/null results without giving up.
+
+### Final verdict (unchanged, now more confident)
+
+**ACCEPT.** The new passing trial converts my "lean ACCEPT" into a confident ACCEPT. The task is a well-formed hard CRISPR-screen pathway-analysis problem with a deterministically-reachable canonical answer, a verifier that does its job (gpt-4o accepted "25%" cleanly), and a 1/19 pass rate that genuinely measures domain-method-choice capability. The non-blocking improvements (verifier robustness, memory ceiling, populated `solve.sh`) still apply, but none of them are necessary for the task to function as a useful capability test.
+
